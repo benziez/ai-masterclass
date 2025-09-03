@@ -1,0 +1,803 @@
+'use client'
+
+import { useState, useEffect, useRef, useCallback } from 'react'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import { useToast } from '@/components/ui/use-toast'
+import { 
+  Check, 
+  Star, 
+  Clock, 
+  Users, 
+  Zap, 
+  Shield,
+  ArrowRight,
+  Play,
+  TrendingUp,
+  Award,
+  Timer,
+  X,
+  Gift
+} from 'lucide-react'
+
+// Force dynamic rendering
+export const dynamic = 'force-dynamic'
+
+// Simple lazy loading hook
+function useLazyLoad() {
+  const [isVisible, setIsVisible] = useState(false)
+  const [hasLoaded, setHasLoaded] = useState(false)
+  
+  useEffect(() => {
+    if (!hasLoaded) {
+      const timer = setTimeout(() => {
+        setIsVisible(true)
+        setHasLoaded(true)
+      }, 100) // Small delay for smooth loading
+      
+      return () => clearTimeout(timer)
+    }
+  }, [hasLoaded])
+  
+  return isVisible
+}
+
+// Progress Bar Component
+function ProgressBar({ onSpotsChange }: { onSpotsChange?: (spots: number) => void }) {
+  const [spotsLeft, setSpotsLeft] = useState(7)
+  const totalSpots = 50
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setSpotsLeft(prev => {
+        if (prev > 1) {
+          const newSpots = prev - Math.floor(Math.random() * 1) // Random decrease of 0 or 1
+          onSpotsChange?.(newSpots)
+          return newSpots
+        }
+        return prev
+      })
+    }, 30000) // Update every 30 seconds
+
+    return () => clearInterval(timer)
+  }, [onSpotsChange])
+
+  const percentageLeft = (spotsLeft / totalSpots) * 100
+
+  return (
+    <div className="flex items-center gap-2">
+      <div className="w-16 h-2 bg-red-200 rounded-full overflow-hidden">
+        <div 
+          className="h-full bg-red-500 rounded-full transition-all duration-500"
+          style={{ width: `${percentageLeft}%` }}
+        ></div>
+      </div>
+    </div>
+  )
+}
+
+export default function GetCoursePage() {
+  const { toast } = useToast()
+  const [showExitPopup, setShowExitPopup] = useState(false)
+  const [hasShownExitPopup, setHasShownExitPopup] = useState(false)
+  const [spotsLeft, setSpotsLeft] = useState(7)
+  const [testimonialsVisible, setTestimonialsVisible] = useState(false)
+  const [storiesVisible, setStoriesVisible] = useState(false)
+
+  // Exit intent detection
+  useEffect(() => {
+    const handleMouseLeave = (e: MouseEvent) => {
+      if (e.clientY <= 0 && !hasShownExitPopup) {
+        setShowExitPopup(true)
+        setHasShownExitPopup(true)
+      }
+    }
+    document.addEventListener('mouseleave', handleMouseLeave)
+    return () => document.removeEventListener('mouseleave', handleMouseLeave)
+  }, [hasShownExitPopup])
+
+  // Lazy loading for testimonials
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setTestimonialsVisible(true)
+    }, 500) // Load after 500ms
+    
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Lazy loading for success stories
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setStoriesVisible(true)
+    }, 800) // Load after 800ms
+    
+    return () => clearTimeout(timer)
+  }, [])
+
+  const handleCheckout = () => {
+    toast({
+      title: "Redirecting to checkout...",
+      description: "You'll be taken to our secure payment page.",
+    })
+    // In production, this would redirect to Stripe
+    setTimeout(() => {
+      toast({
+        title: "Checkout not yet connected",
+        description: "This is a demo. In production, this would connect to Stripe.",
+        variant: "destructive",
+      })
+    }, 1000)
+  }
+  return (
+      <header className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50 shadow-lg">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                AI Freedom
+              </div>
+              <div className="hidden md:flex items-center gap-6 text-sm">
+                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <Users className="h-4 w-4" />
+                  <span>2,000+ students</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <Star className="h-4 w-4 text-yellow-400 fill-current" />
+                  <span>4.9/5 rating</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <Shield className="h-4 w-4" />
+                  <span>Professional support</span>
+                </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-3">
+              <div className="hidden sm:flex items-center gap-2 text-sm text-red-600 dark:text-red-400 font-medium">
+                <Timer className="h-4 w-4" />
+                <span>Only {spotsLeft} spots left</span>
+              </div>
+              <Button 
+                size="sm"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
+                onClick={handleCheckout}
+              >
+                Get Training - $27
+                <ArrowRight className="h-4 w-4 ml-1" />
+              </Button>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="py-16 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            {/* Urgency Badge with Progress Bar */}
+            <div className="inline-flex items-center gap-2 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Timer className="h-4 w-4" />
+              <span>🔥 Private Training: Only {spotsLeft} spots left at $27</span>
+              <span className="hidden sm:inline">•</span>
+              <span><ProgressBar onSpotsChange={setSpotsLeft} /></span>
+            </div>
+
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+              How My Students Are Making 
+              <span className="text-blue-600 dark:text-blue-400"> $3,000-$15,000/Mo With AI Tools</span>
+            </h1>
+            
+            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+              Former Tech Consultant Reveals: The AI Skills That Built My 6-Figure Business (No Coding Required)
+            </p>
+
+            {/* Social Proof */}
+            <div className="flex flex-wrap justify-center items-center gap-6 mb-8 text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex items-center gap-2">
+                <div className="flex">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <span>4.9/5 from 2,000+ reviews</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Users className="h-4 w-4" />
+                <span>2,000+ students enrolled</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Clock className="h-4 w-4" />
+                <span>6 hours of content</span>
+              </div>
+            </div>
+
+            {/* Hero Video Section - Copy MBA Style */}
+            <div className="mb-12">
+              <div className="max-w-4xl mx-auto">
+                <div className="relative bg-black rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
+                  {/* Video Player - Your AI Freedom Course Preview (Vimeo) */}
+                  <div className="aspect-video bg-black relative overflow-hidden">
+                    <iframe
+                      src="https://player.vimeo.com/video/YOUR_VIDEO_ID_HERE?h=YOUR_HASH_HERE&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                      title="AI Freedom Course Preview"
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="autoplay; fullscreen; picture-in-picture"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                  
+                  {/* Video Stats Overlay */}
+                  <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-medium">
+                    <span className="flex items-center gap-2">
+                      <Users className="h-4 w-4" />
+                      2,000+ students
+                    </span>
+                  </div>
+                  
+                  {/* Quality Badge */}
+                  <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    HD Quality
+                  </div>
+                  
+                  {/* Duration Badge */}
+                  <div className="absolute bottom-4 right-4 bg-black/70 backdrop-blur-sm text-white px-3 py-1 rounded-full text-sm">
+                    3:42
+                  </div>
+                </div>
+                
+                {/* Video Trust Indicators */}
+                <div className="flex flex-wrap justify-center gap-6 mt-6 text-sm text-gray-600 dark:text-gray-400">
+                  <div className="flex items-center gap-2">
+                    <Check className="h-4 w-4 text-green-500" />
+                    <span>No registration required</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Shield className="h-4 w-4 text-blue-500" />
+                    <span>Safe to watch</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Clock className="h-4 w-4 text-orange-500" />
+                    <span>Only 3 minutes</span>
+                  </div>
+                </div>
+                
+                {/* Video Hook - Moved Below Video */}
+                <div className="mt-8 max-w-3xl mx-auto text-center">
+                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-3">
+                    <span className="font-semibold text-blue-600 dark:text-blue-400">I have never lost an opportunity</span> because a potential client says they'd rather use AI.
+                  </p>
+                  <p className="text-base text-gray-600 dark:text-gray-400">
+                    Watch this 3-minute preview to see exactly how my students are landing high-paying AI clients and building 6-figure businesses.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <Button 
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
+                onClick={handleCheckout}
+              >
+                <Play className="h-5 w-5 mr-2" />
+                Get Training Now - $27
+                <ArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+              <Button 
+                variant="outline" 
+                size="lg"
+                className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold px-8 py-4 text-lg transition-all duration-200"
+              >
+                Watch Preview (2 min)
+              </Button>
+            </div>
+
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">
+              <div className="flex items-center gap-2">
+                <Shield className="h-4 w-4 text-green-500" />
+                <span>Professional support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-green-500" />
+                <span>Lifetime access</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="h-4 w-4 text-green-500" />
+                <span>Certificate included</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      {/* What You Get Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              What You Get (Value: $497)
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Everything you need to land your first AI client and start earning within 30 days
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+            {[
+              {
+                icon: Play,
+                title: "6-Hour Video Course",
+                description: "Step-by-step tutorials on ChatGPT, Claude, and other AI tools"
+              },
+              {
+                icon: Zap,
+                title: "50+ AI Templates",
+                description: "Ready-to-use prompts for content, automation, and business tasks"
+              },
+              {
+                icon: TrendingUp,
+                title: "Income Strategies",
+                description: "5 proven ways to monetize AI skills and create side income"
+              },
+              {
+                icon: Award,
+                title: "Certificate",
+                description: "Professional certificate to showcase your AI expertise"
+              }
+            ].map((item, index) => (
+              <div key={index}>
+                <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700">
+                  <CardHeader className="text-center">
+                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mx-auto mb-4">
+                      <item.icon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                    </div>
+                    <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {item.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="text-center">
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      {item.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+
+          {/* Pricing */}
+          <div className="text-center">
+            <Card className="max-w-md mx-auto bg-gradient-to-r from-blue-600 to-indigo-600 text-white border-0">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold text-white">
+                  Today's Price: $27
+                </CardTitle>
+                <p className="text-sm text-blue-100">
+                  <span className="line-through text-lg">$497</span> - 95% OFF
+                </p>
+              </CardHeader>
+              <CardContent>
+                <Button 
+                  className="w-full bg-white text-blue-600 hover:bg-blue-50 font-semibold"
+                  onClick={handleCheckout}
+                >
+                  Get Training Now - $27
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+                <p className="text-sm text-blue-200 mt-3">
+                  🔥 Only {spotsLeft} spots remaining at this price
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Video Testimonials Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              How My Students Are Actually Making Money
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300">
+              Real results from real people who applied what they learned
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+            {!testimonialsVisible ? (
+              // Loading skeleton
+              <>
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="animate-pulse">
+                    <div className="h-64 bg-gray-200 dark:bg-gray-700 rounded-lg mb-4"></div>
+                    <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-2"></div>
+                    <div className="h-3 bg-gray-200 dark:bg-gray-700 rounded w-1/2 mb-4"></div>
+                    <div className="h-4 bg-gray-200 dark:bg-gray-700 rounded w-2/3"></div>
+                  </div>
+                ))}
+              </>
+            ) : (
+              [
+              {
+                name: "Sarah Chen",
+                role: "Marketing Manager",
+                content: "I went from spending 8 hours on content to 2 hours. This course paid for itself in the first week!",
+                results: "Saved 6+ hours per week",
+                rating: 5,
+                hasVideo: true,
+                videoId: "VHA_E2S3owU",
+                videoThumbnail: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face"
+              },
+              {
+                name: "Marcus Rodriguez",
+                role: "Freelance Designer",
+                content: "I was skeptical about AI, but this course showed me how to use it as a creative partner. Increased my income by 40%.",
+                results: "40% income increase",
+                rating: 5,
+                hasVideo: true,
+                videoId: "",
+                videoThumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+              },
+              {
+                name: "David Kim",
+                role: "Startup Founder",
+                content: "As a founder, time is my most valuable asset. This course taught me how to leverage AI to scale without hiring.",
+                results: "Saved $15K in hiring costs",
+                rating: 5,
+                hasVideo: true,
+                videoId: "",
+                videoThumbnail: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+              }
+            ].map((testimonial, index) => (
+              <div key={index}>
+                <Card className="h-full bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 overflow-hidden hover:shadow-lg transition-all duration-300">
+                  <CardContent className="p-6">
+                    {/* Video Thumbnail for Video Testimonials */}
+                    {testimonial.hasVideo && testimonial.videoId ? (
+                      <div className="relative mb-4 rounded-lg overflow-hidden">
+                        <div className="aspect-video bg-black">
+                          <iframe
+                            src={`https://www.youtube.com/embed/${testimonial.videoId}?rel=0&modestbranding=1&showinfo=0&controls=1&disablekb=1&fs=1&iv_load_policy=3&cc_load_policy=0&color=white&playsinline=1&origin=http://localhost:3000&enablejsapi=1&widget_referrer=http://localhost:3000&autohide=1&wmode=transparent`}
+                            title={`${testimonial.name} Testimonial`}
+                            className="w-full h-full"
+                            frameBorder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                          ></iframe>
+                        </div>
+                        <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                          LIVE
+                        </div>
+                      </div>
+                    ) : testimonial.hasVideo ? (
+                      <div className="relative mb-4 rounded-lg overflow-hidden">
+                        <div className="aspect-video bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center relative group cursor-pointer">
+                          <div className="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-all duration-300"></div>
+                          <div className="relative z-10">
+                            <div className="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
+                              <Play className="h-5 w-5 text-white ml-0.5" />
+                            </div>
+                            <p className="text-white text-sm mt-2 text-center">Watch Video</p>
+                          </div>
+                        </div>
+                        <div className="absolute top-2 right-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                          LIVE
+                        </div>
+                      </div>
+                    ) : null}
+                    
+                    <div className="flex items-center mb-4">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                      ))}
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+                    <div className="mb-3">
+                      <div className="font-semibold text-gray-900 dark:text-white">
+                        {testimonial.name}
+                      </div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400">
+                        {testimonial.role}
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
+                      <Check className="h-4 w-4" />
+                      <span className="font-medium">{testimonial.results}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+
+          {/* Transform Your Life Section */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              Transform Your Life Like These Students
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Real people, real results. See how our students went from struggling to thriving with AI skills.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {[
+              {
+                title: "From $0 to $15K Monthly",
+                subtitle: "Sarah's AI Freelance Journey",
+                description: "Started with zero AI knowledge, now earns $15K/month as an AI consultant helping businesses automate their operations.",
+                before: "Struggling freelancer making $2K/month",
+                after: "AI consultant earning $15K/month",
+                metrics: ["$180K annual income", "25+ clients", "6 months to success"],
+                image: "👩‍💼",
+                color: "green"
+              },
+              {
+                title: "Corporate Promotion in 3 Months",
+                subtitle: "David's Career Transformation",
+                description: "Went from junior analyst to AI innovation lead, implementing solutions that saved his company $200K annually.",
+                before: "Junior analyst, $45K salary",
+                after: "AI Innovation Lead, $85K salary",
+                metrics: ["$40K salary increase", "3-month timeline", "Company-wide impact"],
+                image: "👨‍💼",
+                color: "blue"
+              },
+              {
+                title: "Agency Owner at 24",
+                subtitle: "Marcus's Entrepreneurial Success",
+                description: "Built a 7-figure AI-powered design agency from scratch, now serving Fortune 500 companies.",
+                before: "Freelance designer, $3K/month",
+                after: "Agency owner, $50K/month",
+                metrics: ["$600K annual revenue", "15 employees", "Fortune 500 clients"],
+                image: "🎨",
+                color: "purple"
+              }
+            ].map((story, index) => (
+              <div key={index}>
+                <Card className="h-full bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-blue-200 dark:border-blue-800 hover:shadow-lg transition-all duration-300">
+                  <CardHeader>
+                    <div className="text-4xl mb-4">{story.image}</div>
+                    <CardTitle className="text-xl font-bold text-gray-900 dark:text-white">
+                      {story.title}
+                    </CardTitle>
+                    <CardDescription className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-2">
+                      {story.subtitle}
+                    </CardDescription>
+                    <CardDescription className="text-gray-600 dark:text-gray-300">
+                      {story.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    {/* Before/After Comparison */}
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="bg-red-100 dark:bg-red-900/30 rounded-lg p-3 text-center">
+                        <div className="text-xs font-medium text-red-600 dark:text-red-400 mb-1">BEFORE</div>
+                        <div className="text-sm text-red-700 dark:text-red-300">{story.before}</div>
+                      </div>
+                      <div className="bg-green-100 dark:bg-green-900/30 rounded-lg p-3 text-center">
+                        <div className="text-xs font-medium text-green-600 dark:text-green-400 mb-1">AFTER</div>
+                        <div className="text-sm text-green-700 dark:text-green-300">{story.after}</div>
+                      </div>
+                    </div>
+                    
+                    {/* Metrics */}
+                    <div className="space-y-2">
+                      {story.metrics.map((metric, metricIndex) => (
+                        <div key={metricIndex} className="flex items-center gap-2 text-sm">
+                          <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                          <span className="text-gray-700 dark:text-gray-300">{metric}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-16 bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+              Frequently Asked Questions
+            </h2>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-6">
+            {[
+              {
+                question: "Do I need coding experience?",
+                answer: "No! This course is designed for complete beginners. We'll teach you everything from scratch."
+              },
+              {
+                question: "How fast will I see results?",
+                answer: "Most students see immediate results within the first week. You'll learn practical skills you can apply right away."
+              },
+              {
+                question: "What if I'm not satisfied?",
+                answer: "We provide comprehensive support and resources to ensure your success. If you have any issues, our team is here to help you get the most out of the course."
+              },
+              {
+                question: "How long do I have access?",
+                answer: "You get lifetime access to the course, including all future updates and new content."
+              }
+            ].map((faq, index) => (
+              <div key={index}>
+                <Card className="bg-gray-50 dark:bg-gray-700 border-gray-200 dark:border-gray-600">
+                  <CardHeader>
+                    <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {faq.question}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Ready to Land Your First AI Client?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8">
+              Join 2,000+ professionals who are already earning with AI skills they learned in this course.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <Button 
+                size="lg" 
+                className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
+                onClick={handleCheckout}
+              >
+                <Play className="h-5 w-5 mr-2" />
+                Get Training Now - $27
+                <ArrowRight className="h-4 w-4 ml-2" />
+              </Button>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-200 mb-6">
+              <div className="flex items-center gap-2">
+                <Shield className="h-4 w-4" />
+                <span>Professional support</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Check className="h-4 w-4" />
+                <span>Lifetime access</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Award className="h-4 w-4" />
+                <span>Certificate included</span>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-blue-200">
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+                <div className="w-4 h-4 bg-green-500 rounded-full"></div>
+                <span>SSL Secured</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+                <Shield className="h-4 w-4" />
+                <span>Payment Protected</span>
+              </div>
+              <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 py-1 rounded-full">
+                <Check className="h-4 w-4" />
+                <span>Instant Access</span>
+              </div>
+            </div>
+
+            <p className="text-sm text-blue-200 mt-6">
+              🔥 Limited time offer - Only {spotsLeft} spots remaining at $27
+            </p>
+
+            {/* Live Activity Indicator */}
+            <div className="mt-6 p-4 bg-white/10 backdrop-blur-sm rounded-lg border border-white/20">
+              <div className="flex items-center justify-center gap-3 text-blue-200">
+                <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium">Live Activity:</span>
+                <span className="text-sm">Sarah from NYC just landed her first AI client at $2,800/month</span>
+                <span className="text-xs opacity-75">2 min ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-gray-400 text-sm">© 2024 AI Freedom. All rights reserved.</p>
+            <p className="text-gray-400 text-sm mt-2">Educational content only. Individual results may vary based on effort and application.</p>
+          </div>
+        </div>
+      </footer>
+
+      {/* Exit Intent Popup */}
+      {showExitPopup && (
+        <div
+          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+        >
+          <div
+            className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl max-w-md w-full p-6 relative"
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setShowExitPopup(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            >
+              <X className="h-5 w-5" />
+            </button>
+
+            {/* Content */}
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Gift className="h-8 w-8 text-white" />
+              </div>
+              
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                Wait! Don't Miss Out
+              </h3>
+              
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Get an extra <span className="font-semibold text-blue-600">$10 OFF</span> when you enroll today!
+              </p>
+
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/30 dark:to-indigo-900/30 rounded-lg p-4 mb-6">
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                  $17
+                </div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <span className="line-through">$497</span> - Limited Time Only
+                </div>
+              </div>
+
+              <div className="space-y-3">
+                <Button 
+                  className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold"
+                  onClick={() => {
+                    handleCheckout()
+                    setShowExitPopup(false)
+                  }}
+                >
+                  Get Training Now - $17
+                  <ArrowRight className="h-4 w-4 ml-2" />
+                </Button>
+                
+                <button
+                  onClick={() => setShowExitPopup(false)}
+                  className="w-full text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 text-sm"
+                >
+                  No thanks, I'll pay full price later
+                </button>
+              </div>
+
+              <div className="mt-4 text-xs text-gray-500 dark:text-gray-400">
+                🔥 Only {spotsLeft} spots remaining at this price
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </main>
+  )
+}

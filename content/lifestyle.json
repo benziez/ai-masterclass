@@ -1,0 +1,58 @@
+[
+  {
+    "src": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=1000&fit=crop",
+    "alt": "Working on AI project in a cafe",
+    "tag": "Freedom",
+    "caption": "Work anywhere, anytime with AI tools.",
+    "priority": true
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=800&h=1000&fit=crop",
+    "alt": "At the airport ready to travel",
+    "tag": "Travel",
+    "caption": "AI side hustles = freedom to explore.",
+    "priority": false
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=1000&fit=crop",
+    "alt": "Working from a beach location",
+    "tag": "Freedom",
+    "caption": "Your office can be anywhere in the world.",
+    "priority": false
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&h=1000&fit=crop",
+    "alt": "Mountain view from workspace",
+    "tag": "Focus",
+    "caption": "Find your perfect work environment.",
+    "priority": false
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&h=1000&fit=crop",
+    "alt": "Coffee shop workspace",
+    "tag": "Focus",
+    "caption": "Productive mornings with AI assistance.",
+    "priority": false
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&h=1000&fit=crop",
+    "alt": "Sunset from balcony workspace",
+    "tag": "Freedom",
+    "caption": "Work-life balance achieved through AI.",
+    "priority": false
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&h=1000&fit=crop",
+    "alt": "City rooftop workspace",
+    "tag": "Focus",
+    "caption": "Urban productivity with AI tools.",
+    "priority": false
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&h=1000&fit=crop",
+    "alt": "Forest cabin workspace",
+    "tag": "Freedom",
+    "caption": "Nature and technology in harmony.",
+    "priority": false
+  }
+]
