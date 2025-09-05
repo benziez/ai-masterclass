@@ -809,7 +809,7 @@ export default function HomePage() {
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
                 >
                   <Play className="h-5 w-5 mr-2" />
-                  Enroll Now - $27
+                  Enroll Now - $97
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>
               </Link>

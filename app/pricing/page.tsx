@@ -114,7 +114,7 @@ export default function PricingPage() {
                       <span className="text-sm text-gray-400 line-through">$497</span>
                       <span className="text-xs bg-red-500 text-white px-2 py-1 rounded-full">95% OFF</span>
                     </div>
-                    <span className="text-4xl font-bold text-white">$27</span>
+                    <span className="text-4xl font-bold text-white">$97</span>
                     <span className="text-gray-400 ml-2">one-time</span>
                   </div>
                   <CardDescription className="text-lg mt-2 text-gray-300">

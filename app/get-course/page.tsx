@@ -138,7 +138,7 @@ export default function GetCoursePage() {
                 className="bg-blue-600 hover:bg-blue-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200"
                 onClick={handleCheckout}
               >
-                Get Training - $27
+                Get Training - $97
                 <ArrowRight className="h-4 w-4 ml-1" />
               </Button>
             </div>
@@ -187,7 +187,7 @@ export default function GetCoursePage() {
             <div className="inline-flex flex-col items-center gap-2 bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 border border-red-200 dark:border-red-800 rounded-xl px-4 py-3 mb-6 mt-8">
               <div className="flex items-center gap-2 text-red-600 dark:text-red-400 font-medium">
                 <span className="text-base">🔥</span>
-                <span className="text-base">Only {spotsLeft} spots left at $27</span>
+                <span className="text-base">Only {spotsLeft} spots left at $97</span>
               </div>
               
               {/* Progress Bar */}
@@ -210,7 +210,7 @@ export default function GetCoursePage() {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg font-semibold px-8 py-4 shadow-xl hover:shadow-2xl transition-all duration-200 transform hover:scale-105"
                 onClick={handleCheckout}
               >
-                Get Training Now - $27
+                Get Training Now - $97
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
               <div className="text-center">
@@ -365,7 +365,7 @@ export default function GetCoursePage() {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-200"
                 onClick={handleCheckout}
               >
-                Start Earning Now - $27
+                Start Earning Now - $97
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </div>
@@ -549,7 +549,7 @@ export default function GetCoursePage() {
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-3 shadow-lg hover:shadow-xl transition-all duration-200"
                   onClick={handleCheckout}
                 >
-                  Start Your Journey - $27
+                  Start Your Journey - $97
                   <ArrowRight className="h-5 w-5 ml-2" />
                 </Button>
                 <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
@@ -668,7 +668,7 @@ export default function GetCoursePage() {
               size="lg" 
               className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-4 text-lg transition-all duration-200 shadow-xl hover:shadow-2xl transform hover:scale-105"
             >
-              Get Training Now - $27
+              Get Training Now - $97
               <ArrowRight className="h-4 w-4 ml-2" />
             </Button>
           </div>

@@ -31,7 +31,7 @@ export default function MediaHero() {
                 </span>
                 <span className="inline-flex items-center px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300 border border-red-200 dark:border-red-800 whitespace-nowrap">
                   <Clock className="w-3 h-3 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
-                  Limited Time: $497 → $27
+                  Limited Time: $497 → $97
                 </span>
               </div>
             </motion.div>
@@ -110,7 +110,7 @@ export default function MediaHero() {
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 w-full sm:w-auto min-h-[48px] sm:min-h-[56px]"
                 >
                   <Play className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                  Start Learning - $27
+                  Start Learning - $97
                   <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 ml-2" />
                 </Button>
               </Link>

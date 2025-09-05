@@ -127,7 +127,7 @@ NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_publishable_key
 - **Feature Cards**: 6 key learning outcomes with icons
 - **Curriculum**: Step-by-step module breakdown
 - **Testimonials**: Student success stories
-- **Pricing Tiers**: Course ($497 value, $27 sale price) + Community ($19/mo)
+- **Pricing Tiers**: Course ($497 value, $97 sale price) + Community ($19/mo)
 - **FAQ**: Common questions with clear answers
 
 ## 🔒 Compliance & Legal
