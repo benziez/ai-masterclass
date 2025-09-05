@@ -445,7 +445,7 @@ export default function HomePage() {
       </section>
 
       {/* Lifestyle Showcase */}
-      {/* <LifestyleShowcase /> */}
+      <LifestyleShowcase />
 
       {/* Testimonials Section */}
       <section className="py-20 bg-white dark:bg-gray-900">

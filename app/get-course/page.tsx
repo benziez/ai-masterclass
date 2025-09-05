@@ -296,24 +296,6 @@ export default function GetCoursePage() {
                 </div>
               </div>
 
-              {/* Screenshot 2 - $7,560 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-xl transition-all duration-300">
-                <div className="rounded-lg overflow-hidden mb-3">
-                  <img 
-                    src="/images/money2.JPG" 
-                    alt="Profit screenshot showing Marcus's digital marketing success"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Digital Marketing Success</h3>
-                  <p className="text-green-600 dark:text-green-400 font-bold text-lg">$7,560</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Marcus</p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">
-                    "Marcus was a freelance digital marketer making just enough to get by. After taking the AI course, he started using automation to build ad campaigns, generate client reports, and optimize outreach. The time savings let him take on more clients, and within a few months his freelance income grew to $7,560 — his highest balance yet."
-                  </p>
-                </div>
-              </div>
 
               {/* Screenshot 3 - $1,366 */}
               <div className="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-xl transition-all duration-300">
