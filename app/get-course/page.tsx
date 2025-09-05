@@ -277,7 +277,7 @@ export default function GetCoursePage() {
               <div className="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-xl transition-all duration-300">
                 <div className="rounded-lg overflow-hidden mb-3 relative">
                   <img 
-                    src="/images/money6.jpg" 
+                    src="/images/127k.PNG" 
                     alt="Profit screenshot showing David's AI trading success"
                     className="w-full h-auto object-contain"
                   />
