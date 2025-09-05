@@ -1,6 +1,6 @@
 # AI Masterclass Course Landing Page
 
-A modern, responsive landing page for "Make Money with AI: Beginner's Blueprint for 2025" built with Next.js 14, TypeScript, Tailwind CSS, and shadcn/ui.
+A modern, new responsive landing page for "Make Money with AI: Beginner's Blueprint for 2025" built with Next.js 14, TypeScript, Tailwind CSS, and shadcn/ui.
 
 ## 🚀 Features
 
