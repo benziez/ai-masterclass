@@ -36,7 +36,6 @@ export default function NavBar() {
     { href: '/reviews', label: 'Reviews' },
     { href: '/pricing', label: 'Pricing' },
     { href: '/faq', label: 'FAQ' },
-    { href: '/software', label: 'Launchpad', highlight: true },
   ]
 
   return (
@@ -58,16 +57,9 @@ export default function NavBar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative transition-colors duration-200 font-medium group ${
-                  item.highlight 
-                    ? 'text-blue-400 hover:text-blue-300' 
-                    : 'text-gray-300 hover:text-blue-400'
-                }`}
+                className="relative transition-colors duration-200 font-medium group text-gray-300 hover:text-blue-400"
               >
                 {item.label}
-                {item.highlight && (
-                  <span className="absolute -top-1 -right-1 w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                )}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
               </Link>
             ))}
@@ -124,17 +116,10 @@ export default function NavBar() {
                   >
                     <Link
                       href={item.href}
-                      className={`block px-4 py-3 hover:bg-gray-800/50 rounded-xl transition-all duration-200 font-medium text-lg relative ${
-                        item.highlight 
-                          ? 'text-blue-400 hover:text-blue-300' 
-                          : 'text-gray-300 hover:text-blue-400'
-                      }`}
+                      className="block px-4 py-3 hover:bg-gray-800/50 rounded-xl transition-all duration-200 font-medium text-lg relative text-gray-300 hover:text-blue-400"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
-                      {item.highlight && (
-                        <span className="absolute top-2 right-2 w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                      )}
                     </Link>
                   </motion.div>
                 ))}
