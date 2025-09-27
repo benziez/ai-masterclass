@@ -136,7 +136,7 @@ export default function CurriculumPage() {
   const courseStats = [
     { icon: Clock, label: "Total Duration", value: "6+ Hours" },
     { icon: BookOpen, label: "Modules", value: "6" },
-    { icon: Play, label: "Video Lessons", value: "23" },
+    { icon: FileText, label: "Downloadable Guides", value: "10+" },
     { icon: Users, label: "Projects", value: "4" },
     { icon: Award, label: "Certificate", value: "Included" },
     { icon: Star, label: "Lifetime Access", value: "Yes" }

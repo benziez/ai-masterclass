@@ -28,7 +28,6 @@ import {
 } from 'lucide-react'
 import NavBar from '@/components/NavBar'
 import MediaHero from '@/components/MediaHero'
-import LifestyleShowcase from '@/components/LifestyleShowcase'
 import Link from 'next/link'
 
 // Force dynamic rendering
@@ -196,20 +195,178 @@ export default function HomePage() {
       question: "What AI tools will I learn?",
       answer: "You'll learn ChatGPT, Claude, and other popular AI tools, plus how to integrate them into your workflow."
     },
-            {
-          question: "Can I access it on mobile?",
-          answer: "Yes! The course works perfectly on all devices."
-        }
+    {
+      question: "Can I access it on mobile?",
+      answer: "Yes! The course works perfectly on all devices."
+    }
   ]
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
+    <main className="min-h-screen bg-gray-900 overflow-x-hidden">
       <NavBar />
       <MediaHero />
       
+      {/* Money Proof Section */}
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <div className="flex flex-col sm:flex-row items-center justify-center mb-6 sm:mb-8">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mb-3 sm:mb-0 sm:mr-4">
+                <TrendingUp className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white text-center sm:text-left">
+                Real Results from Real Entrepreneurs
+              </h2>
+            </div>
+            <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+              See how these entrepreneurs transformed their businesses using the exact system you're about to learn
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-7xl mx-auto">
+            {/* Testimonial 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            >
+              <div className="h-full bg-black/60 border-2 border-green-500/30 rounded-2xl p-4 sm:p-6 hover:border-green-400 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+                    SM
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base">Me</h4>
+                    <p className="text-gray-400 text-sm">Founder</p>
+                  </div>
+                </div>
+                <div className="text-yellow-400 text-lg font-bold mb-2">⭐⭐⭐⭐⭐</div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  "I built an <strong className="text-white">AI trading algorithm</strong> to pick stocks for me using these exact prompts. Was able to take my portfolio from <strong className="text-green-400">$3K to $127K</strong>!"
+                </p>
+                <div className="text-center relative">
+                  <img 
+                    src="/images/127k.PNG" 
+                    alt="Portfolio growth from $3K to $127K" 
+                    className="w-full max-w-xs mx-auto rounded-lg border-2 border-green-500/30"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-black/20 text-white text-lg font-bold tracking-wider transform -rotate-12 select-none pointer-events-none">
+                      AI MASTERCLASS
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-500 text-xs mt-3 text-center">Offer: AI trading signals • Result: $127K</p>
+              </div>
+            </motion.div>
+
+            {/* Testimonial 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            >
+              <div className="h-full bg-black/60 border-2 border-green-500/30 rounded-2xl p-4 sm:p-6 hover:border-green-400 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+                    MR
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base">Mike R.</h4>
+                    <p className="text-gray-400 text-sm">Texas</p>
+                  </div>
+                </div>
+                <div className="text-yellow-400 text-lg font-bold mb-2">⭐⭐⭐⭐⭐</div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  "Finally found a system that works! I was struggling to get clients, but these AI prompts helped me <strong className="text-white">sell my social media management service on Facebook</strong>. Made <strong className="text-green-400">$704</strong> in my first week using these exact prompts!"
+                </p>
+                <div className="text-center relative">
+                  <img 
+                    src="/images/money3.jpg" 
+                    alt="Cash App balance showing $704 from social media service sales" 
+                    className="w-full max-w-xs mx-auto rounded-lg border-2 border-green-500/30"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-black/20 text-white text-lg font-bold tracking-wider transform -rotate-12 select-none pointer-events-none">
+                      AI MASTERCLASS
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-500 text-xs mt-3 text-center">Offer: Social media management • Time: 1 week • Result: $704</p>
+              </div>
+            </motion.div>
+
+            {/* Testimonial 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            >
+              <div className="h-full bg-black/60 border-2 border-green-500/30 rounded-2xl p-4 sm:p-6 hover:border-green-400 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+                    JL
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base">Jessica L.</h4>
+                    <p className="text-gray-400 text-sm">Florida</p>
+                  </div>
+                </div>
+                <div className="text-yellow-400 text-lg font-bold mb-2">⭐⭐⭐⭐⭐</div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  "I was skeptical at first, but this guide changed everything. Used these AI prompts to <strong className="text-white">sell client automation software to a local doctor</strong>. Made <strong className="text-green-400">$5,016</strong> in my first month using these exact prompts!"
+                </p>
+                <div className="text-center relative">
+                  <img 
+                    src="/images/money4.JPG" 
+                    alt="Cash Balance showing $5,016 from automation software sale" 
+                    className="w-full max-w-xs mx-auto rounded-lg border-2 border-green-500/30"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="bg-black/20 text-white text-lg font-bold tracking-wider transform -rotate-12 select-none pointer-events-none">
+                      AI MASTERCLASS
+                    </div>
+                  </div>
+                </div>
+                <p className="text-gray-500 text-xs mt-3 text-center">Offer: Client automation software • Time: 1 month • Result: $5,016</p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Trust Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ once: true }}
+            className="text-center mt-12"
+          >
+            <div className="inline-flex items-center bg-green-500/10 border-2 border-green-500 rounded-full px-6 py-3 text-green-400 text-lg font-bold">
+              <Star className="w-5 h-5 mr-2" />
+              ⭐ 4.9/5 Rating from 2,000+ Students
+            </div>
+          </motion.div>
+        </div>
+      </section>
+      
       {/* Course Overview Section */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -255,254 +412,84 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Test Section - Temporary */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Test Section - Home Page Working
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300">
-            If you can see this, the home page is rendering correctly!
-          </p>
-        </div>
-      </section>
 
-      {/* What You Can Build Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              What You Can Build
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Create real-world projects that demonstrate your AI skills and can be added to your portfolio.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
-                  <CardHeader>
-                    <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
-                      <project.icon className="h-6 w-6 text-green-600 dark:text-green-400" />
-                    </div>
-                    <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">
-                      {project.title}
-                    </CardTitle>
-                    <CardDescription className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">
-                      {project.description}
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-900 dark:text-white text-sm">Key Features:</h4>
-                      <ul className="space-y-2">
-                        {project.features.map((feature, featureIndex) => (
-                          <li key={featureIndex} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
-                            <Check className="h-4 w-4 text-green-500 flex-shrink-0" />
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="text-center mt-12"
-          >
-            <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-              Each project includes step-by-step guidance, downloadable resources, and real-world applications.
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
-            >
-              <Play className="h-5 w-5 mr-2" />
-              Preview Projects
-              <ArrowRight className="h-4 w-4 ml-2" />
-            </Button>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Lead Magnet Section */}
-      <section className="py-20 bg-blue-600 dark:bg-blue-700">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="max-w-2xl mx-auto text-center"
+            className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-              Get Your Free AI Starter Guide
-            </h2>
-            <p className="text-xl text-blue-100 mb-8">
-              Download our comprehensive guide with 3 practical AI projects you can start today.
-            </p>
-            
-            <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <Input
-                type="email"
-                placeholder="Enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="flex-1 bg-white/10 border-white/20 text-white placeholder:text-blue-200"
-                required
-              />
-              <Button
-                type="submit"
-                disabled={isLoading}
-                className="bg-white text-blue-600 hover:bg-blue-50 font-semibold"
-              >
-                {isLoading ? 'Sending...' : (
-                  <>
-                    <Mail className="h-4 w-4 mr-2" />
-                    Get Guide
-                  </>
-                )}
-              </Button>
-            </form>
-            
-            <p className="text-sm text-blue-200 mt-4">
-              No spam, unsubscribe anytime. We respect your privacy.
-            </p>
+            <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border-2 border-green-500 rounded-2xl p-6 sm:p-8 md:p-12 relative overflow-hidden">
+              {/* Background Pattern */}
+              <div className="absolute inset-0 opacity-5">
+                <div className="absolute top-0 left-0 w-32 h-32 bg-green-400 rounded-full -translate-x-16 -translate-y-16"></div>
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-blue-400 rounded-full translate-x-12 translate-y-12"></div>
+              </div>
+              
+              <div className="relative z-10">
+                <div className="flex flex-col sm:flex-row items-center justify-center mb-6 sm:mb-8">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mb-3 sm:mb-0 sm:mr-4">
+                    <FileText className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+                  </div>
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white text-center sm:text-left">
+                    Get Your Free 3-Step AI Side Hustle Preview
+                  </h2>
+                </div>
+                <p className="text-xl text-green-400 mb-4 font-bold">
+                  <strong>Sample from $497 Course</strong> - See how students made $2.3M+ with AI
+                </p>
+                <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+                  Get a taste of the full system. Limited to first 100 downloads this month.
+                </p>
+              </div>
+              
+              <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-lg mx-auto mb-6 relative z-10">
+                <Input
+                  type="email"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  className="flex-1 bg-gray-800 border-gray-600 text-white placeholder:text-gray-400 text-base sm:text-lg py-3 sm:py-4 focus:border-green-500 focus:ring-2 focus:ring-green-500/20 transition-all duration-300"
+                  required
+                />
+                <Button
+                  type="submit"
+                  disabled={isLoading}
+                  className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed w-full sm:w-auto"
+                >
+                  {isLoading ? (
+                    <div className="flex items-center">
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2"></div>
+                      Sending...
+                    </div>
+                  ) : (
+                    <>
+                      <Mail className="h-5 w-5 mr-2" />
+                      Get Free Preview
+                    </>
+                  )}
+                </Button>
+              </form>
+              
+              <p className="text-sm text-gray-400 relative z-10">
+                No spam, unsubscribe anytime. We respect your privacy.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Curriculum Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Course Curriculum
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              A structured learning path designed to take you from AI beginner to confident practitioner.
-            </p>
-          </motion.div>
 
-          <div className="max-w-4xl mx-auto space-y-6">
-            {curriculum.map((module, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-md transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-blue-600 text-white rounded-full flex items-center justify-center text-sm font-semibold flex-shrink-0 mt-1">
-                        {index + 1}
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                          {module.title}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                          {module.description}
-                        </p>
-                      </div>
-                      <ChevronRight className="h-5 w-5 text-gray-400 flex-shrink-0 mt-1" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Lifestyle Showcase */}
-      <LifestyleShowcase />
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              What Our Students Say
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Join thousands of professionals who have transformed their work with AI.
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="h-full bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                      "{testimonial.content}"
-                    </p>
-                    <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">
-                        {testimonial.name}
-                      </div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400">
-                        {testimonial.role}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -510,15 +497,15 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               Everything you need to know about our AI course and learning experience.
             </p>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto space-y-6">
+          <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -527,14 +514,14 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700">
+                <Card className="bg-black/60 border-2 border-green-500/30 hover:border-green-400 transition-all duration-300">
                   <CardHeader>
-                    <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
+                    <CardTitle className="text-lg font-semibold text-white">
                       {faq.question}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-300 leading-relaxed">
                       {faq.answer}
                     </p>
                   </CardContent>
@@ -545,239 +532,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Success Stories */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Real Students, Real Results
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              See how our students have transformed their careers and businesses with AI skills.
-            </p>
-          </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
-            {[
-              {
-                name: "Sarah Chen",
-                role: "Marketing Manager",
-                company: "TechStart Inc.",
-                rating: 5,
-                content: "This course completely transformed how I approach content creation. I went from spending 8 hours on blog posts to 2 hours, and the quality is even better.",
-                avatar: "SC",
-                results: "Saved 6+ hours per week",
-                color: "blue"
-              },
-              {
-                name: "Marcus Rodriguez",
-                role: "Freelance Designer",
-                company: "Self-Employed",
-                rating: 5,
-                content: "I was skeptical about AI at first, but this course showed me how to use it as a creative partner. I've increased my client base by 40%.",
-                avatar: "MR",
-                results: "40% increase in clients",
-                color: "green"
-              },
-              {
-                name: "David Kim",
-                role: "Startup Founder",
-                company: "InnovateLab",
-                rating: 5,
-                content: "As a founder, time is my most valuable asset. This course taught me how to leverage AI to scale my operations without hiring more people.",
-                avatar: "DK",
-                results: "Saved $15K in hiring costs",
-                color: "purple"
-              }
-            ].map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 h-full">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className={`w-12 h-12 bg-${testimonial.color}-100 dark:bg-${testimonial.color}-900/30 rounded-full flex items-center justify-center`}>
-                        <span className="font-semibold text-gray-900 dark:text-white">{testimonial.avatar}</span>
-                      </div>
-                      <div>
-                        <CardTitle className="text-lg font-semibold text-gray-900 dark:text-white">
-                          {testimonial.name}
-                        </CardTitle>
-                        <CardDescription className="text-gray-600 dark:text-gray-400">
-                          {testimonial.role} at {testimonial.company}
-                        </CardDescription>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-1 mb-3">
-                      {Array.from({ length: 5 }, (_, i) => (
-                        <Star
-                          key={i}
-                          className={`h-4 w-4 ${i < testimonial.rating ? 'text-yellow-400 fill-current' : 'text-gray-300'}`}
-                        />
-                      ))}
-                    </div>
-                    <CardDescription className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      "{testimonial.content}"
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="inline-block px-3 py-1 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 rounded-full text-sm font-medium">
-                      {testimonial.results}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Video Testimonials Preview */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-              Hear From Our Students
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-8">
-              Watch real students share their transformation stories and results.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                name: "Sarah Chen",
-                role: "AI Consultant",
-                duration: "2:34",
-                thumbnail: "👩‍💼",
-                title: "From $2K to $15K Monthly"
-              },
-              {
-                name: "David Kim", 
-                role: "Innovation Lead",
-                duration: "3:12",
-                thumbnail: "👨‍💼",
-                title: "Corporate Promotion in 3 Months"
-              },
-              {
-                name: "Marcus Rodriguez",
-                role: "Agency Owner", 
-                duration: "4:01",
-                thumbnail: "🎨",
-                title: "Building a 7-Figure Business"
-              }
-            ].map((video, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <Card className="bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300 cursor-pointer">
-                  <CardContent className="p-0">
-                    <div className="relative">
-                      <div className="w-full h-32 bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 flex items-center justify-center">
-                        <div className="text-4xl">{video.thumbnail}</div>
-                        <div className="absolute inset-0 flex items-center justify-center">
-                          <div className="w-12 h-12 bg-white dark:bg-gray-800 rounded-full flex items-center justify-center shadow-lg">
-                            <Play className="h-4 w-4 text-blue-600 ml-1" />
-                          </div>
-                        </div>
-                        <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded">
-                          {video.duration}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="p-4">
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-1 text-sm">
-                        {video.title}
-                      </h3>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">
-                        {video.name} • {video.role}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quick FAQ Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Everything you need to know about getting started with AI
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {[
-              {
-                question: "Do I need coding experience?",
-                answer: "No coding required! This course is designed for complete beginners."
-              },
-              {
-                question: "How quickly will I see results?",
-                answer: "Most students see immediate results and save 5-10 hours per week within the first week."
-              },
-              {
-                question: "What if I'm not satisfied?",
-                answer: "Yes! The course works perfectly on all devices."
-              },
-              {
-                question: "Can I access it on mobile?",
-                answer: "Yes! The course works perfectly on all devices."
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="text-left"
-              >
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
-                  {faq.question}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  {faq.answer}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Final CTA Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -785,62 +544,65 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Ready to Master AI?
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Join thousands of professionals who are already using AI to transform their work and careers.
+            <div className="flex flex-col sm:flex-row items-center justify-center mb-6 sm:mb-8">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center mb-3 sm:mb-0 sm:mr-4">
+                <Bot className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
+              </div>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white text-center sm:text-left">
+                Ready to Build Your AI Business?
+              </h2>
+            </div>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Join 2,000+ students who are already using this system to make money with AI.
             </p>
             
-            {/* Live Activity Indicator */}
-            <div className="mb-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800 max-w-md mx-auto">
-              <div className="flex items-center justify-center gap-3 text-blue-700 dark:text-blue-300">
+            {/* Scarcity Indicator */}
+            <div className="mb-8 p-4 bg-red-500/10 border border-red-500 rounded-lg max-w-md mx-auto">
+              <div className="flex items-center justify-center gap-3 text-red-400">
                 <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
-                <span className="text-sm font-medium">Live Activity:</span>
-                <span className="text-sm">Sarah from NYC just enrolled</span>
-                <span className="text-xs opacity-75">2 min ago</span>
+                <span className="text-sm font-medium">Only 47 spots left this month</span>
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Link href="/get-course">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8">
+              <Link href="/get-course" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
+                  className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
                 >
-                  <Play className="h-5 w-5 mr-2" />
-                  Enroll Now - $97
-                  <ArrowRight className="h-4 w-4 ml-2" />
+                  <Play className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
+                  🚀 Get AI Masterclass - $97
+                  <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 ml-2" />
                 </Button>
               </Link>
-              <Link href="/curriculum">
+              <Link href="/free-guide" className="w-full sm:w-auto">
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 font-semibold px-8 py-4 text-lg transition-all duration-200"
+                  className="border-2 border-gray-600 text-gray-300 hover:bg-gray-800 font-semibold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg transition-all duration-200 w-full sm:w-auto"
                 >
-                  Preview Course
+                  Get Free Guide First
                 </Button>
               </Link>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500 dark:text-gray-400 mb-8">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mb-8">
               <div className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
-                <span>Professional support</span>
+                <span>30-Day Money Back</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
-                <span>Lifetime access</span>
+                <span>Lifetime Access</span>
               </div>
               <div className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-green-500" />
-                <span>Certificate included</span>
+                <span>No Experience Needed</span>
               </div>
             </div>
             
             {/* Trust Badges */}
-            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-400 dark:text-gray-500">
+            <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <div className="w-4 h-4 bg-green-500 rounded-full"></div>
                 <span>SSL Secured</span>
@@ -860,7 +622,7 @@ export default function HomePage() {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <h3 className="text-2xl font-bold mb-4">AI Education Platform</h3>

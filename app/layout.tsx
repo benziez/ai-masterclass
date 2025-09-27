@@ -1,7 +1,9 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
+import ClientExitIntentWrapper from './providers/ClientExitIntentWrapper'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -12,11 +14,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL('https://aimasterclass.info'),
   title: {
-    default: 'AI Masterclass - Learn AI Tools & Technologies',
+    default: 'AI Masterclass - Make $5K-$15K/Month with AI Strategies',
     template: '%s | AI Masterclass'
   },
-  description: 'Master AI tools and technologies with our comprehensive course. Learn ChatGPT, Midjourney, and more to boost your productivity and career.',
-  keywords: ['AI course', 'ChatGPT', 'Midjourney', 'AI tools', 'artificial intelligence', 'AI training'],
+  description: 'Learn the exact AI strategies that helped students make $2.3M+ in profits. Build profitable AI businesses with no experience required. Join 2,000+ successful students.',
+  keywords: ['AI business course', 'AI side hustle', 'AI strategies', 'make money with AI', 'AI automation', 'AI entrepreneurship', 'AI business ideas', 'AI course online', 'AI training', 'artificial intelligence business'],
   authors: [{ name: 'AI Masterclass Team' }],
   creator: 'AI Masterclass',
   publisher: 'AI Masterclass',
@@ -26,8 +28,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'AI Masterclass - Learn AI Tools & Technologies',
-    description: 'Master AI tools and technologies with our comprehensive course. Learn ChatGPT, Midjourney, and more to boost your productivity and career.',
+    title: 'AI Masterclass - Make $5K-$15K/Month with AI Strategies',
+    description: 'Learn the exact AI strategies that helped students make $2.3M+ in profits. Build profitable AI businesses with no experience required.',
     url: 'https://aimasterclass.info',
     siteName: 'AI Masterclass',
     images: [
@@ -35,16 +37,18 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'AI Masterclass Course',
+        alt: 'AI Masterclass - Make Money with AI Strategies',
       },
     ],
     locale: 'en_US',
+    type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Masterclass - Learn AI Tools & Technologies',
-    description: 'Master AI tools and technologies with our comprehensive course. Learn ChatGPT, Midjourney, and more to boost your productivity and career.',
+    title: 'AI Masterclass - Make $5K-$15K/Month with AI Strategies',
+    description: 'Learn the exact AI strategies that helped students make $2.3M+ in profits. Build profitable AI businesses with no experience required.',
     images: ['/og-image.png'],
+    creator: '@aimasterclass',
   },
   robots: {
     index: true,
@@ -62,6 +66,12 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -69,8 +79,38 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="dark">
+      <head>
+        {/* Facebook Pixel */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              !function(f,b,e,v,n,t,s)
+              {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+              if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+              n.queue=[];t=b.createElement(e);t.async=!0;
+              t.src=v;s=b.getElementsByTagName(e)[0];
+              s.parentNode.insertBefore(t,s)}(window, document,'script',
+              'https://connect.facebook.net/en_US/fbevents.js');
+              fbq('init', '2455252148193058');
+              fbq('track', 'PageView');
+            `,
+          }}
+        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=2455252148193058&ev=PageView&noscript=1"
+          />
+        </noscript>
+      </head>
       <body className={`${inter.className} antialiased`}>
-        {children}
+        <GoogleAnalytics />
+        <ClientExitIntentWrapper>
+          {children}
+        </ClientExitIntentWrapper>
         <Toaster />
       </body>
     </html>

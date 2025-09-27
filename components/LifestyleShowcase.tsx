@@ -17,7 +17,7 @@ export default function LifestyleShowcase() {
           className="text-center mb-8 sm:mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Live the AI Masterclass Lifestyle
+            Student Success Stories
           </h2>
           <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             See how our students are working from anywhere in the world while building their AI-powered businesses
