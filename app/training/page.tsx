@@ -101,6 +101,93 @@ export default function TrainingPage() {
               >
                 🚀 Get AI Masterclass Now - $497
               </Link>
+              
+              {/* Security Badges */}
+              <div className="flex items-center justify-center space-x-4 mt-4 mb-6">
+                <div className="flex items-center text-gray-400 text-sm">
+                  <span className="mr-2">🔒</span>
+                  <span>Stripe Secure Checkout</span>
+                </div>
+                <div className="flex items-center text-gray-400 text-sm">
+                  <span className="mr-2">🛡️</span>
+                  <span>SSL Encrypted</span>
+                </div>
+                <div className="flex items-center text-gray-400 text-sm">
+                  <span className="mr-2">💳</span>
+                  <span>All Cards Accepted</span>
+                </div>
+              </div>
+
+              {/* What You Get Instantly */}
+              <div className="bg-gray-700/30 rounded-xl p-6 mb-6 max-w-2xl mx-auto">
+                <h3 className="text-lg font-bold text-white mb-4">🎁 What You Get INSTANTLY:</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-300">
+                  <div className="flex items-center">
+                    <span className="text-green-400 mr-2">⚡</span>
+                    <span>Complete AI Strategy System</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-400 mr-2">⚡</span>
+                    <span>50+ Advanced AI Prompts</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-400 mr-2">⚡</span>
+                    <span>6 Training Modules</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-400 mr-2">⚡</span>
+                    <span>Private Community Access</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-400 mr-2">⚡</span>
+                    <span>Live Q&A Sessions</span>
+                  </div>
+                  <div className="flex items-center">
+                    <span className="text-green-400 mr-2">⚡</span>
+                    <span>Lifetime Updates</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Student Testimonials */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 max-w-3xl mx-auto">
+                <div className="bg-gray-700/30 rounded-xl p-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-blue-400 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                      S
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold text-sm">Sarah M.</div>
+                      <div className="text-yellow-400 text-xs">★★★★★</div>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 text-sm">"Made $8,200 in my first month using these AI strategies. The prompts are pure gold!"</p>
+                </div>
+                
+                <div className="bg-gray-700/30 rounded-xl p-4">
+                  <div className="flex items-center mb-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                      M
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold text-sm">Mike R.</div>
+                      <div className="text-yellow-400 text-xs">★★★★★</div>
+                    </div>
+                  </div>
+                  <p className="text-gray-300 text-sm">"From $0 to $12K/month in 60 days. These AI techniques actually work!"</p>
+                </div>
+              </div>
+
+              {/* Re-stated Guarantee */}
+              <div className="bg-green-900/20 border border-green-700 rounded-xl p-4 max-w-2xl mx-auto">
+                <div className="flex items-center justify-center space-x-2">
+                  <span className="text-green-400 text-xl">🛡️</span>
+                  <p className="text-green-300 font-semibold text-sm">
+                    <span className="text-white font-bold">30-Day Money Back Guarantee</span> - If you don't see results, we'll refund every penny
+                  </p>
+                </div>
+              </div>
+
               <p className="text-sm text-gray-400 mt-4">
                 ⚡ Instant access • Lifetime access • Join 2,000+ successful students
               </p>
