@@ -102,30 +102,48 @@ export async function POST(request: Request) {
       try {
         const followUpDays = [1, 2, 3, 4, 5, 6, 7]
         
-        for (const day of followUpDays) {
+        // Make all API calls in parallel to avoid timeout issues
+        const schedulingPromises = followUpDays.map(async (day) => {
           const delayMs = day * 24 * 60 * 60 * 1000 // Convert days to milliseconds
           const scheduledTime = new Date(Date.now() + delayMs).toISOString()
           
-          const followUpResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://aimasterclass.info'}/api/schedule-follow-up/`, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-              email: email,
-              day: day,
-              delay: delayMs
-            }),
-          })
-          
-          if (followUpResponse.ok) {
-            console.log(`✅ Follow-up email Day ${day} scheduled for:`, email, 'at:', scheduledTime)
-          } else {
-            console.log(`⚠️ Failed to schedule follow-up email Day ${day} for:`, email)
+          try {
+            const followUpResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://aimasterclass.info'}/api/schedule-follow-up/`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify({
+                email: email,
+                day: day,
+                delay: delayMs
+              }),
+            })
+            
+            if (followUpResponse.ok) {
+              const result = await followUpResponse.json()
+              console.log(`✅ Follow-up email Day ${day} scheduled for:`, email, 'at:', scheduledTime, 'ID:', result.messageId)
+              return { day, success: true, messageId: result.messageId }
+            } else {
+              const error = await followUpResponse.text()
+              console.log(`⚠️ Failed to schedule follow-up email Day ${day} for:`, email, 'Error:', error)
+              return { day, success: false, error }
+            }
+          } catch (error) {
+            console.log(`❌ Error scheduling Day ${day} for:`, email, error)
+            return { day, success: false, error: error.message }
           }
-        }
+        })
+        
+        // Wait for all scheduling attempts to complete
+        const results = await Promise.all(schedulingPromises)
+        const successful = results.filter(r => r.success).length
+        const failed = results.filter(r => !r.success).length
+        
+        console.log(`📧 Email scheduling complete: ${successful} successful, ${failed} failed for:`, email)
+        
       } catch (followUpError) {
-        console.log('⚠️ Error scheduling follow-up emails:', followUpError)
+        console.log('⚠️ Error in follow-up email scheduling:', followUpError)
       }
     }
 
