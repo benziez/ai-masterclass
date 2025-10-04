@@ -6,284 +6,130 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 const getEmailTemplate = (day: number, email: string) => {
   const templates = {
     1: {
-      subject: "Here's your free AI Side Hustle training replay 🎥",
+      subject: "🎥 Your free AI training is unlocked (watch before it's taken down)",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">Here's your free AI Side Hustle training replay 🎥</h1>
+          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">🎥 Your free AI training is unlocked (watch before it's taken down)</h1>
+          <p style="color: #6b7280; font-size: 14px; margin-bottom: 20px;">12,000+ people already watched this before it gets removed…</p>
           <p>Hey there,</p>
-          <p>I hope you enjoyed the free training video. If you haven't watched it yet, make sure to check it out - it's packed with valuable strategies.</p>
-          <p><strong>What to do next:</strong></p>
-          <ol>
-            <li>Watch the full training video</li>
-            <li>Take notes on the key strategies</li>
-            <li>Start implementing what you learned</li>
-          </ol>
-          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Watch Training →</a></p>
-          <p>Questions? Just reply to this email!</p>
-          <p>Talk soon,<br>Ben</p>
+          <p>Here's your free AI Side Hustle training — it's finally unlocked.</p>
+          <p><strong>In this video, you'll see:</strong></p>
+          <ul>
+            <li>✅ How students are making $5K–$15K/mo using AI (no coding)</li>
+            <li>✅ The exact system they followed step-by-step</li>
+            <li>✅ Why 2025 is the biggest opportunity window for AI freelancers</li>
+          </ul>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">👉 Watch the free training now before it expires</a></p>
+          <p>By the end, you'll see exactly how to turn AI tools into your first real income stream.</p>
+          <p>– From AI Masterclass</p>
         </div>
       `
     },
     2: {
-      subject: "He made $7,400 last month using this exact system",
+      subject: "He made $7,200 last month with ChatGPT 😳",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">He made $7,400 last month using this exact system</h1>
-          <p>Hey there,</p>
-          <p>Meet Marcus. He had no tech background. No audience. Just curiosity about AI.</p>
-          <p>He grabbed the same 3-step system you just learned about… and within 4 weeks he landed his first paying client for $700. Fast-forward, and he's now bringing in over $7,400/month using nothing but AI strategies + the system inside AI Masterclass.</p>
-          <p>The best part? He built it all without showing his face online.</p>
-          <p>If you've been waiting for proof that this is possible, here it is.</p>
-          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">See How He Did It →</a></p>
-          <p>Talk soon,<br>Ben</p>
+          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">He made $7,200 last month with ChatGPT 😳</h1>
+          <p style="color: #6b7280; font-size: 14px; margin-bottom: 20px;">No ads. No coding. Just using AI the right way.</p>
+          <p>One of our students — Marcus — started this exact training 2 months ago.</p>
+          <p>He had zero experience, but followed the system…</p>
+          <p>Now he's averaging $7,200/mo using AI to help small businesses automate social media.</p>
+          <p>You don't need to be "techy."</p>
+          <p>You just need the right prompts, tools, and systems — exactly what's inside AI Masterclass.</p>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">👉 Watch the training replay & see how he did it</a></p>
+          <p>– From AI Masterclass</p>
         </div>
       `
     },
     3: {
-      subject: "Most people won't do this… that's why they stay broke",
+      subject: "Most people will ignore this and stay broke 💀",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">Most people won't do this… that's why they stay broke</h1>
-          <p>Hey there,</p>
-          <p>Here's the truth: 95% of people will watch the training, get excited, then do nothing.</p>
-          <p>They'll make excuses. "I'm too busy." "I need to learn more first." "I'll start next month."</p>
-          <p>Meanwhile, the 5% who actually take action are already making money.</p>
-          <p>Which group do you want to be in?</p>
-          <p>The difference isn't talent or luck. It's simply taking action on what you learn.</p>
-          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Stop Making Excuses →</a></p>
-          <p>Don't be like everyone else,<br>Ben</p>
+          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">Most people will ignore this and stay broke 💀</h1>
+          <p style="color: #6b7280; font-size: 14px; margin-bottom: 20px;">Harsh truth: AI isn't coming — it's already here.</p>
+          <p>Every day, AI replaces another "safe" job.</p>
+          <p>Yet most people scroll right past the opportunity to use it instead of fight it.</p>
+          <p>The truth is — AI won't replace people.</p>
+          <p>People using AI will replace people not using AI.</p>
+          <p>That's why we built AI Masterclass — to help you be on the winning side.</p>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">👉 Watch the free training again — it could change your income forever</a></p>
+          <p>– From AI Masterclass</p>
         </div>
       `
     },
     4: {
-      subject: "The 3 AI tools that print money in 2025",
+      subject: "3 AI tools printing money in 2025 🚀",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Hey there,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Here's a quick win for you:
-          </p>
-
-          <div style="background: #f8fafc; padding: 20px; border-radius: 12px; margin-bottom: 25px; border-left: 4px solid #3b82f6;">
-            <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-              👉 Paste this prompt into ChatGPT:
-            </p>
-            <p style="color: #1e40af; font-size: 14px; line-height: 1.5; font-family: monospace; background: #e0e7ff; padding: 15px; border-radius: 8px; margin: 0;">
-              "Act as a social media manager. Write me 7 Instagram captions that teach [topic] in a way that's simple, engaging, and curiosity-driven."
-            </p>
-          </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            In 60 seconds, you'll have a week's worth of content done.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            This is just one of the 50+ prompt frameworks inside AI Masterclass.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            If this little trick just saved you hours, imagine what a full system could do.
-          </p>
-
-          <div style="text-align: center; margin-bottom: 30px;">
-            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" 
-               style="display: inline-block; background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);">
-              👉 Click here to get AI Masterclass today
-            </a>
-          </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-            Keep winning,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            – AI Masterclass
-          </p>
-
-          <div style="border-top: 1px solid #e5e7eb; padding-top: 15px; text-align: center;">
-            <p style="color: #9ca3af; font-size: 12px;">
-              This email was sent to ${email} because you requested your free AI guide.<br>
-              <a href="#" style="color: #6b7280;">Unsubscribe</a> | <a href="#" style="color: #6b7280;">Update Preferences</a>
-            </p>
-          </div>
+          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">3 AI tools printing money in 2025 🚀</h1>
+          <p style="color: #6b7280; font-size: 14px; margin-bottom: 20px;">These are the exact tools we use to run our business.</p>
+          <p>Everyone talks about AI… but very few actually make money with it.</p>
+          <p><strong>Here are our top 3 income-generating tools:</strong></p>
+          <ul>
+            <li>1️⃣ ChatGPT — the brain behind everything (when prompted right)</li>
+            <li>2️⃣ Midjourney — turns visuals into content clients pay for</li>
+            <li>3️⃣ Runway / OpusClip — repurpose videos into viral clips</li>
+          </ul>
+          <p>Inside AI Masterclass, you'll learn to turn these into a full business that pays monthly.</p>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">👉 Join AI Masterclass today & get instant access to every tool + prompt we use</a></p>
+          <p>– From AI Masterclass</p>
         </div>
       `
     },
     5: {
-      subject: "Still thinking about starting? Watch this 30-sec clip…",
+      subject: "This 1-minute clip might change your life ⚡️",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Hey there,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            A lot of people think "AI income" is just hype. Let me show you otherwise.
-          </p>
-
-          <div style="background: #f0fdf4; padding: 20px; border-radius: 12px; margin-bottom: 25px; border-left: 4px solid #10b981;">
-            <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 15px; font-weight: bold;">
-              Marcus had been learning how to run his agency for months but struggled to land his first paying client.
-            </p>
-            
-            <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 15px;">
-              After completing the AI course, he used the outreach and automation techniques to book meetings more consistently. Within a few weeks, he closed his very first client for <strong style="color: #059669;">$1,366</strong>—proof that his agency finally had momentum.
-            </p>
-            
-            <div style="text-align: center; margin-bottom: 15px;">
-              <img src="${process.env.NEXT_PUBLIC_SITE_URL}/images/money2.JPG" 
-                   alt="Marcus's $1,366 PayPal screenshot" 
-                   style="max-width: 100%; height: auto; border-radius: 8px; border: 2px solid #10b981; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-            </div>
-            
-            <p style="color: #059669; font-size: 18px; font-weight: bold; margin: 0; text-align: center;">
-              $1,366 in his first few weeks using AI automation
-            </p>
-          </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            This works because it's not about chasing trends—it's about using proven frameworks that get people to buy.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            Inside AI Masterclass, you'll get those frameworks, templates, and strategies step-by-step.
-          </p>
-
-          <div style="text-align: center; margin-bottom: 30px;">
-            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" 
-               style="display: inline-block; background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);">
-              👉 See what's possible when you enroll today
-            </a>
-          </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            – AI Masterclass
-          </p>
-
-          <div style="border-top: 1px solid #e5e7eb; padding-top: 15px; text-align: center;">
-            <p style="color: #9ca3af; font-size: 12px;">
-              This email was sent to ${email} because you requested your free AI guide.<br>
-              <a href="#" style="color: #6b7280;">Unsubscribe</a> | <a href="#" style="color: #6b7280;">Update Preferences</a>
-            </p>
-          </div>
+          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">This 1-minute clip might change your life ⚡️</h1>
+          <p style="color: #6b7280; font-size: 14px; margin-bottom: 20px;">Once you see it, you can't unsee what's coming.</p>
+          <p>We just uploaded a short clip from the training — and it's the part that wakes people up.</p>
+          <p>It shows how AI is creating a new class of entrepreneurs who use automation instead of working 10-hour shifts.</p>
+          <p>You can either ride that wave… or get crushed by it.</p>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">👉 Watch the 1-minute clip now</a></p>
+          <p>Ready to go all in? AI Masterclass is open — you'll get our entire system, templates, and case studies.</p>
+          <p>– From AI Masterclass</p>
         </div>
       `
     },
     6: {
-      subject: "Questions people keep asking me about AI Masterclass",
+      subject: "Before you join AI Masterclass — read this 👇",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Hey there,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            You might be wondering…
-          </p>
-
+          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">Before you join AI Masterclass — read this 👇</h1>
+          <p style="color: #6b7280; font-size: 14px; margin-bottom: 20px;">The 3 biggest questions people ask us — answered.</p>
+          <p>Here are the 3 questions we get most often:</p>
           <div style="background: #f8fafc; padding: 20px; border-radius: 12px; margin-bottom: 25px;">
             <div style="margin-bottom: 20px;">
-              <p style="color: #1e40af; font-size: 16px; font-weight: bold; margin-bottom: 8px;">1. Do I need money upfront?</p>
-              <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">No. You can start with free tools and the prompts I give you.</p>
+              <p style="color: #1e40af; font-size: 16px; font-weight: bold; margin-bottom: 8px;">1️⃣ Do I need tech skills?</p>
+              <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">No. This program is for beginners. If you can type prompts, you can do this.</p>
             </div>
-            
             <div style="margin-bottom: 20px;">
-              <p style="color: #1e40af; font-size: 16px; font-weight: bold; margin-bottom: 8px;">2. What if I don't have a business idea yet?</p>
-              <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">We cover exactly how to pick a profitable niche, even if you're starting from zero.</p>
+              <p style="color: #1e40af; font-size: 16px; font-weight: bold; margin-bottom: 8px;">2️⃣ How fast can I make money?</p>
+              <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">Most students see their first client or income within 2-4 weeks after applying what they learn.</p>
             </div>
-            
             <div>
-              <p style="color: #1e40af; font-size: 16px; font-weight: bold; margin-bottom: 8px;">3. Won't AI get saturated?</p>
-              <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">Not if you're ahead of the curve. Most people don't know how to actually use AI to make money. You will.</p>
+              <p style="color: #1e40af; font-size: 16px; font-weight: bold; margin-bottom: 8px;">3️⃣ Is it worth it?</p>
+              <p style="color: #374151; font-size: 16px; line-height: 1.6; margin: 0;">Well… how much longer do you want to "wait and see" while others profit from AI?</p>
             </div>
           </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            If you've been on the fence, now's the time to move.
-          </p>
-
-          <div style="text-align: center; margin-bottom: 30px;">
-            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" 
-               style="display: inline-block; background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);">
-              👉 Enroll in AI Masterclass today
-            </a>
-          </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-            Talk soon,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            – AI Masterclass
-          </p>
-
-          <div style="border-top: 1px solid #e5e7eb; padding-top: 15px; text-align: center;">
-            <p style="color: #9ca3af; font-size: 12px;">
-              This email was sent to ${email} because you requested your free AI guide.<br>
-              <a href="#" style="color: #6b7280;">Unsubscribe</a> | <a href="#" style="color: #6b7280;">Update Preferences</a>
-            </p>
-          </div>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">👉 Join AI Masterclass before the next price increase</a></p>
+          <p>– From AI Masterclass</p>
         </div>
       `
     },
     7: {
-      subject: "Last day to join before the next price bump 🚀",
+      subject: "⏳ Final call — doors close tonight (then price goes up)",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <div style="text-align: center; margin-bottom: 30px;">
-            <h1 style="color: #dc2626; font-size: 28px; margin-bottom: 15px;">⏰ LAST CHANCE</h1>
-          </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Hey there,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            This is it—the final reminder.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Enrollment for AI Masterclass closes tonight at midnight. After that, the bonuses and discounted pricing go away.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-            If you want to:
-          </p>
-
-          <ul style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px; padding-left: 20px;">
-            <li style="margin-bottom: 10px;">✅ Build an AI-powered side hustle this month</li>
-            <li style="margin-bottom: 10px;">✅ Follow proven templates instead of guessing</li>
-            <li style="margin-bottom: 10px;">✅ Join a growing group of students already making it happen</li>
-          </ul>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            …then now is your moment.
-          </p>
-
-          <div style="text-align: center; margin-bottom: 30px;">
-            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" 
-               style="display: inline-block; background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);">
-              👉 Enroll here before midnight
-            </a>
-          </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-            See you inside,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            – AI Masterclass
-          </p>
-
-          <div style="border-top: 1px solid #e5e7eb; padding-top: 15px; text-align: center;">
-            <p style="color: #9ca3af; font-size: 12px;">
-              This email was sent to ${email} because you requested your free AI guide.<br>
-              <a href="#" style="color: #6b7280;">Unsubscribe</a> | <a href="#" style="color: #6b7280;">Update Preferences</a>
-            </p>
-          </div>
+          <h1 style="color: #dc2626; font-size: 24px; margin-bottom: 15px;">⏳ Final call — doors close tonight (then price goes up)</h1>
+          <p style="color: #6b7280; font-size: 14px; margin-bottom: 20px;">Last reminder before AI Masterclass closes.</p>
+          <p>This is it.</p>
+          <p>In a few hours, enrollment for AI Masterclass closes. When it reopens, the price goes up.</p>
+          <p>You've seen what's possible — $5K, $10K, even $15K/mo side hustles powered by AI.</p>
+          <p>All from people who started exactly where you are right now.</p>
+          <p>Don't be the person who looks back in 6 months and says "I should've joined."</p>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" style="background: #dc2626; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">👉 Join AI Masterclass now before it's too late</a></p>
+          <p>– From AI Masterclass</p>
         </div>
       `
     }
