@@ -5,56 +5,42 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 // Email templates for the 7-day sequence
 const getEmailTemplate = (day: number, email: string) => {
   const templates = {
-    2: {
-      subject: 'From zero experience → $3K/month with AI 💻',
+    1: {
+      subject: "Here's your free AI Side Hustle training replay 🎥",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Hey there,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Meet Jordan. He had no tech background. No audience. Just curiosity about AI.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            He grabbed the same 3-step guide you just downloaded… and within 4 weeks he landed his first paying client for $700. Fast-forward, and he's now bringing in over $3,000/month using nothing but AI prompts + the system inside AI Masterclass.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            The best part? He built it all without showing his face online.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            If you've been waiting for proof that this is possible, here it is.
-          </p>
-
-          <div style="text-align: center; margin-bottom: 30px;">
-            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" 
-               style="display: inline-block; background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);">
-              👉 Click here to see how AI Masterclass can shortcut your journey
-            </a>
-          </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 20px;">
-            Talk soon,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            – AI Masterclass
-          </p>
-
-          <div style="border-top: 1px solid #e5e7eb; padding-top: 15px; text-align: center;">
-            <p style="color: #9ca3af; font-size: 12px;">
-              This email was sent to ${email} because you requested your free AI guide.<br>
-              <a href="#" style="color: #6b7280;">Unsubscribe</a> | <a href="#" style="color: #6b7280;">Update Preferences</a>
-            </p>
-          </div>
+          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">Here's your free AI Side Hustle training replay 🎥</h1>
+          <p>Hey there,</p>
+          <p>I hope you enjoyed the free training video. If you haven't watched it yet, make sure to check it out - it's packed with valuable strategies.</p>
+          <p><strong>What to do next:</strong></p>
+          <ol>
+            <li>Watch the full training video</li>
+            <li>Take notes on the key strategies</li>
+            <li>Start implementing what you learned</li>
+          </ol>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Watch Training →</a></p>
+          <p>Questions? Just reply to this email!</p>
+          <p>Talk soon,<br>Ben</p>
+        </div>
+      `
+    },
+    2: {
+      subject: "He made $7,400 last month using this exact system",
+      html: `
+        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">He made $7,400 last month using this exact system</h1>
+          <p>Hey there,</p>
+          <p>Meet Marcus. He had no tech background. No audience. Just curiosity about AI.</p>
+          <p>He grabbed the same 3-step system you just learned about… and within 4 weeks he landed his first paying client for $700. Fast-forward, and he's now bringing in over $7,400/month using nothing but AI strategies + the system inside AI Masterclass.</p>
+          <p>The best part? He built it all without showing his face online.</p>
+          <p>If you've been waiting for proof that this is possible, here it is.</p>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">See How He Did It →</a></p>
+          <p>Talk soon,<br>Ben</p>
         </div>
       `
     },
     3: {
-      subject: '"But I\'m not techy…" 🤔',
+      subject: "Most people won't do this… that's why they stay broke",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
@@ -114,7 +100,7 @@ const getEmailTemplate = (day: number, email: string) => {
       `
     },
     4: {
-      subject: 'A 60-second AI trick to save hours 🚀',
+      subject: "The 3 AI tools that print money in 2025",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
@@ -171,7 +157,7 @@ const getEmailTemplate = (day: number, email: string) => {
       `
     },
     5: {
-      subject: 'How Marcus made $1,366 in a few weeks with AI 🚀',
+      subject: "Still thinking about starting? Watch this 30-sec clip…",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
@@ -231,7 +217,7 @@ const getEmailTemplate = (day: number, email: string) => {
       `
     },
     6: {
-      subject: '3 common questions about AI Masterclass',
+      subject: "Questions people keep asking me about AI Masterclass",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
@@ -288,7 +274,7 @@ const getEmailTemplate = (day: number, email: string) => {
       `
     },
     7: {
-      subject: 'Last chance: enrollment closes tonight ⏰',
+      subject: "Last day to join before the next price bump 🚀",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center; margin-bottom: 30px;">
