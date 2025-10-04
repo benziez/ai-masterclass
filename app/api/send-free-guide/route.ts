@@ -4,7 +4,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 
 export async function POST(request: Request) {
   try {
-    const { email } = await request.json()
+    const { email, firstName } = await request.json()
 
     if (!email) {
       return Response.json({ error: 'Email is required' }, { status: 400 })
@@ -14,15 +14,38 @@ export async function POST(request: Request) {
     // For now, we'll just send emails and manually add contacts to audience
     console.log('📧 Processing signup for:', email)
 
+    // Add to Resend audience for future communications
+    try {
+      const { Resend } = await import('resend')
+      const resend = new Resend(process.env.RESEND_API_KEY)
+      
+      await resend.contacts.create({
+        email: email,
+        firstName: firstName || 'there',
+        audienceId: 'general'
+      })
+      
+      console.log('✅ Contact added to Resend audience:', email)
+    } catch (error) {
+      console.log('ℹ️ Contact may already exist in Resend:', email)
+    }
+
+    // For now, we'll just log that follow-up emails should be sent
+    // In a production environment, you'd use a proper job scheduler like:
+    // - Vercel Cron Jobs
+    // - Netlify Scheduled Functions  
+    // - External service like Zapier or Make.com
+    console.log('📧 Follow-up emails should be sent to:', email, 'on days 1, 3, and 7')
+
     // Send Email 1 - Delivery (Immediately)
     const { data, error } = await resend.emails.send({
       from: 'AI Masterclass <hello@aimasterclass.info>',
       to: [email],
-      subject: 'Here\'s your free AI Side Hustle guide 🎉',
+      subject: 'Your free AI training is ready! 🎥',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <div style="text-align: center; margin-bottom: 30px;">
-            <h1 style="color: #2563eb; font-size: 28px; margin-bottom: 15px;">Here's your free AI Side Hustle guide 🎉</h1>
+            <h1 style="color: #2563eb; font-size: 28px; margin-bottom: 15px;">Your free AI training is ready! 🎥</h1>
           </div>
 
           <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
@@ -30,13 +53,13 @@ export async function POST(request: Request) {
           </p>
 
           <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Your download is ready: <strong>3 Steps to Your First AI-Powered Side Hustle</strong> 👇
+            Your free training is ready! Click below to watch your exclusive AI training video 👇
           </p>
 
           <div style="text-align: center; margin-bottom: 30px;">
-            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/downloads/3steps.pdf" 
+            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/training" 
                style="display: inline-block; background: linear-gradient(135deg, #9333ea 0%, #3b82f6 100%); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 15px rgba(147, 51, 234, 0.3);">
-              📥 Download the guide
+              🎥 Watch Free Training
             </a>
           </div>
 

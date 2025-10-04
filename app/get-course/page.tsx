@@ -325,95 +325,58 @@ export default function GetCoursePage() {
               </p>
             </div>
 
-            {/* Profit Screenshots Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-              {/* Screenshot 1 - $100,000+ */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-xl transition-all duration-300">
-                <div className="rounded-lg overflow-hidden mb-3 relative">
-                  <img 
-                    src="/images/127k.PNG" 
-                    loading="lazy"
-                    decoding="async"
-                    alt="Profit screenshot showing my AI trading success"
-                    className="w-full h-auto object-contain"
-                  />
-                  {/* Best Student Badge */}
-                  <div className="absolute top-2 right-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg">
-                    🏆 Our Best Student
+            {/* Money Proof Testimonials - Same as Training Page */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* Testimonial 1 - Mike R. */}
+              <div className="bg-black/60 border-2 border-green-500/30 rounded-2xl p-6 hover:border-green-400 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+                    MR
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base">Mike R.</h4>
+                    <p className="text-gray-400 text-sm">Texas</p>
                   </div>
                 </div>
+                <div className="text-yellow-400 text-2xl font-bold mb-3">⭐⭐⭐⭐⭐</div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  "Finally found a system that works! I was struggling to get clients, but these AI prompts helped me <strong className="text-white">sell my social media management service on Facebook</strong>. Made <strong className="text-green-400">$704</strong> in my first week using these exact prompts!"
+                </p>
+                {/* Money Proof Image */}
                 <div className="text-center">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">AI Trading Success</h3>
-                  <p className="text-green-600 dark:text-green-400 font-bold text-lg">$100,000+</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Me</p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">
-                    "I built my own automated trading system using the AI strategies revealed in this course. What started as a $3,000 account has grown to over $100,000 through consistent AI-powered trades. The strategies taught me how to use AI for market analysis, risk management, and automated execution - turning my passion into a profitable business that runs 24/7."
-                  </p>
-                </div>
-              </div>
-
-
-              {/* Screenshot 3 - $1,366 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-xl transition-all duration-300">
-                <div className="rounded-lg overflow-hidden mb-3">
-                  <img 
-                    src="/images/money2.JPG" 
-                    loading="lazy"
-                    decoding="async"
-                    alt="Profit screenshot showing Marcus's agency success"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Agency Success</h3>
-                  <p className="text-green-600 dark:text-green-400 font-bold text-lg">$1,366</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Marcus</p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">
-                    "Marcus had been learning how to run his agency for months but struggled to land his first paying client. After completing the AI course, he used the outreach and automation techniques to book meetings more consistently. Within a few weeks, he closed his very first client for $1,366 — proof that his agency finally had momentum."
-                  </p>
-                </div>
-              </div>
-
-              {/* Screenshot 4 - $704 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-xl transition-all duration-300">
-                <div className="rounded-lg overflow-hidden mb-3">
                   <img 
                     src="/images/money3.jpg" 
-                    loading="lazy"
-                    decoding="async"
-                    alt="Profit screenshot showing Jordan's content creation success"
-                    className="w-full h-auto object-contain"
+                    alt="Cash App balance showing $704 from social media service sales" 
+                    className="w-full max-w-xs mx-auto rounded-lg border-2 border-green-500/30"
                   />
                 </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Content Creator Success</h3>
-                  <p className="text-green-600 dark:text-green-400 font-bold text-lg">$704</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Jordan</p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">
-                    "Jordan always wanted to start a side hustle online but didn't know where to begin. After going through the AI course, he learned how to use automation tools to create short-form content and manage multiple platforms at once. By growing his pages and selling ads, Jordan made $704 in his very first month — his first real income from content creation — and it gave him the confidence to keep scaling."
-                  </p>
-                </div>
+                <p className="text-gray-500 text-xs mt-3 text-center">Offer: Social media management • Time: 1 week • Result: $704</p>
               </div>
 
-              {/* Screenshot 5 - $5,016 */}
-              <div className="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-xl transition-all duration-300">
-                <div className="rounded-lg overflow-hidden mb-3">
+              {/* Testimonial 2 - Jessica L. */}
+              <div className="bg-black/60 border-2 border-green-500/30 rounded-2xl p-6 hover:border-green-400 transition-all duration-300">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
+                    JL
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base">Jessica L.</h4>
+                    <p className="text-gray-400 text-sm">Florida</p>
+                  </div>
+                </div>
+                <div className="text-yellow-400 text-2xl font-bold mb-3">⭐⭐⭐⭐⭐</div>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
+                  "I was skeptical at first, but this guide changed everything. Used these AI prompts to <strong className="text-white">sell client automation software to a local doctor</strong>. Made <strong className="text-green-400">$5,016</strong> in my first month using these exact prompts!"
+                </p>
+                {/* Money Proof Image */}
+                <div className="text-center">
                   <img 
                     src="/images/money4.JPG" 
-                    loading="lazy"
-                    decoding="async"
-                    alt="Profit screenshot showing Eric's side hustle success"
-                    className="w-full h-auto object-contain"
+                    alt="Cash Balance showing $5,016 from automation software sale" 
+                    className="w-full max-w-xs mx-auto rounded-lg border-2 border-green-500/30"
                   />
                 </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">Side Hustle Success</h3>
-                  <p className="text-green-600 dark:text-green-400 font-bold text-lg">$5,016</p>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">Eric</p>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">
-                    "Eric was looking for a simple way to earn extra income outside of his 9–5. After taking the AI course, he started using automation to flip local services and manage gig work smarter — from lead generation to payment tracking. By streamlining everything through Cash App, Eric pulled in $5,016, showing how quickly AI can turn a side hustle into steady cash flow."
-                  </p>
-                </div>
+                <p className="text-gray-500 text-xs mt-3 text-center">Offer: Client automation software • Time: 1 month • Result: $5,016</p>
               </div>
             </div>
 
