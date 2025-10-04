@@ -53,6 +53,7 @@
     "typescript": "^5"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^14.2.32",
     "@types/bcryptjs": "^2.4.6",
     "@types/jsonwebtoken": "^9.0.10",
     "eslint": "^8",
