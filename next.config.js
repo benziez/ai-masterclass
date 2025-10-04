@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   trailingSlash: true,
   images: {
     unoptimized: true,
@@ -14,6 +13,7 @@ const nextConfig = {
       },
     ],
   },
+  // Remove output: 'export' to enable API routes on Netlify
 }
 
 module.exports = nextConfig
