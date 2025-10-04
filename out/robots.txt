@@ -1,0 +1,7 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /thank-you
+Disallow: /success
+
+Sitemap: https://aimasterclass.info/sitemap.xml
