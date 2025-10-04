@@ -131,7 +131,7 @@ export async function POST(request: Request) {
             }
           } catch (error) {
             console.log(`❌ Error scheduling Day ${day} for:`, email, error)
-            return { day, success: false, error: error.message }
+            return { day, success: false, error: error instanceof Error ? error.message : String(error) }
           }
         })
         
