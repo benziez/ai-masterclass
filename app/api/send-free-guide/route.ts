@@ -102,12 +102,17 @@ export async function POST(request: Request) {
       try {
         const followUpDays = [1, 2, 3, 4, 5, 6, 7]
         
-        // Make all API calls in parallel to avoid timeout issues
-        const schedulingPromises = followUpDays.map(async (day) => {
+        // Make API calls sequentially to avoid timeout issues
+        let successful = 0
+        let failed = 0
+        
+        for (const day of followUpDays) {
           const delayMs = day * 24 * 60 * 60 * 1000 // Convert days to milliseconds
           const scheduledTime = new Date(Date.now() + delayMs).toISOString()
           
           try {
+            console.log(`🔄 Scheduling Day ${day} for:`, email)
+            
             const followUpResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://aimasterclass.info'}/api/schedule-follow-up/`, {
               method: 'POST',
               headers: {
@@ -118,27 +123,26 @@ export async function POST(request: Request) {
                 day: day,
                 delay: delayMs
               }),
+              signal: AbortSignal.timeout(10000) // 10 second timeout
             })
             
             if (followUpResponse.ok) {
               const result = await followUpResponse.json()
               console.log(`✅ Follow-up email Day ${day} scheduled for:`, email, 'at:', scheduledTime, 'ID:', result.messageId)
-              return { day, success: true, messageId: result.messageId }
+              successful++
             } else {
               const error = await followUpResponse.text()
               console.log(`⚠️ Failed to schedule follow-up email Day ${day} for:`, email, 'Error:', error)
-              return { day, success: false, error }
+              failed++
             }
           } catch (error) {
             console.log(`❌ Error scheduling Day ${day} for:`, email, error)
-            return { day, success: false, error: error instanceof Error ? error.message : String(error) }
+            failed++
           }
-        })
-        
-        // Wait for all scheduling attempts to complete
-        const results = await Promise.all(schedulingPromises)
-        const successful = results.filter(r => r.success).length
-        const failed = results.filter(r => !r.success).length
+          
+          // Small delay between calls to prevent rate limiting
+          await new Promise(resolve => setTimeout(resolve, 500))
+        }
         
         console.log(`📧 Email scheduling complete: ${successful} successful, ${failed} failed for:`, email)
         
