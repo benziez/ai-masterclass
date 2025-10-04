@@ -121,27 +121,6 @@ export default function OptInPage() {
           <p className="text-sm text-gray-500 mt-2">Don't worry, it's free.</p>
         </div>
 
-        {/* What You'll Learn */}
-        <div className="max-w-2xl mx-auto mb-8">
-          <h3 className="text-xl font-bold text-white text-center mb-4">What You'll Learn:</h3>
-          <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-            <ul className="space-y-3 text-gray-300">
-              <li className="flex items-start">
-                <span className="text-green-400 mr-3 mt-1">✓</span>
-                <span>The easiest AI side hustles to start right now</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-400 mr-3 mt-1">✓</span>
-                <span>How to use ChatGPT + simple tools to deliver real client work</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-400 mr-3 mt-1">✓</span>
-                <span>The fastest path to $5K/month — even with zero followers</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
         {/* Signup Form */}
         <div id="signup-form" className="max-w-md mx-auto mb-8">
           <form onSubmit={handleSubmit} className="bg-gray-800 rounded-xl p-6 border border-gray-700">
@@ -185,6 +164,33 @@ export default function OptInPage() {
               </p>
             </div>
           </form>
+        </div>
+
+        {/* What You'll Learn */}
+        <div className="max-w-2xl mx-auto mb-8">
+          <h3 className="text-xl font-bold text-white text-center mb-4">What You'll Learn:</h3>
+          <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <span>The easiest AI side hustles to start right now</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <span>How to use ChatGPT + simple tools to deliver real client work</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <span>The fastest path to $5K/month — even with zero followers</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Real Results Header */}
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-bold text-white mb-2">REAL RESULTS FROM OUR STUDENTS</h2>
+          <p className="text-gray-400">See how others are already making money with AI</p>
         </div>
 
         {/* Money Proof Testimonials */}
