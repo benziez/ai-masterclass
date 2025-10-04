@@ -100,7 +100,7 @@ export async function POST(request: Request) {
       
       // Schedule follow-up emails using Resend's native scheduling
       try {
-        const followUpDays = [1, 3, 7]
+        const followUpDays = [2, 3, 7]
         
         for (const day of followUpDays) {
           const delayMs = day * 24 * 60 * 60 * 1000 // Convert days to milliseconds
