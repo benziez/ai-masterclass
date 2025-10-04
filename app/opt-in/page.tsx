@@ -100,6 +100,13 @@ export default function OptInPage() {
           </div>
         </div>
 
+        {/* Who It's For */}
+        <div className="text-center mb-6">
+          <p className="text-lg text-gray-300 font-medium">
+            Perfect for students, freelancers, and creators who want to build their first AI-powered income stream this month.
+          </p>
+        </div>
+
         {/* CTA Button */}
         <div className="text-center mb-8">
           <button
@@ -112,6 +119,27 @@ export default function OptInPage() {
             Unlock Free Training Video! &gt;&gt;
           </button>
           <p className="text-sm text-gray-500 mt-2">Don't worry, it's free.</p>
+        </div>
+
+        {/* What You'll Learn */}
+        <div className="max-w-2xl mx-auto mb-8">
+          <h3 className="text-xl font-bold text-white text-center mb-4">What You'll Learn:</h3>
+          <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
+            <ul className="space-y-3 text-gray-300">
+              <li className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <span>The easiest AI side hustles to start right now</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <span>How to use ChatGPT + simple tools to deliver real client work</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-green-400 mr-3 mt-1">✓</span>
+                <span>The fastest path to $5K/month — even with zero followers</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Signup Form */}
