@@ -103,7 +103,7 @@ export async function POST(request: Request) {
         const followUpDays = [1, 3, 7]
         
         for (const day of followUpDays) {
-          const followUpResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://aimasterclass.info'}/api/send-follow-up`, {
+          const followUpResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://aimasterclass.info'}/api/send-follow-up/`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
