@@ -43,59 +43,15 @@ const getEmailTemplate = (day: number, email: string) => {
       subject: "Most people won't do this… that's why they stay broke",
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Hey there,
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            I hear this all the time: "I'm not technical. Can I really do this?"
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Here's the truth: you don't need coding skills, fancy tools, or hours of free time.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Inside AI Masterclass, everything is broken into plug-and-play templates.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Just copy → paste → edit.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Follow the prompts.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 25px;">
-            Launch your first AI income stream.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            If you can write an email, you can follow this system.
-          </p>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            So don't let "I'm not techy" hold you back.
-          </p>
-
-          <div style="text-align: center; margin-bottom: 30px;">
-            <a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" 
-               style="display: inline-block; background: linear-gradient(135deg, #dc2626, #b91c1c); color: white; padding: 15px 30px; text-decoration: none; border-radius: 10px; font-weight: bold; font-size: 16px; box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);">
-              👉 Enroll now and see how simple it actually is
-            </a>
-          </div>
-
-          <p style="color: #374151; font-size: 16px; line-height: 1.6; margin-bottom: 30px;">
-            – AI Masterclass
-          </p>
-
-          <div style="border-top: 1px solid #e5e7eb; padding-top: 15px; text-align: center;">
-            <p style="color: #9ca3af; font-size: 12px;">
-              This email was sent to ${email} because you requested your free AI guide.<br>
-              <a href="#" style="color: #6b7280;">Unsubscribe</a> | <a href="#" style="color: #6b7280;">Update Preferences</a>
-            </p>
-          </div>
+          <h1 style="color: #2563eb; font-size: 24px; margin-bottom: 15px;">Most people won't do this… that's why they stay broke</h1>
+          <p>Hey there,</p>
+          <p>Here's the truth: 95% of people will watch the training, get excited, then do nothing.</p>
+          <p>They'll make excuses. "I'm too busy." "I need to learn more first." "I'll start next month."</p>
+          <p>Meanwhile, the 5% who actually take action are already making money.</p>
+          <p>Which group do you want to be in?</p>
+          <p>The difference isn't talent or luck. It's simply taking action on what you learn.</p>
+          <p><a href="${process.env.NEXT_PUBLIC_SITE_URL}/get-course" style="background: #4F46E5; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Stop Making Excuses →</a></p>
+          <p>Don't be like everyone else,<br>Ben</p>
         </div>
       `
     },
