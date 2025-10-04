@@ -98,15 +98,35 @@ export async function POST(request: Request) {
     } else {
       console.log('✅ Free guide email sent successfully:', email)
       
-      // For now, just log that follow-up emails should be scheduled
-      // In a production environment, you'd use a proper job scheduler like:
-      // - Vercel Cron Jobs
-      // - Netlify Scheduled Functions  
-      // - External service like Zapier or Make.com
-      console.log('📧 Follow-up emails should be scheduled for:', email, 'on days 1, 3, and 7')
-      
-      // TODO: Implement proper email scheduling
-      // For now, users get the welcome email and can be manually added to follow-up sequences
+      // Schedule follow-up emails using Resend's native scheduling
+      try {
+        const followUpDays = [1, 3, 7]
+        
+        for (const day of followUpDays) {
+          const delayMs = day * 24 * 60 * 60 * 1000 // Convert days to milliseconds
+          const scheduledTime = new Date(Date.now() + delayMs).toISOString()
+          
+          const followUpResponse = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL || 'https://aimasterclass.info'}/api/schedule-follow-up/`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              email: email,
+              day: day,
+              delay: delayMs
+            }),
+          })
+          
+          if (followUpResponse.ok) {
+            console.log(`✅ Follow-up email Day ${day} scheduled for:`, email, 'at:', scheduledTime)
+          } else {
+            console.log(`⚠️ Failed to schedule follow-up email Day ${day} for:`, email)
+          }
+        }
+      } catch (followUpError) {
+        console.log('⚠️ Error scheduling follow-up emails:', followUpError)
+      }
     }
 
     // Always return success - user gets instant download regardless of email delivery
