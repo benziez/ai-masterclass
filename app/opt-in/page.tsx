@@ -46,11 +46,6 @@ export default function OptInPage() {
 
       {/* Main Content */}
       <div className="max-w-4xl mx-auto px-4 py-8">
-        {/* Sub-header */}
-        <div className="text-center mb-6">
-          <p className="text-lg text-gray-300 font-medium">24 Year Old Entrepreneur Reveals:</p>
-        </div>
-
         {/* Main Headline */}
         <div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
