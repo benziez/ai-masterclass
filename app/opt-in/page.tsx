@@ -263,7 +263,7 @@ export default function OptInPage() {
         {/* Urgency/Scarcity */}
         <div className="text-center mt-8">
           <div className="inline-flex items-center bg-red-900/30 text-red-300 px-4 py-2 rounded-full text-sm font-semibold border border-red-700">
-            ⏰ Limited Time: Only 47 spots left this month
+            ⏰ Limited Time: Only 7 spots left this month
           </div>
         </div>
       </div>
