@@ -20,7 +20,7 @@ export default function OptInPage() {
     }
     setLoading(true)
     try {
-      await fetch('/api/send-free-guide', {
+      await fetch('/api/send-free-guide/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
