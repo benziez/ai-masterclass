@@ -162,23 +162,59 @@ export default function OptInPage() {
         </div>
 
         {/* What You'll Learn */}
-        <div className="max-w-2xl mx-auto mb-8">
-          <h3 className="text-xl font-bold text-white text-center mb-4">What You'll Learn:</h3>
-          <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
-            <ul className="space-y-3 text-gray-300">
-              <li className="flex items-start">
-                <span className="text-green-400 mr-3 mt-1">✓</span>
-                <span>The easiest AI side hustles to start right now</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-400 mr-3 mt-1">✓</span>
-                <span>How to use ChatGPT + simple tools to deliver real client work</span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-green-400 mr-3 mt-1">✓</span>
-                <span>The fastest path to $5K/month — even with zero followers</span>
-              </li>
-            </ul>
+        <div className="max-w-3xl mx-auto mb-8">
+          <h3 className="text-2xl font-bold text-white text-center mb-6">🔥 What You'll Discover Inside:</h3>
+          <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl p-8 border border-gray-700 shadow-2xl">
+            <div className="grid md:grid-cols-1 gap-6">
+              <div className="bg-gray-700/50 rounded-xl p-6 border-l-4 border-green-500">
+                <div className="flex items-start">
+                  <div className="bg-green-500 rounded-full p-2 mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-lg mb-2">The 3 AI Side Hustles That Print Money in 2025</h4>
+                    <p className="text-gray-300">Social media management, AI art sales, and content creation - the exact businesses our students used to make $2.3M+ in profits</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gray-700/50 rounded-xl p-6 border-l-4 border-blue-500">
+                <div className="flex items-start">
+                  <div className="bg-blue-500 rounded-full p-2 mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-lg mb-2">50+ Copy-Paste AI Prompts That Close Deals</h4>
+                    <p className="text-gray-300">The exact prompts that helped Marcus land $1,366 in his first week and Jordan make $704 selling AI art - no guessing, just results</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gray-700/50 rounded-xl p-6 border-l-4 border-purple-500">
+                <div className="flex items-start">
+                  <div className="bg-purple-500 rounded-full p-2 mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-lg mb-2">The "No Audience" Client Acquisition System</h4>
+                    <p className="text-gray-300">How to get paying clients without social media followers, email lists, or expensive ads - just AI + the right outreach strategy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-6 text-center">
+              <div className="inline-flex items-center bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-full font-bold">
+                <span className="mr-2">💰</span>
+                <span>Average student makes $3,200 in their first month</span>
+              </div>
+            </div>
           </div>
         </div>
 
