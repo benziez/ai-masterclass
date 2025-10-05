@@ -72,13 +72,44 @@ export default function TrainingPage() {
             </div>
 
             {/* Price Section */}
-            <div className="bg-gradient-to-r from-red-900/30 to-orange-900/30 rounded-xl p-8 mb-10 border border-red-700 shadow-lg">
-              <div className="text-center">
-                <div className="text-sm text-gray-400 mb-2">Regular Price:</div>
-                <div className="text-3xl text-gray-400 line-through mb-3">$1,497</div>
-                <div className="text-sm text-red-300 mb-4">Today Only:</div>
-                <div className="text-5xl sm:text-6xl font-black text-green-400 mb-3">$197</div>
-                <div className="text-xl text-green-300 font-bold">Save $1,300</div>
+            <div className="relative bg-gradient-to-br from-red-900/40 via-orange-900/30 to-yellow-900/20 rounded-2xl p-8 mb-10 border-2 border-red-500 shadow-2xl overflow-hidden">
+              {/* Animated background elements */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/20 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-500/20 rounded-full blur-2xl"></div>
+              
+              <div className="relative text-center">
+                {/* Urgency Header */}
+                <div className="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+                  🔥 LIMITED TIME OFFER
+                </div>
+                
+                {/* Price Comparison */}
+                <div className="mb-6">
+                  <div className="text-sm text-gray-300 mb-1">What others charge for this:</div>
+                  <div className="text-2xl text-gray-400 line-through mb-2">$1,497</div>
+                  <div className="text-sm text-red-300 font-semibold">Your price today:</div>
+                </div>
+                
+                {/* Main Price */}
+                <div className="relative mb-4">
+                  <div className="text-6xl sm:text-7xl font-black text-green-400 mb-2 drop-shadow-lg">
+                    $197
+                  </div>
+                  <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full transform rotate-12">
+                    SAVE 87%
+                  </div>
+                </div>
+                
+                {/* Savings Breakdown */}
+                <div className="bg-green-900/30 rounded-xl p-4 mb-4 border border-green-500">
+                  <div className="text-green-300 font-bold text-lg mb-1">You Save $1,300 Today!</div>
+                  <div className="text-sm text-gray-300">That's like getting paid $1,300 to start your AI business</div>
+                </div>
+                
+                {/* Value Reminder */}
+                <div className="text-sm text-gray-300">
+                  <span className="text-yellow-400 font-semibold">Less than $1 per day</span> to build a $5K-$15K/month business
+                </div>
               </div>
             </div>
 
