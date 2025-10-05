@@ -30,17 +30,14 @@ export default function TrainingPage() {
         </div>
 
         <div className="relative mx-auto max-w-3xl w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/40 mb-10">
-          {/* Placeholder video frame */}
-          <div className="absolute inset-0 grid place-items-center text-gray-400">
-            <div className="text-center">
-              <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-white/10 grid place-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
-                  <path d="M4.5 5.653c0-1.38 1.483-2.246 2.69-1.59l11.54 6.347c1.273.7 1.273 2.48 0 3.18L7.19 19.937c-1.207.656-2.69-.21-2.69-1.59V5.654z" />
-                </svg>
-              </div>
-              <p className="text-sm">Your VSL placeholder</p>
-            </div>
-          </div>
+          <iframe
+            src="https://player.vimeo.com/video/1124655262?autoplay=1&muted=1&controls=1&title=0&byline=0&portrait=0&responsive=1"
+            className="absolute inset-0 w-full h-full"
+            frameBorder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowFullScreen
+            title="AI Masterclass Training Video"
+          />
         </div>
 
         {/* Upsell Section */}
