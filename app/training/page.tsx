@@ -52,22 +52,61 @@ export default function TrainingPage() {
             </p>
 
             {/* Value Stack */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 max-w-2xl mx-auto">
-              <div className="flex items-center text-gray-300">
-                <span className="text-green-400 mr-3 text-xl">✅</span>
-                <span>50+ Advanced AI Prompts</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
+              <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600 hover:border-green-500 transition-colors">
+                <div className="flex items-start">
+                  <div className="bg-green-500 rounded-full p-2 mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-lg mb-2">50+ Copy-Paste AI Prompts</h3>
+                    <p className="text-gray-300 text-sm">The exact prompts that helped Marcus make $1,366 in his first week and Jordan earn $704 selling AI art</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center text-gray-300">
-                <span className="text-green-400 mr-3 text-xl">✅</span>
-                <span>6 Complete Modules</span>
+              
+              <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600 hover:border-blue-500 transition-colors">
+                <div className="flex items-start">
+                  <div className="bg-blue-500 rounded-full p-2 mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-lg mb-2">6 Complete Business Modules</h3>
+                    <p className="text-gray-300 text-sm">From picking your niche to landing your first $5K month - everything you need to build a profitable AI business</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center text-gray-300">
-                <span className="text-green-400 mr-3 text-xl">✅</span>
-                <span>Lifetime Access</span>
+              
+              <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600 hover:border-purple-500 transition-colors">
+                <div className="flex items-start">
+                  <div className="bg-purple-500 rounded-full p-2 mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-lg mb-2">Lifetime Access + Updates</h3>
+                    <p className="text-gray-300 text-sm">Get all future AI tools, prompts, and strategies we add - no monthly fees, no expiration date</p>
+                  </div>
+                </div>
               </div>
-              <div className="flex items-center text-gray-300">
-                <span className="text-green-400 mr-3 text-xl">✅</span>
-                <span>30-Day Money Back</span>
+              
+              <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600 hover:border-orange-500 transition-colors">
+                <div className="flex items-start">
+                  <div className="bg-orange-500 rounded-full p-2 mr-4 flex-shrink-0">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-lg mb-2">30-Day Money-Back Guarantee</h3>
+                    <p className="text-gray-300 text-sm">Try everything risk-free. If you don't make money in 30 days, we'll refund every penny - no questions asked</p>
+                  </div>
+                </div>
               </div>
             </div>
 
