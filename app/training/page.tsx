@@ -31,10 +31,10 @@ export default function TrainingPage() {
 
         <div className="relative mx-auto max-w-3xl w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/40 mb-10">
           <iframe
-            src="https://player.vimeo.com/video/1124655262?autoplay=1&muted=1&controls=1&title=0&byline=0&portrait=0&responsive=1"
+            src="https://player.vimeo.com/video/1124655262?controls=1&title=0&byline=0&portrait=0&responsive=1"
             className="absolute inset-0 w-full h-full"
             frameBorder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
+            allow="fullscreen; picture-in-picture"
             allowFullScreen
             title="AI Masterclass Training Video"
           />
