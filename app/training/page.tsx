@@ -1,6 +1,28 @@
 import Link from 'next/link'
+import { useEffect } from 'react'
+
+// Declare fbq function for TypeScript
+declare global {
+  interface Window {
+    fbq: (action: string, event: string, data?: any) => void;
+  }
+}
 
 export default function TrainingPage() {
+  useEffect(() => {
+    // Fire Lead event after component mounts
+    const fireLead = () => {
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('track', 'Lead');
+        console.log('Facebook Pixel Lead event fired');
+      } else {
+        // Retry if fbq not ready yet
+        setTimeout(fireLead, 100);
+      }
+    };
+    
+    fireLead();
+  }, []);
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-purple-800 text-white">
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
