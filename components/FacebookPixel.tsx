@@ -23,7 +23,7 @@ export default function FacebookPixel() {
       }
 
       // Check if already loaded
-      if (window.fbq) {
+      if (typeof window.fbq === 'function') {
         console.log('🔧 FacebookPixel: Pixel already loaded')
         return
       }
