@@ -1,30 +1,23 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect } from 'react'
 import Head from 'next/head'
 
 export default function TrainingPage() {
-  useEffect(() => {
-    // Fire Lead event on training page (PageView is already handled by layout)
-    const fireLeadEvent = () => {
-      if (typeof window !== 'undefined' && window.fbq) {
-        console.log('Firing Lead event on training page...');
-        window.fbq('track', 'Lead');
-        console.log('Lead event fired!');
-      } else {
-        // Retry if fbq not ready yet
-        setTimeout(fireLeadEvent, 500);
-      }
-    };
-    
-    // Try multiple times to ensure it fires
-    setTimeout(fireLeadEvent, 1000);
-    setTimeout(fireLeadEvent, 2000);
-    setTimeout(fireLeadEvent, 3000);
-  }, []);
   return (
-    <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-purple-800 text-white">
+    <>
+      <Head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined' && window.fbq) {
+                window.fbq('track', 'Lead');
+              }
+            `,
+          }}
+        />
+      </Head>
+      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-purple-800 text-white">
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">Your Free Training is Unlocked 🎉</h1>
         <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
@@ -308,7 +301,8 @@ export default function TrainingPage() {
           </div>
         </div>
       </section>
-    </main>
+      </main>
+    </>
   )
 }
 
