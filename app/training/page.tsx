@@ -12,20 +12,26 @@ export default function TrainingPage() {
   useEffect(() => {
     // Fire Lead event after component mounts
     const fireLead = () => {
+      console.log('🔍 Checking for Facebook pixel...');
+      console.log('Window object:', typeof window);
+      console.log('fbq function:', typeof window?.fbq);
+      
       if (typeof window !== 'undefined' && window.fbq) {
+        console.log('🚀 Firing Facebook Lead event...');
         window.fbq('track', 'Lead');
         console.log('✅ Facebook Pixel Lead event fired successfully');
         // Temporary alert to confirm it's working
         alert('Facebook Lead pixel fired! Check console for details.');
       } else {
         console.log('⚠️ Facebook Pixel not ready yet, retrying...');
+        console.log('fbq available:', !!window?.fbq);
         // Retry if fbq not ready yet
         setTimeout(fireLead, 100);
       }
     };
     
     // Add a small delay to ensure page is fully loaded
-    setTimeout(fireLead, 500);
+    setTimeout(fireLead, 1000);
   }, []);
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-purple-800 text-white">
