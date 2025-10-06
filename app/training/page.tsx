@@ -17,9 +17,15 @@ export default function TrainingPage() {
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '2455252148193058');
-      fbq('track', 'PageView');
-      fbq('track', 'Lead');
+      
+      // Wait for pixel to load, then fire events
+      setTimeout(function() {
+        console.log('Firing Facebook pixel events...');
+        fbq('init', '2455252148193058');
+        fbq('track', 'PageView');
+        fbq('track', 'Lead');
+        console.log('Facebook pixel events fired!');
+      }, 1000);
     `;
     document.head.appendChild(script);
   }, []);
