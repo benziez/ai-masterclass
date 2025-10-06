@@ -11,15 +11,24 @@ declare global {
 
 export default function FacebookPixel() {
   useEffect(() => {
+    console.log('🔧 FacebookPixel component: Starting to load...')
+    
     // Load Facebook pixel script
     const loadFacebookPixel = () => {
-      if (typeof window === 'undefined') return
+      console.log('🔧 FacebookPixel: loadFacebookPixel function called')
+      
+      if (typeof window === 'undefined') {
+        console.log('🔧 FacebookPixel: Window is undefined, skipping')
+        return
+      }
 
       // Check if already loaded
       if (window.fbq) {
-        console.log('Facebook Pixel already loaded')
+        console.log('🔧 FacebookPixel: Pixel already loaded')
         return
       }
+
+      console.log('🔧 FacebookPixel: Creating and loading script...')
 
       // Create and load the script
       const script = document.createElement('script')
@@ -34,9 +43,10 @@ export default function FacebookPixel() {
         'https://connect.facebook.net/en_US/fbevents.js');
         fbq('init', '2455252148193058');
         fbq('track', 'PageView');
-        console.log('Facebook Pixel loaded and initialized');
+        console.log('🔧 FacebookPixel: Script executed, pixel should be loaded');
       `
       document.head.appendChild(script)
+      console.log('🔧 FacebookPixel: Script added to head')
 
       // Add noscript fallback
       const noscript = document.createElement('noscript')
@@ -45,6 +55,7 @@ export default function FacebookPixel() {
         src="https://www.facebook.com/tr?id=2455252148193058&ev=PageView&noscript=1" />
       `
       document.head.appendChild(noscript)
+      console.log('🔧 FacebookPixel: Noscript fallback added')
     }
 
     // Load pixel after a short delay
