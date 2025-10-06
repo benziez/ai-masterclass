@@ -14,15 +14,12 @@ export async function POST(request: Request) {
     // For now, we'll just send emails and manually add contacts to audience
     console.log('📧 Processing signup for:', email)
 
-    // Add to Resend audience for future communications
+    // ✅ Automatically add new signup to Resend Audience
     try {
-      const { Resend } = await import('resend')
-      const resend = new Resend(process.env.RESEND_API_KEY)
-      
       await resend.contacts.create({
         email: email,
         firstName: firstName || 'there',
-        audienceId: 'general'
+        audienceId: '5b82f317-6750-4c36-9e45-56ae3fe8d597' // Your General audience ID
       })
       
       console.log('✅ Contact added to Resend audience:', email)
