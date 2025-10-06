@@ -15,6 +15,8 @@ export default function TrainingPage() {
       if (typeof window !== 'undefined' && window.fbq) {
         window.fbq('track', 'Lead');
         console.log('✅ Facebook Pixel Lead event fired successfully');
+        // Temporary alert to confirm it's working
+        alert('Facebook Lead pixel fired! Check console for details.');
       } else {
         console.log('⚠️ Facebook Pixel not ready yet, retrying...');
         // Retry if fbq not ready yet
