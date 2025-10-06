@@ -7,13 +7,21 @@ import Head from 'next/head'
 export default function TrainingPage() {
   useEffect(() => {
     // Fire Lead event on training page (PageView is already handled by layout)
-    setTimeout(() => {
+    const fireLeadEvent = () => {
       if (typeof window !== 'undefined' && window.fbq) {
         console.log('Firing Lead event on training page...');
         window.fbq('track', 'Lead');
         console.log('Lead event fired!');
+      } else {
+        // Retry if fbq not ready yet
+        setTimeout(fireLeadEvent, 500);
       }
-    }, 1000);
+    };
+    
+    // Try multiple times to ensure it fires
+    setTimeout(fireLeadEvent, 1000);
+    setTimeout(fireLeadEvent, 2000);
+    setTimeout(fireLeadEvent, 3000);
   }, []);
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-purple-800 text-white">
