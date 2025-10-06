@@ -14,14 +14,16 @@ export default function TrainingPage() {
     const fireLead = () => {
       if (typeof window !== 'undefined' && window.fbq) {
         window.fbq('track', 'Lead');
-        console.log('Facebook Pixel Lead event fired');
+        console.log('✅ Facebook Pixel Lead event fired successfully');
       } else {
+        console.log('⚠️ Facebook Pixel not ready yet, retrying...');
         // Retry if fbq not ready yet
         setTimeout(fireLead, 100);
       }
     };
     
-    fireLead();
+    // Add a small delay to ensure page is fully loaded
+    setTimeout(fireLead, 500);
   }, []);
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-purple-800 text-white">
