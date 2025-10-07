@@ -200,7 +200,7 @@ export default function TrainingPage() {
                 {/* Price Comparison */}
                 <div className="mb-6">
                   <div className="text-sm text-gray-400 mb-1">What others charge for this:</div>
-                  <div className="text-2xl text-gray-500 line-through mb-2">$1,497</div>
+                  <div className="text-2xl text-gray-500 line-through mb-2">$127</div>
                   <div className="text-sm text-cyan-400 font-semibold">Your price today:</div>
                 </div>
                 
@@ -219,8 +219,8 @@ export default function TrainingPage() {
                 
                 {/* Value Breakdown */}
                 <div className="bg-cyan-900/20 rounded-xl p-4 mb-4 border border-cyan-500/40">
-                  <div className="text-cyan-300 font-bold text-lg mb-1">You Save $1,470 Today!</div>
-                  <div className="text-sm text-gray-300">That's like getting paid $1,470 to start your AI business</div>
+                  <div className="text-cyan-300 font-bold text-lg mb-1">You Save $100 Today!</div>
+                  <div className="text-sm text-gray-300">That's like getting paid $100 to start your AI business</div>
                 </div>
                 
                 {/* Value Reminder */}
