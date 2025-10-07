@@ -1,50 +1,54 @@
 'use client'
 
 import Link from 'next/link'
-import Head from 'next/head'
+import Script from 'next/script'
 
 export default function TrainingPage() {
   return (
     <>
-      <Head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+      <Script
+        id="facebook-lead"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            // Wait for fbq to be available
+            function trackLead() {
               if (typeof window !== 'undefined' && window.fbq) {
                 window.fbq('track', 'Lead');
+                console.log('Lead event fired!');
+              } else {
+                // Retry after a short delay
+                setTimeout(trackLead, 100);
               }
-            `,
-          }}
-        />
-      </Head>
-      <main className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-900 to-purple-800 text-white">
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24 text-center">
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">Your Free Training is Unlocked 🎉</h1>
-        <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-          Watch the private training below. This is the fastest way to launch your AI side hustle using a simple 3-step system.
+            }
+            trackLead();
+          `,
+        }}
+      />
+      <main className="min-h-screen bg-black text-white">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 text-center">
+        {/* Top Text */}
+        <div className="mb-2">
+          <p className="text-cyan-400 text-xs sm:text-sm font-bold tracking-wide">
+            💰💸 FOR ANYONE LOOKING TO <span className="text-cyan-300">MAKE EXTRA INCOME</span>
+          </p>
+        </div>
+        
+        <div className="mb-8">
+          <p className="text-cyan-400 text-xs sm:text-sm font-bold tracking-wide">
+            USING AI IN A FEW HOURS PER WEEK
+          </p>
+        </div>
+
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-5 leading-[1.1] max-w-5xl mx-auto tracking-tight">
+          HOW STUDENTS ARE BUILDING $5K-$15K/MONTH AI BUSINESSES WITHOUT CODING OR EXPERIENCE
+        </h1>
+
+        <p className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-medium">
+          The Complete System That Helped 2,000+ People Launch Profitable AI Side Hustles
         </p>
 
-        {/* Social Proof */}
-        <div className="bg-green-900/20 border border-green-700 rounded-xl p-4 mb-6 max-w-2xl mx-auto">
-          <div className="flex items-center justify-center space-x-2">
-            <span className="text-green-400 text-2xl">👥</span>
-            <p className="text-green-300 font-semibold">
-              Join <span className="text-white font-black">2,000+ students</span> who've already built profitable AI businesses
-            </p>
-          </div>
-        </div>
-
-        {/* Urgency */}
-        <div className="bg-red-900/20 border border-red-700 rounded-xl p-4 mb-10 max-w-2xl mx-auto">
-          <div className="flex items-center justify-center space-x-2">
-            <span className="text-red-400 text-2xl">⏰</span>
-            <p className="text-red-300 font-semibold">
-              Only <span className="text-white font-black">7 spots left</span> this month - enrollment closes soon
-            </p>
-          </div>
-        </div>
-
-        <div className="relative mx-auto max-w-3xl w-full aspect-video rounded-2xl overflow-hidden border border-white/10 bg-black/40 mb-10">
+        <div className="relative mx-auto max-w-4xl w-full aspect-video rounded-3xl overflow-hidden border-2 border-gray-800 bg-black mb-6 shadow-2xl shadow-cyan-500/10">
           <iframe
             src="https://player.vimeo.com/video/1124655262?controls=1&title=0&byline=0&portrait=0&responsive=1"
             className="absolute inset-0 w-full h-full"
@@ -55,9 +59,41 @@ export default function TrainingPage() {
           />
         </div>
 
+        {/* CTA Badge */}
+        <div className="inline-flex items-center gap-2 bg-cyan-500 text-black px-8 py-4 rounded-full text-lg font-black mb-16 shadow-lg shadow-cyan-500/30 hover:bg-cyan-400 transition-all">
+          ✅ Hit Play on The Video Above
+        </div>
+
+        {/* Value Proposition */}
+        <div className="max-w-4xl mx-auto mb-20 text-left bg-gray-900/50 border border-gray-800 rounded-3xl p-8 md:p-12">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-10 text-center leading-tight">
+            WHAT IS <span className="text-cyan-400">AI MASTERCLASS</span>?
+          </h2>
+          
+          <p className="text-lg sm:text-xl text-gray-200 mb-6 leading-relaxed">
+            AI Masterclass is the complete system I built after making my first $100K+ using AI strategies. This is everything I wish someone had shown me when I was just getting started.
+          </p>
+
+          <p className="text-lg sm:text-xl text-gray-200 mb-6 leading-relaxed">
+            Instead of spending months trying to figure out what actually works, you get the exact blueprint that's already helped 2,000+ students build profitable AI side hustles - no coding, no tech background, no expensive tools required.
+          </p>
+
+          <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
+            The reality is simple: businesses need help with AI right now. They need automation, content creation, lead generation, and they're willing to pay for it. The problem? Most people have no idea where to start or what to actually offer.
+          </p>
+
+          <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
+            That's where AI Masterclass comes in. You'll learn the exact AI tools, prompts, and strategies that students are using to land $500-$5,000/month clients. No fluff, no theory - just proven systems that work in 2025.
+          </p>
+
+          <p className="text-lg sm:text-xl text-gray-200 mb-0 leading-relaxed">
+            My students like Marcus made $1,366 in his first week using the outreach templates. Jordan earned $704 with AI art. And I personally built my trading account to over $100,000 using the strategies inside. This stuff actually works when you follow the system.
+          </p>
+        </div>
+
         {/* Upsell Section */}
         <div className="max-w-5xl mx-auto mb-10">
-          <div className="bg-gray-800/50 backdrop-blur rounded-2xl p-8 md:p-12 border border-gray-700 shadow-2xl">
+          <div className="bg-gray-900 border-2 border-gray-800 rounded-2xl p-8 md:p-12 shadow-2xl">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6">
               🎯 Ready to Get the Complete System?
             </h2>
@@ -67,102 +103,102 @@ export default function TrainingPage() {
             </p>
 
             {/* Value Stack */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
-              <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600 hover:border-green-500 transition-colors">
-                <div className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-10 max-w-4xl mx-auto">
+              <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-cyan-500/30 hover:border-cyan-500/60 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="bg-cyan-500 rounded-full p-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-lg mb-2">50+ Copy-Paste AI Prompts</h3>
-                    <p className="text-gray-300 text-sm">The exact prompts that helped Marcus make $1,366 in his first week and Jordan earn $704 selling AI art</p>
+                    <h3 className="text-white font-bold text-xl mb-2">50+ Copy-Paste AI Prompts</h3>
+                    <p className="text-gray-400 text-base leading-relaxed">The exact prompts that helped Marcus make $1,366 in his first week and Jordan earn $704 selling AI art</p>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600 hover:border-blue-500 transition-colors">
-                <div className="flex items-start">
-                  <div className="bg-blue-500 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-cyan-500/30 hover:border-cyan-500/60 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="bg-cyan-500 rounded-full p-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-lg mb-2">6 Complete Business Modules</h3>
-                    <p className="text-gray-300 text-sm">From picking your niche to landing your first $5K month - everything you need to build a profitable AI business</p>
+                    <h3 className="text-white font-bold text-xl mb-2">6 Complete Business Modules</h3>
+                    <p className="text-gray-400 text-base leading-relaxed">From picking your niche to landing your first $5K month - everything you need to build a profitable AI business</p>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600 hover:border-purple-500 transition-colors">
-                <div className="flex items-start">
-                  <div className="bg-purple-500 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-cyan-500/30 hover:border-cyan-500/60 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="bg-cyan-500 rounded-full p-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-lg mb-2">Lifetime Access + Updates</h3>
-                    <p className="text-gray-300 text-sm">Get all future AI tools, prompts, and strategies we add - no monthly fees, no expiration date</p>
+                    <h3 className="text-white font-bold text-xl mb-2">Lifetime Access + Updates</h3>
+                    <p className="text-gray-400 text-base leading-relaxed">Get all future AI tools, prompts, and strategies we add - no monthly fees, no expiration date</p>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-gray-700/30 rounded-xl p-6 border border-gray-600 hover:border-orange-500 transition-colors">
-                <div className="flex items-start">
-                  <div className="bg-orange-500 rounded-full p-2 mr-4 flex-shrink-0">
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+              <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-cyan-500/30 hover:border-cyan-500/60 transition-all hover:shadow-lg hover:shadow-cyan-500/20">
+                <div className="flex items-start gap-4">
+                  <div className="bg-cyan-500 rounded-full p-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-lg mb-2">30-Day Money-Back Guarantee</h3>
-                    <p className="text-gray-300 text-sm">Try everything risk-free. If you don't make money in 30 days, we'll refund every penny - no questions asked</p>
+                    <h3 className="text-white font-bold text-xl mb-2">30-Day Money-Back Guarantee</h3>
+                    <p className="text-gray-400 text-base leading-relaxed">Try everything risk-free. If you don't make money in 30 days, we'll refund every penny - no questions asked</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Price Section */}
-            <div className="relative bg-gradient-to-br from-red-900/40 via-orange-900/30 to-yellow-900/20 rounded-2xl p-8 mb-10 border-2 border-red-500 shadow-2xl overflow-hidden">
+            <div className="relative bg-gray-900/50 rounded-2xl p-8 mb-10 border-2 border-cyan-500/30 shadow-2xl overflow-hidden">
               {/* Animated background elements */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-red-500/20 rounded-full blur-3xl"></div>
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-orange-500/20 rounded-full blur-2xl"></div>
+              <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl"></div>
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-cyan-500/10 rounded-full blur-2xl"></div>
               
               <div className="relative text-center">
                 {/* Urgency Header */}
-                <div className="inline-flex items-center bg-red-600 text-white px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
+                <div className="inline-flex items-center bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-bold mb-4 border border-cyan-500/40">
                   🔥 LIMITED TIME OFFER
                 </div>
                 
                 {/* Price Comparison */}
                 <div className="mb-6">
-                  <div className="text-sm text-gray-300 mb-1">What others charge for this:</div>
-                  <div className="text-2xl text-gray-400 line-through mb-2">$1,497</div>
-                  <div className="text-sm text-red-300 font-semibold">Your price today:</div>
+                  <div className="text-sm text-gray-400 mb-1">What others charge for this:</div>
+                  <div className="text-2xl text-gray-500 line-through mb-2">$1,497</div>
+                  <div className="text-sm text-cyan-400 font-semibold">Your price today:</div>
                 </div>
                 
                 {/* Main Price */}
                 <div className="relative mb-4">
-                  <div className="text-6xl sm:text-7xl font-black text-green-400 mb-2 drop-shadow-lg">
+                  <div className="text-6xl sm:text-7xl font-black text-cyan-400 mb-2 drop-shadow-lg">
                     $197
                   </div>
-                  <div className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full transform rotate-12">
+                  <div className="absolute -top-2 -right-2 bg-cyan-500 text-black text-xs font-bold px-2 py-1 rounded-full transform rotate-12">
                     SAVE 87%
                   </div>
                 </div>
                 
                 {/* Savings Breakdown */}
-                <div className="bg-green-900/30 rounded-xl p-4 mb-4 border border-green-500">
-                  <div className="text-green-300 font-bold text-lg mb-1">You Save $1,300 Today!</div>
+                <div className="bg-cyan-900/20 rounded-xl p-4 mb-4 border border-cyan-500/40">
+                  <div className="text-cyan-300 font-bold text-lg mb-1">You Save $1,300 Today!</div>
                   <div className="text-sm text-gray-300">That's like getting paid $1,300 to start your AI business</div>
                 </div>
                 
                 {/* Value Reminder */}
                 <div className="text-sm text-gray-300">
-                  <span className="text-yellow-400 font-semibold">Less than $1 per day</span> to build a $5K-$15K/month business
+                  <span className="text-cyan-400 font-semibold">Less than $1 per day</span> to build a $5K-$15K/month business
                 </div>
               </div>
             </div>
@@ -171,7 +207,7 @@ export default function TrainingPage() {
             <div className="text-center">
               <Link
                 href="https://buy.stripe.com/aFa00i38OgHl50d7tt5gc04"
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-green-500 to-blue-500 px-12 py-6 text-xl font-black shadow-lg shadow-green-500/20 transition transform hover:scale-[1.02] hover:shadow-green-500/30"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-6 text-xl font-black shadow-lg shadow-cyan-500/30 transition transform hover:scale-[1.02] hover:shadow-cyan-500/40"
               >
                 🚀 Get AI Masterclass Now - $197
               </Link>

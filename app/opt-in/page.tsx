@@ -19,6 +19,13 @@ export default function OptInPage() {
       return
     }
     setLoading(true)
+    
+    // Fire Facebook Lead event
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'Lead')
+      console.log('Lead event fired on opt-in!')
+    }
+    
     try {
       await fetch('/api/send-free-guide/', {
         method: 'POST',
@@ -36,9 +43,9 @@ export default function OptInPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-900 text-white">
+    <main className="min-h-screen bg-black text-white">
       {/* Header */}
-      <div className="bg-blue-600 text-white py-3 px-4">
+      <div className="bg-cyan-500/20 text-cyan-400 py-3 px-4 border-b border-cyan-500/30">
         <div className="max-w-4xl mx-auto flex items-center justify-center">
           <span className="text-sm font-medium">🔔 Private Training For AI Entrepreneurs:</span>
         </div>
@@ -50,9 +57,9 @@ export default function OptInPage() {
         <div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
             How My Students Are Making<br/>
-            <span className="text-blue-400">$5,000-$15,000/Mo</span><br/>
+            <span className="text-cyan-400">$5,000-$15,000/Mo</span><br/>
             With<br/>
-            <span className="text-green-400">AI Side Hustles...</span>
+            <span className="text-cyan-400">AI Side Hustles...</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
             And how YOU can do the same, with no<br/>
@@ -62,14 +69,14 @@ export default function OptInPage() {
 
         {/* Locked Video Preview */}
         <div className="max-w-4xl mx-auto mb-8">
-          <div className="relative bg-gray-800 rounded-2xl overflow-hidden border border-gray-700">
+          <div className="relative bg-gray-900 rounded-2xl overflow-hidden border-2 border-cyan-500/30">
             {/* Video Thumbnail/Preview */}
-            <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 relative">
+            <div className="aspect-video bg-gradient-to-br from-gray-900 to-black relative">
               {/* Locked Overlay */}
               <div className="absolute inset-0 bg-black/60 flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center mb-4 mx-auto">
-                    <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <div className="w-20 h-20 bg-cyan-500 rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg shadow-cyan-500/50">
+                    <svg className="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
                     </svg>
                   </div>
@@ -80,7 +87,7 @@ export default function OptInPage() {
               
               {/* Video Preview Elements */}
               <div className="absolute top-4 left-4">
-                <div className="bg-red-600 text-white px-3 py-1 rounded-full text-sm font-bold">
+                <div className="bg-cyan-500 text-black px-3 py-1 rounded-full text-sm font-bold border border-cyan-400">
                   🔒 PRIVATE TRAINING
                 </div>
               </div>
@@ -149,7 +156,7 @@ export default function OptInPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold text-lg py-4 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl disabled:opacity-60"
+                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold text-lg py-4 px-6 rounded-lg transition-all duration-200 shadow-lg shadow-cyan-500/30 hover:shadow-xl disabled:opacity-60"
               >
                 {loading ? 'Unlocking Training...' : '🚀 Get My Free AI Training'}
               </button>
@@ -298,7 +305,7 @@ export default function OptInPage() {
 
         {/* Urgency/Scarcity */}
         <div className="text-center mt-8">
-          <div className="inline-flex items-center bg-red-900/30 text-red-300 px-4 py-2 rounded-full text-sm font-semibold border border-red-700">
+          <div className="inline-flex items-center bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold border border-cyan-500/40">
             ⏰ Limited Time: Only 7 spots left this month
           </div>
         </div>
