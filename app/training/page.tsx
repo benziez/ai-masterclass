@@ -2,8 +2,32 @@
 
 import Link from 'next/link'
 import Script from 'next/script'
+import { useState } from 'react'
 
 export default function TrainingPage() {
+  const [isLoading, setIsLoading] = useState(false)
+
+  const startTrial = async () => {
+    setIsLoading(true)
+    try {
+      const res = await fetch('/api/create-checkout-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+      const data = await res.json()
+      if (data.url) {
+        window.location.href = data.url // redirect to Stripe Checkout
+      } else {
+        console.error('No checkout URL received')
+      }
+    } catch (error) {
+      console.error('Checkout error:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
   return (
     <>
       <Script
@@ -183,17 +207,20 @@ export default function TrainingPage() {
                 {/* Main Price */}
                 <div className="relative mb-4">
                   <div className="text-6xl sm:text-7xl font-black text-cyan-400 mb-2 drop-shadow-lg">
-                    $197
+                    $27
+                  </div>
+                  <div className="text-xl sm:text-2xl font-bold text-gray-300 mb-1">
+                    One-Time Payment
                   </div>
                   <div className="absolute -top-2 -right-2 bg-cyan-500 text-black text-xs font-bold px-2 py-1 rounded-full transform rotate-12">
                     SAVE 87%
                   </div>
                 </div>
                 
-                {/* Savings Breakdown */}
+                {/* Value Breakdown */}
                 <div className="bg-cyan-900/20 rounded-xl p-4 mb-4 border border-cyan-500/40">
-                  <div className="text-cyan-300 font-bold text-lg mb-1">You Save $1,300 Today!</div>
-                  <div className="text-sm text-gray-300">That's like getting paid $1,300 to start your AI business</div>
+                  <div className="text-cyan-300 font-bold text-lg mb-1">You Save $1,470 Today!</div>
+                  <div className="text-sm text-gray-300">That's like getting paid $1,470 to start your AI business</div>
                 </div>
                 
                 {/* Value Reminder */}
@@ -205,12 +232,13 @@ export default function TrainingPage() {
 
             {/* CTA Button */}
             <div className="text-center">
-              <Link
-                href="https://buy.stripe.com/aFa00i38OgHl50d7tt5gc04"
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-6 text-xl font-black shadow-lg shadow-cyan-500/30 transition transform hover:scale-[1.02] hover:shadow-cyan-500/40"
+              <button
+                onClick={startTrial}
+                disabled={isLoading}
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-6 text-xl font-black shadow-lg shadow-cyan-500/30 transition transform hover:scale-[1.02] hover:shadow-cyan-500/40 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                🚀 Get AI Masterclass Now - $197
-              </Link>
+                {isLoading ? '🔄 Processing...' : '🚀 Get AI Masterclass Now - $27'}
+              </button>
               
               {/* Security Badges */}
               <div className="flex flex-wrap items-center justify-center gap-4 mt-6 mb-8">
