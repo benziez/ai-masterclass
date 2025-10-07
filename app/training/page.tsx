@@ -2,32 +2,8 @@
 
 import Link from 'next/link'
 import Script from 'next/script'
-import { useState } from 'react'
 
 export default function TrainingPage() {
-  const [isLoading, setIsLoading] = useState(false)
-
-  const startTrial = async () => {
-    setIsLoading(true)
-    try {
-      const res = await fetch('/api/create-checkout-session', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-      const data = await res.json()
-      if (data.url) {
-        window.location.href = data.url // redirect to Stripe Checkout
-      } else {
-        console.error('No checkout URL received')
-      }
-    } catch (error) {
-      console.error('Checkout error:', error)
-    } finally {
-      setIsLoading(false)
-    }
-  }
   return (
     <>
       <Script
@@ -232,13 +208,12 @@ export default function TrainingPage() {
 
             {/* CTA Button */}
             <div className="text-center">
-              <button
-                onClick={startTrial}
-                disabled={isLoading}
-                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-6 text-xl font-black shadow-lg shadow-cyan-500/30 transition transform hover:scale-[1.02] hover:shadow-cyan-500/40 disabled:opacity-50 disabled:cursor-not-allowed"
+              <Link
+                href="https://buy.stripe.com/8x2dR8fVA4YDgIV6pp5gc06"
+                className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-6 text-xl font-black shadow-lg shadow-cyan-500/30 transition transform hover:scale-[1.02] hover:shadow-cyan-500/40"
               >
-                {isLoading ? '🔄 Processing...' : '🚀 Get AI Masterclass Now - $27'}
-              </button>
+                🚀 Get AI Masterclass Now - $27
+              </Link>
               
               {/* Security Badges */}
               <div className="flex flex-wrap items-center justify-center gap-4 mt-6 mb-8">
