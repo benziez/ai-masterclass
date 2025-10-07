@@ -4,6 +4,7 @@ import './globals.css'
 import { Toaster } from '@/components/ui/toaster'
 import ClientExitIntentWrapper from './providers/ClientExitIntentWrapper'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import Script from 'next/script'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -80,8 +81,13 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <head>
+        {/* Facebook Pixel will be loaded by Script component */}
+      </head>
+      <body className={`${inter.className} antialiased`}>
         {/* Facebook Pixel */}
-        <script
+        <Script
+          id="facebook-pixel"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               !function(f,b,e,v,n,t,s)
@@ -105,8 +111,6 @@ export default function RootLayout({
             src="https://www.facebook.com/tr?id=2455252148193058&ev=PageView&noscript=1"
           />
         </noscript>
-      </head>
-      <body className={`${inter.className} antialiased`}>
         <GoogleAnalytics />
         <ClientExitIntentWrapper>
           {children}

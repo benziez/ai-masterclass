@@ -26,7 +26,7 @@ export default function TrainingPage() {
         }}
       />
       <main className="min-h-screen bg-black text-white">
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 text-center">
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 text-center">
         {/* Top Text */}
         <div className="mb-2">
           <p className="text-cyan-400 text-xs sm:text-sm font-bold tracking-wide">
@@ -71,11 +71,11 @@ export default function TrainingPage() {
           </h2>
           
           <p className="text-lg sm:text-xl text-gray-200 mb-6 leading-relaxed">
-            AI Masterclass is the complete system I built after making my first $100K+ using AI strategies. This is everything I wish someone had shown me when I was just getting started.
+            AI Masterclass is the complete system I built after making my first <span className="text-green-400 font-bold">$100K+</span> using AI strategies. This is everything I wish someone had shown me when I was just getting started.
           </p>
 
           <p className="text-lg sm:text-xl text-gray-200 mb-6 leading-relaxed">
-            Instead of spending months trying to figure out what actually works, you get the exact blueprint that's already helped 2,000+ students build profitable AI side hustles - no coding, no tech background, no expensive tools required.
+            Instead of spending months trying to figure out what actually works, you get the exact blueprint that's already helped <span className="text-green-400 font-bold">2,000+</span> students build profitable AI side hustles - no coding, no tech background, no expensive tools required.
           </p>
 
           <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
@@ -83,11 +83,11 @@ export default function TrainingPage() {
           </p>
 
           <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-            That's where AI Masterclass comes in. You'll learn the exact AI tools, prompts, and strategies that students are using to land $500-$5,000/month clients. No fluff, no theory - just proven systems that work in 2025.
+            That's where AI Masterclass comes in. You'll learn the exact AI tools, prompts, and strategies that students are using to land <span className="text-green-400 font-bold">$500-$5,000/month</span> clients. No fluff, no theory - just proven systems that work in <span className="text-green-400 font-bold">2025</span>.
           </p>
 
           <p className="text-lg sm:text-xl text-gray-200 mb-0 leading-relaxed">
-            My students like Marcus made $1,366 in his first week using the outreach templates. Jordan earned $704 with AI art. And I personally built my trading account to over $100,000 using the strategies inside. This stuff actually works when you follow the system.
+            My students like Marcus made <span className="text-green-400 font-bold">$1,366</span> in his first week using the outreach templates. Jordan earned <span className="text-green-400 font-bold">$704</span> with AI art. And I personally built my trading account to over <span className="text-green-400 font-bold">$100,000</span> using the strategies inside. This stuff actually works when you follow the system.
           </p>
         </div>
 
@@ -227,41 +227,92 @@ export default function TrainingPage() {
                   <span>All Cards Accepted</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
 
-
-              {/* Social Proof Section */}
-              <div className="max-w-4xl mx-auto mb-16 text-center">
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
-                  HERE'S PROOF THIS ACTUALLY WORKS FOR REGULAR PEOPLE:
-                </h2>
-                
-                <p className="text-xl text-gray-300 mb-6 italic">
-                  I know what you're thinking - <span className="text-gray-400">"This sounds too good to be true."</span>
-                </p>
-                
-                <p className="text-2xl font-bold text-white mb-6">
-                  I get it.
-                </p>
-                
-                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  That's why 97% of people who land on this page don't end up starting a business; <span className="font-bold underline">EVER.</span>
-                </p>
-                
-                <p className="text-lg text-gray-400 italic mb-6">
-                  Because everything sounds too good to be true.
-                </p>
-                
-                <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                  I thought the same thing until I started seeing the results.
-                </p>
-                
-                <p className="text-lg text-gray-300 mb-10 leading-relaxed">
-                  And I have even MORE conviction now after helping dozens of people replicate my success.
-                </p>
+        {/* Bonus Section */}
+        <div className="max-w-4xl mx-auto mb-10">
+          <div className="bg-gray-900/50 rounded-2xl p-6 border-2 border-cyan-500/30 shadow-2xl">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center bg-cyan-500 text-black px-4 py-2 rounded-full text-sm font-black mb-3">
+                🎁 BONUS PACK
               </div>
+              <h3 className="text-xl sm:text-2xl font-black text-white mb-3">
+                AI MASTERCLASS BONUS LESSONS
+              </h3>
+              <p className="text-sm text-gray-300 mb-4">
+                Get these exclusive bonus modules when you join today:
+              </p>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-gray-800/50 rounded-xl p-4 border border-cyan-500/20">
+                <div className="flex items-start gap-3">
+                  <div className="bg-cyan-500 rounded-full p-2 flex-shrink-0">
+                    <span className="text-lg">📈</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base mb-1">The AI Stock Investor's Guide (2025 Edition)</h4>
+                    <p className="text-gray-400 text-sm leading-relaxed">Learn how to use AI to identify winning stocks and build a profitable investment portfolio</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gray-800/50 rounded-xl p-4 border border-cyan-500/20">
+                <div className="flex items-start gap-3">
+                  <div className="bg-cyan-500 rounded-full p-2 flex-shrink-0">
+                    <span className="text-lg">🛡</span>
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold text-base mb-1">Future Careers: AI-Proof Jobs of the Next 10 Years</h4>
+                    <p className="text-gray-400 text-sm leading-relaxed">Discover which careers will thrive in the AI era and how to position yourself for long-term success</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center mt-4">
+              <p className="text-cyan-400 font-bold text-sm">
+                💰 Total Bonus Value: $497 - Yours FREE Today!
+              </p>
+            </div>
+          </div>
+        </div>
 
-              {/* Student Testimonials - With Money Screenshots */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 max-w-6xl mx-auto">
+        {/* Social Proof Section */}
+        <div className="max-w-4xl mx-auto mb-16 text-center">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight">
+            HERE'S PROOF THIS ACTUALLY WORKS FOR REGULAR PEOPLE:
+          </h2>
+          
+          <p className="text-xl text-gray-300 mb-6 italic">
+            I know what you're thinking - <span className="text-gray-400">"This sounds too good to be true."</span>
+          </p>
+          
+          <p className="text-2xl font-bold text-white mb-6">
+            I get it.
+          </p>
+          
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            That's why 97% of people who land on this page don't end up starting a business; <span className="font-bold underline">EVER.</span>
+          </p>
+          
+          <p className="text-lg text-gray-400 italic mb-6">
+            Because everything sounds too good to be true.
+          </p>
+          
+          <p className="text-lg text-gray-300 mb-6 leading-relaxed">
+            I thought the same thing until I started seeing the results.
+          </p>
+          
+          <p className="text-lg text-gray-300 mb-10 leading-relaxed">
+            And I have even MORE conviction now after helping dozens of people replicate my success.
+          </p>
+        </div>
+
+        {/* Student Testimonials - With Money Screenshots */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 max-w-6xl mx-auto">
                 {/* Screenshot 1 - $100,000+ */}
                 <div className="group relative overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-xl transition-all duration-300">
                   <div className="rounded-lg overflow-hidden mb-3 relative">
@@ -349,101 +400,95 @@ export default function TrainingPage() {
                     </p>
                   </div>
                 </div>
-              </div>
+        </div>
 
-              {/* Guarantee Section */}
-              <div className="max-w-4xl mx-auto text-center py-16">
-                {/* 100% Badge */}
-                <div className="relative inline-block mb-8">
-                  <div className="w-32 h-32 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center shadow-2xl shadow-yellow-500/30 relative">
-                    <div className="absolute inset-0 bg-yellow-500 rounded-full animate-ping opacity-20"></div>
-                    <span className="text-5xl font-black text-black relative z-10">100%</span>
-                  </div>
-                  {/* Star decorations */}
-                  <div className="absolute -top-2 -left-2 text-4xl">⭐</div>
-                  <div className="absolute -top-2 -right-2 text-4xl">⭐</div>
-                  <div className="absolute -bottom-2 -left-2 text-4xl">⭐</div>
-                  <div className="absolute -bottom-2 -right-2 text-4xl">⭐</div>
-                </div>
+        {/* Guarantee Section */}
+        <div className="max-w-4xl mx-auto text-center py-16">
+          {/* Professional Badge */}
+          <div className="inline-flex items-center gap-3 bg-cyan-500/20 text-cyan-400 px-8 py-4 rounded-full text-lg font-bold mb-8 border border-cyan-500/40 shadow-lg">
+            <div className="w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center">
+              <svg className="w-5 h-5 text-black" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
+              </svg>
+            </div>
+            <span>100% SUCCESS COMMITMENT</span>
+          </div>
 
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-8 leading-tight">
-                  YOUR SUCCESS IS MY PRIORITY
-                </h2>
-                
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  I know you might be thinking, "This sounds great, but what if it doesn't work for me?"
-                </p>
-                
-                <p className="text-xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto font-semibold">
-                  Here's the thing - I'm committed to making sure you succeed with AI Masterclass.
-                </p>
-                
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  If you're not seeing results or have any questions, just reach out to us. I'll personally work with you to make sure you get the value you're looking for.
-                </p>
-                
-                <p className="text-lg text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
-                  Whether it's extra support, custom guidance, or anything else - I'll do whatever it takes to help you succeed.
-                </p>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-8 leading-tight">
+            YOUR SUCCESS IS MY PRIORITY
+          </h2>
+          
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            I know you might be thinking, "This sounds great, but what if it doesn't work for me?"
+          </p>
+          
+          <p className="text-xl text-gray-200 mb-8 leading-relaxed max-w-3xl mx-auto font-semibold">
+            Here's the thing - I'm committed to making sure you succeed with AI Masterclass.
+          </p>
+          
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            If you're not seeing results or have any questions, just reach out to us. I'll personally work with you to make sure you get the value you're looking for.
+          </p>
+          
+          <p className="text-lg text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
+            Whether it's extra support, custom guidance, or anything else - I'll do whatever it takes to help you succeed.
+          </p>
 
-                <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  That's how confident I am that this system works when you actually implement it.
-                </p>
-                
-                <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                  I've seen this system work for hundreds of people from all different backgrounds. Corporate employees, stay-at-home parents, recent graduates, people who've never made money online before.
-                </p>
-                
-                <p className="text-2xl font-bold text-white mt-8">
-                  The only question is: are you ready to be next?
-                </p>
-              </div>
+          <p className="text-lg text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+            That's how confident I am that this system works when you actually implement it.
+          </p>
+          
+          <p className="text-lg text-gray-300 leading-relaxed max-w-3xl mx-auto">
+            I've seen this system work for hundreds of people from all different backgrounds. Corporate employees, stay-at-home parents, recent graduates, people who've never made money online before.
+          </p>
+          
+          <p className="text-2xl font-bold text-white mt-8">
+            The only question is: are you ready to be next?
+          </p>
+        </div>
 
-              {/* FAQ Section */}
-              <div className="max-w-4xl mx-auto mt-20 mb-16">
-                <h2 className="text-4xl sm:text-5xl font-black mb-12 text-center">
-                  FREQUENTLY ASKED QUESTIONS
-                </h2>
-                
-                <div className="space-y-4">
-                  {/* FAQ 1 */}
-                  <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
-                    <h3 className="text-xl font-bold text-white mb-3">Do I need any technical background to take this course?</h3>
-                    <p className="text-gray-400 leading-relaxed">No technical background required! This training is designed for complete beginners. We'll teach you everything from the ground up, including how to use AI tools without any coding knowledge.</p>
-                  </div>
-                  
-                  {/* FAQ 2 */}
-                  <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
-                    <h3 className="text-xl font-bold text-white mb-3">How long will it take to see results?</h3>
-                    <p className="text-gray-400 leading-relaxed">Most students start seeing results within weeks of implementing our strategies. Some have even started earning money in their first week by applying the AI automation techniques we teach.</p>
-                  </div>
-                  
-                  {/* FAQ 3 */}
-                  <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
-                    <h3 className="text-xl font-bold text-white mb-3">What if I'm not satisfied with the course?</h3>
-                    <p className="text-gray-400 leading-relaxed">We're confident you'll love the course, but if you have any concerns, please reach out to our support team. We're here to help ensure you get the most value from your investment.</p>
-                  </div>
-                  
-                  {/* FAQ 4 */}
-                  <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
-                    <h3 className="text-xl font-bold text-white mb-3">How long do I have access to the course?</h3>
-                    <p className="text-gray-400 leading-relaxed">You get lifetime access to the course content, including all future updates and new modules we add. You can learn at your own pace and revisit the material anytime.</p>
-                  </div>
-                  
-                  {/* FAQ 5 */}
-                  <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
-                    <h3 className="text-xl font-bold text-white mb-3">What kind of support do you provide?</h3>
-                    <p className="text-gray-400 leading-relaxed">We provide professional support through our dedicated student community, email support, and detailed course materials. You're never alone in your learning journey.</p>
-                  </div>
-                </div>
-              </div>
-
-              <p className="text-sm text-gray-400 mt-4 text-center">
-                ⚡ Instant access • Lifetime access • Join 2,000+ successful students
-              </p>
+        {/* FAQ Section */}
+        <div className="max-w-4xl mx-auto mt-20 mb-16">
+          <h2 className="text-4xl sm:text-5xl font-black mb-12 text-center">
+            FREQUENTLY ASKED QUESTIONS
+          </h2>
+          
+          <div className="space-y-4">
+            {/* FAQ 1 */}
+            <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
+              <h3 className="text-xl font-bold text-white mb-3">Do I need any technical background to take this course?</h3>
+              <p className="text-gray-400 leading-relaxed">No technical background required! This training is designed for complete beginners. We'll teach you everything from the ground up, including how to use AI tools without any coding knowledge.</p>
+            </div>
+            
+            {/* FAQ 2 */}
+            <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
+              <h3 className="text-xl font-bold text-white mb-3">How long will it take to see results?</h3>
+              <p className="text-gray-400 leading-relaxed">Most students start seeing results within weeks of implementing our strategies. Some have even started earning money in their first week by applying the AI automation techniques we teach.</p>
+            </div>
+            
+            {/* FAQ 3 */}
+            <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
+              <h3 className="text-xl font-bold text-white mb-3">What if I'm not satisfied with the course?</h3>
+              <p className="text-gray-400 leading-relaxed">We're confident you'll love the course, but if you have any concerns, please reach out to our support team. We're here to help ensure you get the most value from your investment.</p>
+            </div>
+            
+            {/* FAQ 4 */}
+            <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
+              <h3 className="text-xl font-bold text-white mb-3">How long do I have access to the course?</h3>
+              <p className="text-gray-400 leading-relaxed">You get lifetime access to the course content, including all future updates and new modules we add. You can learn at your own pace and revisit the material anytime.</p>
+            </div>
+            
+            {/* FAQ 5 */}
+            <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
+              <h3 className="text-xl font-bold text-white mb-3">What kind of support do you provide?</h3>
+              <p className="text-gray-400 leading-relaxed">We provide professional support through our dedicated student community, email support, and detailed course materials. You're never alone in your learning journey.</p>
             </div>
           </div>
         </div>
+
+        <p className="text-sm text-gray-400 mt-4 text-center">
+          ⚡ Instant access • Lifetime access • Join 2,000+ successful students
+        </p>
       </section>
       </main>
     </>

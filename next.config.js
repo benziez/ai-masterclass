@@ -13,7 +13,7 @@ const nextConfig = {
       },
     ],
   },
-  // Remove output: 'export' to enable API routes on Netlify
+  // Removed output: 'export' to enable API routes on Netlify
 }
 
 module.exports = nextConfig
