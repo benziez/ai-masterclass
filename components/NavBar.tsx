@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
@@ -31,7 +32,7 @@ export default function NavBar() {
   }, [isMenuOpen])
 
   const navItems = [
-    { href: '#overview', label: 'Overview' },
+    { href: '/', label: 'Homepage' },
     { href: '/curriculum', label: 'Curriculum' },
     { href: '/reviews', label: 'Reviews' },
     { href: '/pricing', label: 'Pricing' },
@@ -39,16 +40,21 @@ export default function NavBar() {
   ]
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'bg-gray-900/95 backdrop-blur-md border-b border-gray-800 shadow-lg' 
-        : 'bg-gray-900/80 backdrop-blur-sm'
-    }`}>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-gray-800 shadow-[0_0_30px_rgba(0,0,0,0.8)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
+        <div className="flex justify-between items-center h-20 sm:h-24">
           {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-gray-900 dark:text-white">
-            AI Masterclass.
+          <Link href="/" className="flex items-center group">
+            <div className="relative">
+              <Image
+                src="/images/aimasterclasslogo.png"
+                alt="AI Masterclass"
+                width={200}
+                height={200}
+                className="transition-transform duration-300 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-lg blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -57,10 +63,10 @@ export default function NavBar() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="relative transition-colors duration-200 font-medium group text-gray-300 hover:text-blue-400"
+                className="relative transition-all duration-300 font-semibold group text-gray-300 hover:text-white px-3 py-2 rounded-lg hover:bg-white/5"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-3 right-3 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300 rounded-full"></span>
               </Link>
             ))}
           </div>
@@ -70,7 +76,7 @@ export default function NavBar() {
             <Link href="/get-course">
               <Button 
                 size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-6 py-2 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] border border-blue-400/30"
               >
                 Get the Course
               </Button>
@@ -84,7 +90,7 @@ export default function NavBar() {
               size="icon"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle menu"
-              className="text-gray-300 hover:text-blue-400 hover:bg-gray-800/50 w-12 h-12 rounded-xl transition-all duration-200"
+              className="text-gray-300 hover:text-white hover:bg-white/10 w-12 h-12 rounded-xl transition-all duration-300 border border-gray-700/50 hover:border-gray-500/50"
             >
               <motion.div
                 animate={{ rotate: isMenuOpen ? 180 : 0 }}
@@ -104,7 +110,7 @@ export default function NavBar() {
               animate={{ opacity: 1, height: 'auto', y: 0 }}
               exit={{ opacity: 0, height: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="md:hidden border-t border-gray-800 bg-gray-900/95 backdrop-blur-md"
+              className="md:hidden border-t border-gray-800/50 bg-black/95 backdrop-blur-xl"
             >
               <div className="px-4 pt-4 pb-6 space-y-2">
                 {navItems.map((item, index) => (
@@ -116,7 +122,7 @@ export default function NavBar() {
                   >
                     <Link
                       href={item.href}
-                      className="block px-4 py-3 hover:bg-gray-800/50 rounded-xl transition-all duration-200 font-medium text-lg relative text-gray-300 hover:text-blue-400"
+                      className="block px-4 py-3 hover:bg-white/5 rounded-xl transition-all duration-300 font-semibold text-lg relative text-gray-300 hover:text-white border border-transparent hover:border-gray-700/50"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.label}
@@ -130,7 +136,7 @@ export default function NavBar() {
                   className="px-4 pt-2"
                 >
                   <Link href="/get-course" onClick={() => setIsMenuOpen(false)}>
-                    <Button className="w-full bg-blue-600 hover:bg-blue-700 text-lg py-4 rounded-xl transform hover:scale-105 transition-all duration-200 shadow-lg">
+                    <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold text-lg py-4 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] border border-blue-400/30">
                       Get the Course
                     </Button>
                   </Link>

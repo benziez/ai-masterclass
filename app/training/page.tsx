@@ -29,23 +29,23 @@ export default function TrainingPage() {
         <section className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 text-center">
         {/* Top Text */}
         <div className="mb-2">
-          <p className="text-cyan-400 text-xs sm:text-sm font-bold tracking-wide">
-            💰💸 FOR ANYONE LOOKING TO <span className="text-cyan-300">MAKE EXTRA INCOME</span>
+          <p className="text-blue-400 text-xs sm:text-sm font-bold tracking-wide">
+            🚀 THE FUTURE OF <span className="text-blue-300">AUTOMATED INCOME</span>
           </p>
         </div>
         
         <div className="mb-8">
-          <p className="text-cyan-400 text-xs sm:text-sm font-bold tracking-wide">
-            USING AI IN A FEW HOURS PER WEEK
+          <p className="text-blue-400 text-xs sm:text-sm font-bold tracking-wide">
+            DESIGN AI SYSTEMS THAT EARN WHILE YOU SLEEP
           </p>
         </div>
 
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-5 leading-[1.1] max-w-5xl mx-auto tracking-tight">
-          HOW STUDENTS ARE BUILDING $5K-$15K/MONTH AI BUSINESSES WITHOUT CODING OR EXPERIENCE
+          HOW <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">AI INCOME ENGINEERS</span> ARE BUILDING $5K-$15K/MONTH AUTOMATED SYSTEMS
         </h1>
 
         <p className="text-xl sm:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto font-medium">
-          The Complete System That Helped 2,000+ People Launch Profitable AI Side Hustles
+          The Complete AI Income Engineering™ System That Helped 2,000+ People Design Automated Income Streams
         </p>
 
         <div className="relative mx-auto max-w-4xl w-full aspect-video rounded-3xl overflow-hidden border-2 border-gray-800 bg-black mb-6 shadow-2xl shadow-cyan-500/10">
@@ -67,27 +67,27 @@ export default function TrainingPage() {
         {/* Value Proposition */}
         <div className="max-w-4xl mx-auto mb-20 text-left bg-gray-900/50 border border-gray-800 rounded-3xl p-8 md:p-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-10 text-center leading-tight">
-            WHAT IS <span className="text-cyan-400">AI MASTERCLASS</span>?
+            WHAT IS <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">AI INCOME ENGINEERING™</span>?
           </h2>
           
           <p className="text-lg sm:text-xl text-gray-200 mb-6 leading-relaxed">
-            AI Masterclass is the complete system I built after making my first <span className="text-green-400 font-bold">$100K+</span> using AI strategies. This is everything I wish someone had shown me when I was just getting started.
+            AI Income Engineering™ is the complete system I built after designing my first <span className="text-blue-400 font-bold">$100K+</span> automated income stream using AI. This is the methodology I wish someone had taught me when I was just getting started.
           </p>
 
           <p className="text-lg sm:text-xl text-gray-200 mb-6 leading-relaxed">
-            Instead of spending months trying to figure out what actually works, you get the exact blueprint that's already helped <span className="text-green-400 font-bold">2,000+</span> students build profitable AI side hustles - no coding, no tech background, no expensive tools required.
+            Instead of spending months trying to figure out what actually works, you get the exact blueprint that's already helped <span className="text-blue-400 font-bold">2,000+</span> AI Income Engineers design profitable automated systems - no coding, no tech background, no expensive tools required.
           </p>
 
           <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-            The reality is simple: businesses need help with AI right now. They need automation, content creation, lead generation, and they're willing to pay for it. The problem? Most people have no idea where to start or what to actually offer.
+            The reality is simple: businesses need AI systems that work 24/7 right now. They need automation, content creation, lead generation, and they're willing to pay for it. The problem? Most people are still learning prompts instead of building systems that earn.
           </p>
 
           <p className="text-lg sm:text-xl text-gray-200 mb-8 leading-relaxed">
-            That's where AI Masterclass comes in. You'll learn the exact AI tools, prompts, and strategies that students are using to land <span className="text-green-400 font-bold">$500-$5,000/month</span> clients. No fluff, no theory - just proven systems that work in <span className="text-green-400 font-bold">2025</span>.
+            That's where AI Income Engineering™ comes in. You'll learn the exact AI systems, automation frameworks, and income engineering strategies that students are using to build <span className="text-blue-400 font-bold">$500-$5,000/month</span> automated income streams. No fluff, no theory - just proven systems that work in <span className="text-blue-400 font-bold">2025</span>.
           </p>
 
           <p className="text-lg sm:text-xl text-gray-200 mb-0 leading-relaxed">
-            My students like Marcus made <span className="text-green-400 font-bold">$1,366</span> in his first week using the outreach templates. Jordan earned <span className="text-green-400 font-bold">$704</span> with AI art. And I personally built my trading account to over <span className="text-green-400 font-bold">$100,000</span> using the strategies inside. This stuff actually works when you follow the system.
+            My AI Income Engineers like Marcus built his first <span className="text-blue-400 font-bold">$1,366</span> automated system in his first week. Jordan engineered a <span className="text-blue-400 font-bold">$704/month</span> AI art income stream. And I personally designed systems that generated over <span className="text-blue-400 font-bold">$100,000</span> using the methodologies inside. This stuff actually works when you follow the system.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ export default function TrainingPage() {
         <div className="max-w-5xl mx-auto mb-10">
           <div className="bg-gray-900 border-2 border-gray-800 rounded-2xl p-8 md:p-12 shadow-2xl">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black mb-6">
-              🎯 Ready to Get the Complete System?
+              🎯 Ready to Become an AI Income Engineer?
             </h2>
             
             <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -112,8 +112,8 @@ export default function TrainingPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-xl mb-2">50+ Copy-Paste AI Prompts</h3>
-                    <p className="text-gray-400 text-base leading-relaxed">The exact prompts that helped Marcus make $1,366 in his first week and Jordan earn $704 selling AI art</p>
+                    <h3 className="text-white font-bold text-xl mb-2">8 Complete AI Income Engineering™ Modules</h3>
+                    <p className="text-gray-400 text-base leading-relaxed">From AI mindset to automated systems - everything you need to build profitable AI income streams</p>
                   </div>
                 </div>
               </div>
@@ -126,8 +126,8 @@ export default function TrainingPage() {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-white font-bold text-xl mb-2">6 Complete Business Modules</h3>
-                    <p className="text-gray-400 text-base leading-relaxed">From picking your niche to landing your first $5K month - everything you need to build a profitable AI business</p>
+                    <h3 className="text-white font-bold text-xl mb-2">19 Detailed Lessons & Tutorials</h3>
+                    <p className="text-gray-400 text-base leading-relaxed">Step-by-step tutorials with real-world examples and actionable systems you can implement immediately</p>
                   </div>
                 </div>
               </div>
@@ -212,7 +212,7 @@ export default function TrainingPage() {
                 href="https://buy.stripe.com/8x2dR8fVA4YDgIV6pp5gc06"
                 className="inline-flex items-center justify-center rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 px-12 py-6 text-xl font-black shadow-lg shadow-cyan-500/30 transition transform hover:scale-[1.02] hover:shadow-cyan-500/40"
               >
-                🚀 Get AI Masterclass Now - $27
+                🚀 Join the AI Income Engineering Revolution - $27
               </Link>
               
               {/* Security Badges */}

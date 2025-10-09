@@ -45,9 +45,9 @@ export default function OptInPage() {
   return (
     <main className="min-h-screen bg-black text-white">
       {/* Header */}
-      <div className="bg-cyan-500/20 text-cyan-400 py-3 px-4 border-b border-cyan-500/30">
+      <div className="bg-blue-500/20 text-blue-400 py-3 px-4 border-b border-blue-500/30">
         <div className="max-w-4xl mx-auto flex items-center justify-center">
-          <span className="text-sm font-medium">🔔 Private Training For AI Entrepreneurs:</span>
+          <span className="text-sm font-medium">🚀 Private Training For AI Income Engineers:</span>
         </div>
       </div>
 
@@ -56,13 +56,13 @@ export default function OptInPage() {
         {/* Main Headline */}
         <div className="text-center mb-8">
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
-            How My Students Are Making<br/>
-            <span className="text-cyan-400">$5,000-$15,000/Mo</span><br/>
-            With<br/>
-            <span className="text-cyan-400">AI Side Hustles...</span>
+            How My AI Income Engineers Are Building<br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">$5,000-$15,000/Mo</span><br/>
+            Automated<br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400">Income Systems...</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto">
-            And how YOU can do the same, with no<br/>
+            And how YOU can engineer the same, with no<br/>
             experience or "tech skills"...
           </p>
         </div>
@@ -87,40 +87,19 @@ export default function OptInPage() {
               
               {/* Video Preview Elements */}
               <div className="absolute top-4 left-4">
-                <div className="bg-cyan-500 text-black px-3 py-1 rounded-full text-sm font-bold border border-cyan-400">
+                <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold border border-blue-400">
                   🔒 PRIVATE TRAINING
                 </div>
               </div>
               
               <div className="absolute bottom-4 left-4 right-4">
                 <div className="bg-black/80 rounded-lg p-3">
-                  <h4 className="text-white font-semibold mb-1">3 Steps to Your First AI-Powered Side Hustle</h4>
-                  <p className="text-gray-300 text-sm">Learn the exact system that helped students make $2.3M+ in profits</p>
+                  <h4 className="text-white font-semibold mb-1">3 Steps to Your First AI Income Engineering™ System</h4>
+                  <p className="text-gray-300 text-sm">Learn the exact system that helped AI Income Engineers make $2.3M+ in automated profits</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Who It's For */}
-        <div className="text-center mb-6">
-          <p className="text-lg text-gray-300 font-medium">
-            Perfect for students, freelancers, and creators who want to build their first AI-powered income stream this month.
-          </p>
-        </div>
-
-        {/* CTA Button */}
-        <div className="text-center mb-8">
-          <button
-            onClick={() => {
-              // Scroll to form
-              document.getElementById('signup-form')?.scrollIntoView({ behavior: 'smooth' })
-            }}
-            className="w-full max-w-md bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg py-4 px-8 rounded-lg transition-colors duration-200 shadow-lg"
-          >
-            Unlock Free Training Video! &gt;&gt;
-          </button>
-          <p className="text-sm text-gray-500 mt-2">Don't worry, it's free.</p>
         </div>
 
         {/* Signup Form */}
@@ -156,9 +135,9 @@ export default function OptInPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-black font-bold text-lg py-4 px-6 rounded-lg transition-all duration-200 shadow-lg shadow-cyan-500/30 hover:shadow-xl disabled:opacity-60"
+                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold text-lg py-4 px-6 rounded-lg transition-all duration-200 shadow-lg shadow-blue-500/30 hover:shadow-xl disabled:opacity-60"
               >
-                {loading ? 'Unlocking Training...' : '🚀 Get My Free AI Training'}
+                {loading ? 'Unlocking Training...' : '🚀 Get My Free AI Income Engineering™ Training'}
               </button>
 
               <p className="text-xs text-gray-400 text-center">
@@ -168,56 +147,63 @@ export default function OptInPage() {
           </form>
         </div>
 
+        {/* Who It's For */}
+        <div className="text-center mb-8">
+          <p className="text-lg text-gray-300 font-medium">
+            Perfect for students, freelancers, and creators who want to engineer their first automated AI income system this month.
+          </p>
+        </div>
+
         {/* What You'll Learn */}
         <div className="max-w-4xl mx-auto mb-12">
           <h3 className="text-3xl sm:text-4xl font-black text-white text-center mb-10">🔥 What You'll Discover Inside:</h3>
           <div className="space-y-5">
-            <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-cyan-500/30 hover:border-cyan-500/60 transition-all">
+            <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-blue-500/30 hover:border-blue-500/60 transition-all">
               <div className="flex items-start gap-4">
-                <div className="bg-cyan-500 rounded-full p-3 flex-shrink-0">
-                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                <div className="bg-blue-500 rounded-full p-3 flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-xl mb-2">The 3 AI Side Hustles That Print Money in 2025</h4>
-                  <p className="text-gray-400 leading-relaxed">Social media management, AI art sales, and content creation - the exact businesses our students used to make $2.3M+ in profits</p>
+                  <h4 className="text-white font-bold text-xl mb-2">The 3 AI Income Engineering™ Systems That Print Money in 2025</h4>
+                  <p className="text-gray-400 leading-relaxed">Automated social media management, AI art sales systems, and content creation automation - the exact systems our AI Income Engineers used to make $2.3M+ in automated profits</p>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-cyan-500/30 hover:border-cyan-500/60 transition-all">
+            <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-blue-500/30 hover:border-blue-500/60 transition-all">
               <div className="flex items-start gap-4">
-                <div className="bg-cyan-500 rounded-full p-3 flex-shrink-0">
-                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                <div className="bg-blue-500 rounded-full p-3 flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-xl mb-2">50+ Copy-Paste AI Prompts That Close Deals</h4>
-                  <p className="text-gray-400 leading-relaxed">The exact prompts that helped Marcus land $1,366 in his first week and Jordan make $704 selling AI art - no guessing, just results</p>
+                  <h4 className="text-white font-bold text-xl mb-2">50+ AI Income Engineering™ System Templates That Close Deals</h4>
+                  <p className="text-gray-400 leading-relaxed">The exact system templates that helped Marcus engineer $1,366 in his first week and Jordan build a $704/month AI art income stream - no guessing, just automated results</p>
                 </div>
               </div>
             </div>
             
-            <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-cyan-500/30 hover:border-cyan-500/60 transition-all">
+            <div className="bg-gray-900/80 rounded-2xl p-7 border-2 border-blue-500/30 hover:border-blue-500/60 transition-all">
               <div className="flex items-start gap-4">
-                <div className="bg-cyan-500 rounded-full p-3 flex-shrink-0">
-                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20">
+                <div className="bg-blue-500 rounded-full p-3 flex-shrink-0">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"/>
                   </svg>
                 </div>
                 <div>
-                  <h4 className="text-white font-bold text-xl mb-2">The "No Audience" Client Acquisition System</h4>
-                  <p className="text-gray-400 leading-relaxed">How to get paying clients without social media followers, email lists, or expensive ads - just AI + the right outreach strategy</p>
+                  <h4 className="text-white font-bold text-xl mb-2">The "No Audience" Automated Client Acquisition System</h4>
+                  <p className="text-gray-400 leading-relaxed">How to engineer automated client acquisition without social media followers, email lists, or expensive ads - just AI Income Engineering™ + the right system design</p>
                 </div>
               </div>
             </div>
             
             <div className="mt-8 text-center">
-              <div className="inline-flex items-center bg-cyan-500/20 text-cyan-400 px-6 py-3 rounded-full font-bold border border-cyan-500/40">
+              <div className="inline-flex items-center bg-blue-500/20 text-blue-400 px-6 py-3 rounded-full font-bold border border-blue-500/40">
                 <span className="mr-2">💰</span>
-                <span>Average student makes $3,200 in their first month</span>
+                <span>Average AI Income Engineer makes $3,200 in their first month</span>
               </div>
             </div>
           </div>
@@ -225,8 +211,8 @@ export default function OptInPage() {
 
         {/* Real Results Header */}
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-white mb-2">REAL RESULTS FROM OUR STUDENTS</h2>
-          <p className="text-gray-400">See how others are already making money with AI</p>
+          <h2 className="text-2xl font-bold text-white mb-2">REAL RESULTS FROM OUR AI INCOME ENGINEERS</h2>
+          <p className="text-gray-400">See how others are already engineering automated income with AI</p>
         </div>
 
         {/* Money Proof Testimonials */}
@@ -248,9 +234,9 @@ export default function OptInPage() {
             </div>
             <div className="p-4">
               <p className="text-sm text-gray-300 leading-relaxed">
-                "I built an <strong className="text-white">AI trading algorithm</strong> to pick stocks for me using these exact prompts. Was able to take my portfolio from <strong className="text-green-400">$3K to $127K</strong>!"
+                "I engineered an <strong className="text-white">automated AI trading system</strong> to pick stocks for me using these exact AI Income Engineering™ templates. Was able to take my portfolio from <strong className="text-green-400">$3K to $127K</strong>!"
               </p>
-              <p className="text-gray-500 text-xs mt-3 text-center">Offer: AI trading signals • Time: — • Result: $127K</p>
+              <p className="text-gray-500 text-xs mt-3 text-center">System: AI trading automation • Time: — • Result: $127K</p>
             </div>
           </div>
 
@@ -271,9 +257,9 @@ export default function OptInPage() {
             </div>
             <div className="p-4">
               <p className="text-sm text-gray-300 leading-relaxed">
-                "Finally found a system that works! I was struggling to get clients, but these AI prompts helped me <strong className="text-white">sell my social media management service on Facebook</strong>. Made <strong className="text-green-400">$704</strong> in my first week using these exact prompts!"
+                "Finally found a system that works! I was struggling to get clients, but these AI Income Engineering™ templates helped me <strong className="text-white">build an automated social media management system</strong>. Made <strong className="text-green-400">$704</strong> in my first week using these exact system templates!"
               </p>
-              <p className="text-gray-500 text-xs mt-3 text-center">Offer: Social media management • Time: 1 week • Result: $704</p>
+              <p className="text-gray-500 text-xs mt-3 text-center">System: Automated social media management • Time: 1 week • Result: $704</p>
             </div>
           </div>
 
@@ -294,16 +280,16 @@ export default function OptInPage() {
             </div>
             <div className="p-4">
               <p className="text-sm text-gray-300 leading-relaxed">
-                "Best investment I've made! These AI prompts helped me <strong className="text-white">launch a small online service selling custom AI-generated art</strong>. My PayPal balance shows <strong className="text-green-400">$1,366.70</strong> from my first few sales!"
+                "Best investment I've made! These AI Income Engineering™ templates helped me <strong className="text-white">engineer an automated AI art sales system</strong>. My PayPal balance shows <strong className="text-green-400">$1,366.70</strong> from my first few automated sales!"
               </p>
-              <p className="text-gray-500 text-xs mt-3 text-center">Offer: Custom AI-generated art • Time: first few sales • Result: $1,366.70</p>
+              <p className="text-gray-500 text-xs mt-3 text-center">System: Automated AI art sales • Time: first few sales • Result: $1,366.70</p>
             </div>
           </div>
         </div>
 
         {/* Urgency/Scarcity */}
         <div className="text-center mt-8">
-          <div className="inline-flex items-center bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-full text-sm font-semibold border border-cyan-500/40">
+          <div className="inline-flex items-center bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-semibold border border-blue-500/40">
             ⏰ Limited Time: Only 7 spots left this month
           </div>
         </div>
@@ -318,7 +304,7 @@ export default function OptInPage() {
           </p>
         </div>
       </div>
-    </main>
+      </main>
   )
 }
 

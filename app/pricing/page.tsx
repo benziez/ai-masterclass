@@ -64,30 +64,37 @@ export default function PricingPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-gray-900">
-      <NavBar />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-900 to-blue-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Choose Your Learning Path
-            </h1>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-              Choose your path: Learn yourself, get personalized guidance, or have us build it for you.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <main className="min-h-screen bg-black overflow-x-hidden relative pt-20 sm:pt-24">
+      {/* Animated background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-green-900/20 opacity-50"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-700/10 via-transparent to-transparent"></div>
+      <div className="relative z-10">
+        <NavBar />
+        
+        {/* Hero Section */}
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5"></div>
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 leading-tight px-2 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                Choose Your Learning Path
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-4 font-medium">
+                Choose your path: Learn yourself, get personalized guidance, or have us build it for you.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+      </div>
 
       {/* Pricing Cards */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-blue-500/5"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Course Only */}
             <motion.div
@@ -95,7 +102,7 @@ export default function PricingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <Card className="h-full relative bg-gray-800 border-gray-700">
+              <Card className="h-full relative bg-gradient-to-br from-gray-800/95 via-gray-700/50 to-gray-800/95 border-gray-600 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
                 <CardHeader className="text-center pb-8">
                   <div className="flex items-center justify-center mb-4">
                     <Zap className="h-12 w-12 text-blue-400" />
@@ -124,9 +131,9 @@ export default function PricingPage() {
                   </ul>
                   <Button
                     onClick={handleCheckout}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3"
+                    className="w-full relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black py-4 text-lg shadow-[0_0_30px_rgba(34,197,94,0.3)] hover:shadow-[0_0_40px_rgba(34,197,94,0.5)] transition-all duration-500 transform hover:scale-105 border-2 border-green-400/50 hover:border-green-300 backdrop-blur-sm"
                   >
-                    Enroll in Course
+                    🚀 Enroll in Course
                   </Button>
                 </CardContent>
               </Card>
@@ -168,9 +175,9 @@ export default function PricingPage() {
                   </ul>
                   <Button
                     onClick={handleCheckout}
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3"
+                    className="w-full relative bg-gradient-to-r from-purple-500 via-blue-500 to-green-500 hover:from-purple-600 hover:via-blue-600 hover:to-green-600 text-white font-black py-4 text-lg shadow-[0_0_30px_rgba(147,51,234,0.3)] hover:shadow-[0_0_40px_rgba(147,51,234,0.5)] transition-all duration-500 transform hover:scale-105 border-2 border-purple-400/50 hover:border-purple-300 backdrop-blur-sm"
                   >
-                    Book Consultation
+                    🚀 Book Consultation
                   </Button>
                 </CardContent>
               </Card>
@@ -182,7 +189,7 @@ export default function PricingPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Card className="h-full relative bg-gray-800 border-gray-700">
+              <Card className="h-full relative bg-gradient-to-br from-gray-800/95 via-gray-700/50 to-gray-800/95 border-gray-600 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
                 <CardHeader className="text-center pb-8">
                   <div className="flex items-center justify-center mb-4">
                     <Zap className="h-12 w-12 text-purple-400" />
@@ -207,9 +214,9 @@ export default function PricingPage() {
                   </ul>
                   <Button
                     onClick={() => window.open('mailto:hello@aimasterclass.info?subject=Book Strategy Call - Done-For-You Package', '_blank')}
-                    className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3"
+                    className="w-full relative bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 hover:from-orange-600 hover:via-red-600 hover:to-pink-600 text-white font-black py-4 text-lg shadow-[0_0_30px_rgba(249,115,22,0.3)] hover:shadow-[0_0_40px_rgba(249,115,22,0.5)] transition-all duration-500 transform hover:scale-105 border-2 border-orange-400/50 hover:border-orange-300 backdrop-blur-sm"
                   >
-                    Book Strategy Call
+                    🚀 Book Strategy Call
                   </Button>
                   <p className="text-xs text-gray-500 text-center mt-2">
                     Schedule a free 15-minute consultation to discuss your needs

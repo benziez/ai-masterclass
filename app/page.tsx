@@ -77,60 +77,68 @@ export default function HomePage() {
   const features = [
     {
       icon: BookOpen,
-      title: "Comprehensive AI Fundamentals",
-      description: "Learn the basics of AI, machine learning, and how these technologies work in practice."
+      title: "8 Complete AI Income Engineering™ Modules",
+      description: "From AI mindset to automated systems - everything you need to build profitable AI income streams."
     },
     {
       icon: Zap,
-      title: "Practical Tool Mastery",
-      description: "Master ChatGPT, Claude, and other AI tools through hands-on exercises and real projects."
+      title: "19 Detailed Lessons & Tutorials",
+      description: "Step-by-step tutorials with real-world examples and actionable systems you can implement immediately."
     },
     {
       icon: TrendingUp,
-      title: "Workflow Optimization",
-      description: "Discover how to integrate AI into your daily work to save time and improve productivity."
+      title: "5+ Proven Income Systems",
+      description: "Build automated systems that generate $5K-$15K monthly revenue while you sleep."
     },
     {
       icon: Shield,
-      title: "Ethical AI Usage",
-      description: "Learn best practices for using AI responsibly and avoiding common pitfalls."
+      title: "Complete Automation Frameworks",
+      description: "Master the tools and frameworks for building AI systems that work 24/7 without your input."
     },
     {
       icon: Users,
-      title: "Collaborative Learning",
-      description: "Join a community of learners and share insights, tips, and project ideas."
+      title: "AI Income Engineer Community",
+      description: "Join 2,000+ successful AI Income Engineers who are already building automated income streams."
     },
     {
       icon: Award,
-      title: "Portfolio Projects",
-      description: "Build real projects using AI tools that you can showcase in your portfolio."
+      title: "Lifetime Access + Updates",
+      description: "Get all future AI tools, strategies, and updates - no monthly fees, no expiration date."
     }
   ]
 
   const curriculum = [
     {
-      title: "AI Fundamentals",
-      description: "Understanding AI basics, machine learning concepts, and current AI landscape."
+      title: "The AI Mindset",
+      description: "Develop the foundational mindset needed to think like an AI Income Engineer and build automated systems."
     },
     {
-      title: "AI Tools & Platforms",
-      description: "Mastering ChatGPT, Claude, and other essential AI tools for daily use."
+      title: "Building Businesses with AI",
+      description: "Learn how to identify and create profitable AI-powered business models that generate consistent revenue."
     },
     {
-      title: "AI in Business",
-      description: "Applying AI to business processes, content creation, and workflow automation."
+      title: "AI for Automation & Systems",
+      description: "Master the tools and frameworks for building automated AI systems that work 24/7."
     },
     {
-      title: "AI Project Development",
-      description: "Building practical AI projects and integrating AI into existing workflows."
+      title: "Content & Marketing with AI",
+      description: "Create compelling content and marketing systems that attract customers and generate leads automatically."
     },
     {
-      title: "AI Ethics & Best Practices",
-      description: "Understanding AI limitations, ethical considerations, and responsible usage."
+      title: "AI Tools & Software Mastery",
+      description: "Master the complete AI tool stack that successful AI Income Engineers use to build profitable systems."
     },
     {
-      title: "Future of AI",
-      description: "Exploring emerging AI trends and preparing for the future of work."
+      title: "Scaling & Optimization",
+      description: "Learn how to scale your AI income systems and optimize them for maximum profitability."
+    },
+    {
+      title: "Advanced AI Strategies",
+      description: "Discover advanced AI Income Engineering™ strategies used by top performers to generate $10K+ monthly."
+    },
+    {
+      title: "Bonus: Future-Proofing Your AI Business",
+      description: "Bonus module covering AI stock investing, future careers, and long-term AI business strategy."
     }
   ]
 
@@ -202,13 +210,25 @@ export default function HomePage() {
   ]
 
   return (
-    <main className="min-h-screen bg-gray-900 overflow-x-hidden">
-      <NavBar />
-      <MediaHero />
+    <main className="min-h-screen bg-black overflow-x-hidden relative pt-20 sm:pt-24">
+      {/* Animated background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-green-900/20 opacity-50"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-700/10 via-transparent to-transparent"></div>
+      <div className="relative z-10">
+        <NavBar />
+        <MediaHero />
+      </div>
+      
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-green-500/50 to-transparent"></div>
       
       {/* Money Proof Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 via-transparent to-blue-500/5"></div>
+        {/* Glowing orbs */}
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -238,7 +258,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
-              <div className="h-full bg-black/60 border-2 border-green-500/30 rounded-2xl p-4 sm:p-6 hover:border-green-400 transition-all duration-300">
+              <div className="h-full bg-gradient-to-br from-green-500/5 via-black to-blue-500/5 border-2 border-green-500/50 rounded-3xl p-4 sm:p-6 hover:border-green-400 hover:shadow-[0_0_50px_rgba(34,197,94,0.3)] hover:bg-gradient-to-br hover:from-green-500/10 hover:via-black hover:to-blue-500/10 transition-all duration-500 transform hover:-translate-y-3 hover:scale-[1.02] backdrop-blur-md">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
                     SM
@@ -277,7 +297,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
-              <div className="h-full bg-black/60 border-2 border-green-500/30 rounded-2xl p-4 sm:p-6 hover:border-green-400 transition-all duration-300">
+              <div className="h-full bg-gradient-to-br from-green-500/5 via-black to-blue-500/5 border-2 border-green-500/50 rounded-3xl p-4 sm:p-6 hover:border-green-400 hover:shadow-[0_0_50px_rgba(34,197,94,0.3)] hover:bg-gradient-to-br hover:from-green-500/10 hover:via-black hover:to-blue-500/10 transition-all duration-500 transform hover:-translate-y-3 hover:scale-[1.02] backdrop-blur-md">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
                     MR
@@ -316,7 +336,7 @@ export default function HomePage() {
               viewport={{ once: true }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
-              <div className="h-full bg-black/60 border-2 border-green-500/30 rounded-2xl p-4 sm:p-6 hover:border-green-400 transition-all duration-300">
+              <div className="h-full bg-gradient-to-br from-green-500/5 via-black to-blue-500/5 border-2 border-green-500/50 rounded-3xl p-4 sm:p-6 hover:border-green-400 hover:shadow-[0_0_50px_rgba(34,197,94,0.3)] hover:bg-gradient-to-br hover:from-green-500/10 hover:via-black hover:to-blue-500/10 transition-all duration-500 transform hover:-translate-y-3 hover:scale-[1.02] backdrop-blur-md">
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg mr-3">
                     JL
@@ -364,9 +384,16 @@ export default function HomePage() {
         </div>
       </section>
       
+      {/* Section Divider */}
+      <div className="h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent"></div>
+      
       {/* Course Overview Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+      <section className="py-20 bg-gradient-to-b from-transparent via-gray-800/30 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5"></div>
+        {/* Glowing orbs */}
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-1/3 left-1/3 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -391,10 +418,10 @@ export default function HomePage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="h-full bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
+                <Card className="h-full bg-gradient-to-br from-blue-500/5 via-gray-900/80 to-purple-500/5 dark:from-blue-500/10 dark:via-gray-900/90 dark:to-purple-500/10 border-2 border-blue-500/30 dark:border-blue-500/40 hover:shadow-[0_0_60px_rgba(59,130,246,0.4)] hover:border-blue-400 transition-all duration-500 transform hover:-translate-y-2 hover:scale-[1.03] backdrop-blur-lg">
                   <CardHeader>
-                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
-                      <feature.icon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+                    <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 dark:from-blue-500 dark:to-blue-700 rounded-2xl flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(59,130,246,0.5)] transform transition-transform duration-300 hover:rotate-12 hover:scale-110">
+                      <feature.icon className="h-7 w-7 text-white" />
                     </div>
                     <CardTitle className="text-xl font-semibold text-gray-900 dark:text-white">
                       {feature.title}
@@ -415,8 +442,9 @@ export default function HomePage() {
 
 
       {/* Lead Magnet Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 via-transparent to-blue-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -488,8 +516,9 @@ export default function HomePage() {
 
 
       {/* FAQ Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-pink-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -535,8 +564,9 @@ export default function HomePage() {
 
 
       {/* Final CTA Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-transparent to-blue-500/10"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -568,7 +598,7 @@ export default function HomePage() {
               <Link href="/get-course" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
-                  className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-bold px-8 sm:px-12 py-4 sm:py-5 text-lg sm:text-xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
+                  className="relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl shadow-[0_0_60px_rgba(34,197,94,0.5)] hover:shadow-[0_0_80px_rgba(34,197,94,0.7)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 w-full sm:w-auto backdrop-blur-sm border-2 border-green-400/50 hover:border-green-300"
                 >
                   <Play className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                   🚀 Get AI Masterclass - $97
@@ -621,8 +651,9 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+      <footer className="bg-gradient-to-b from-transparent via-gray-900/80 to-black text-white py-16 relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-green-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1 md:col-span-2">
               <h3 className="text-2xl font-bold mb-4">AI Education Platform</h3>

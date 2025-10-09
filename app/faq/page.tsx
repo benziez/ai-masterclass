@@ -99,43 +99,50 @@ export default function FAQPage() {
 
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
-      <NavBar />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Everything you need to know about our AI course, learning process, and how to get started. 
-              Can't find what you're looking for? Contact us and we'll help you out.
-            </p>
-            
-            <Button 
-              size="lg" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
+    <main className="min-h-screen bg-black overflow-x-hidden relative pt-20 sm:pt-24">
+      {/* Animated background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-green-900/20 opacity-50"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-700/10 via-transparent to-transparent"></div>
+      <div className="relative z-10">
+        <NavBar />
+        
+        {/* Hero Section */}
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5"></div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
             >
-              <Play className="h-5 w-5 mr-2" />
-              Start Learning - $97
-              <ArrowRight className="h-4 w-4 ml-2" />
-            </Button>
-          </motion.div>
-        </div>
-      </section>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 leading-tight px-2 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                Frequently Asked Questions
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-4 font-medium">
+                Everything you need to know about our AI course, learning process, and how to get started. 
+                Can't find what you're looking for? Contact us and we'll help you out.
+              </p>
+            
+              <Button 
+                size="lg" 
+                className="relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 text-lg sm:text-xl md:text-2xl shadow-[0_0_60px_rgba(34,197,94,0.5)] hover:shadow-[0_0_80px_rgba(34,197,94,0.7)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 w-full sm:w-auto min-h-[56px] sm:min-h-[64px] md:min-h-[72px] border-2 border-green-400/50 hover:border-green-300 backdrop-blur-sm"
+              >
+                <Play className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
+                🚀 Start Learning - $97
+                <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 ml-2" />
+              </Button>
+            </motion.div>
+          </div>
+        </section>
+      </div>
 
 
 
       {/* FAQ Items */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-blue-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -143,10 +150,10 @@ export default function FAQPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
               Common Questions
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-medium">
               Here are the most frequently asked questions from our students.
             </p>
           </motion.div>
@@ -160,7 +167,7 @@ export default function FAQPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
+                <Card className="bg-gradient-to-br from-white/95 via-gray-50 to-white/95 dark:from-gray-900/95 dark:via-gray-800/50 dark:to-gray-900/95 border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
                   <CardHeader 
                     className="cursor-pointer"
                     onClick={() => toggleItem(index)}

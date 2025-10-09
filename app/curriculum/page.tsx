@@ -31,114 +31,129 @@ export default function CurriculumPage() {
   const modules = [
     {
       number: "01",
-      title: "AI Fundamentals & Landscape",
-      duration: "45 minutes",
+      title: "The AI Mindset",
+      duration: "1 hour",
       lessons: 3,
-      description: "Understand the basics of AI, machine learning, and the current state of AI technology.",
+      description: "Develop the foundational mindset needed to think like an AI Income Engineer and build automated systems.",
       topics: [
-        "What is AI and how it works",
-        "Current AI landscape and trends",
-        "AI vs human intelligence",
-        "Ethical considerations in AI"
+        "Understanding the AI Income Engineering™ philosophy",
+        "Building systems vs. learning prompts",
+        "The automation-first mindset for income generation"
       ],
       icon: BookOpen,
       color: "blue"
     },
     {
       number: "02", 
-      title: "Mastering AI Tools & Platforms",
-      duration: "1 hour 15 minutes",
-      lessons: 4,
-      description: "Learn to use ChatGPT, Claude, and other essential AI tools effectively.",
+      title: "Building Businesses with AI",
+      duration: "45 minutes",
+      lessons: 2,
+      description: "Learn how to identify and create profitable AI-powered business models that generate consistent revenue.",
       topics: [
-        "ChatGPT advanced prompting",
-        "Claude for complex tasks",
-        "AI tool comparison and selection",
-        "Best practices and workflows"
+        "Identifying AI business opportunities",
+        "Validating AI income streams before building"
       ],
-      icon: Zap,
+      icon: TrendingUp,
       color: "purple"
     },
     {
       number: "03",
-      title: "AI in Business Applications",
-      duration: "1 hour 30 minutes", 
-      lessons: 5,
-      description: "Apply AI to real business processes, content creation, and workflow automation.",
+      title: "AI for Automation & Systems",
+      duration: "40 minutes", 
+      lessons: 2,
+      description: "Master the tools and frameworks for building automated AI systems that work 24/7.",
       topics: [
-        "Content creation and marketing",
-        "Customer service automation",
-        "Data analysis and insights",
-        "Process optimization",
-        "ROI measurement"
+        "Essential AI automation tools and platforms",
+        "Building your first automated AI workflow"
       ],
-      icon: TrendingUp,
+      icon: Zap,
       color: "green"
     },
     {
       number: "04",
-      title: "Building AI Projects",
-      duration: "2 hours",
-      lessons: 6,
-      description: "Create practical AI projects and integrate AI into existing workflows.",
+      title: "Content & Marketing with AI",
+      duration: "1 hour 15 minutes",
+      lessons: 3,
+      description: "Create compelling content and marketing systems that attract customers and generate leads automatically.",
       topics: [
-        "Project planning and scoping",
-        "AI integration strategies",
-        "Testing and iteration",
-        "Deployment and maintenance",
-        "Performance optimization",
-        "Real-world case studies"
+        "AI-powered content creation systems",
+        "Automated marketing and lead generation",
+        "Scaling content production with AI"
       ],
-      icon: Code,
+      icon: FileText,
       color: "orange"
     },
     {
       number: "05",
-      title: "AI Ethics & Best Practices",
-      duration: "45 minutes",
+      title: "AI Tools & Software Mastery",
+      duration: "1 hour 20 minutes",
       lessons: 3,
-      description: "Learn responsible AI usage, limitations, and how to avoid common pitfalls.",
+      description: "Master the complete AI tool stack that successful AI Income Engineers use to build profitable systems.",
       topics: [
-        "AI bias and fairness",
-        "Privacy and data protection",
-        "Transparency and explainability",
-        "Risk management strategies"
+        "Essential AI tools for income generation",
+        "Advanced prompting and AI optimization",
+        "Building custom AI workflows"
       ],
-      icon: Shield,
+      icon: Bot,
       color: "red"
     },
     {
       number: "06",
-      title: "Future of AI & Career Growth",
-      duration: "30 minutes",
+      title: "Scaling & Optimization",
+      duration: "35 minutes",
       lessons: 2,
-      description: "Stay ahead of AI trends and prepare for the future of work.",
+      description: "Learn how to scale your AI income systems and optimize them for maximum profitability.",
       topics: [
-        "Emerging AI technologies",
-        "Career opportunities in AI",
-        "Continuous learning strategies",
-        "Building your AI portfolio"
+        "Scaling AI income streams",
+        "Optimization strategies for maximum revenue"
       ],
       icon: Target,
       color: "indigo"
+    },
+    {
+      number: "07",
+      title: "Advanced AI Strategies",
+      duration: "40 minutes",
+      lessons: 2,
+      description: "Discover advanced AI Income Engineering™ strategies used by top performers to generate $10K+ monthly.",
+      topics: [
+        "Advanced automation frameworks",
+        "High-value AI income strategies"
+      ],
+      icon: Shield,
+      color: "cyan"
+    },
+    {
+      number: "08",
+      title: "Bonus: Future-Proofing Your AI Business",
+      duration: "50 minutes",
+      lessons: 3,
+      description: "Bonus module covering AI stock investing, future careers, and long-term AI business strategy.",
+      topics: [
+        "AI Stock Investor's Guide (2025 Edition)",
+        "Future Careers: AI-Proof Jobs",
+        "Long-term AI business strategy"
+      ],
+      icon: Award,
+      color: "yellow"
     }
   ]
 
   const learningOutcomes = [
-    "Master ChatGPT, Claude, and other AI tools",
-    "Build 4 professional AI projects for your portfolio",
-    "Automate business processes and workflows",
-    "Create compelling content with AI assistance",
-    "Understand AI ethics and responsible usage",
-    "Stay ahead of AI trends and developments"
+    "Build 5+ proven AI income systems generating $5K+ monthly",
+    "Master complete automation frameworks that work 24/7",
+    "Create automated content and marketing systems",
+    "Design AI-powered business models from scratch",
+    "Scale AI income streams to $10K+ monthly revenue",
+    "Future-proof your career with AI Income Engineering™"
   ]
 
   const courseStats = [
-    { icon: Clock, label: "Total Duration", value: "6+ Hours" },
-    { icon: BookOpen, label: "Modules", value: "6" },
-    { icon: FileText, label: "Downloadable Guides", value: "10+" },
-    { icon: Users, label: "Projects", value: "4" },
-    { icon: Award, label: "Certificate", value: "Included" },
+    { icon: Clock, label: "Total Duration", value: "5+ Hours" },
+    { icon: BookOpen, label: "Modules", value: "8" },
+    { icon: FileText, label: "Lessons", value: "19" },
+    { icon: Users, label: "Income Systems", value: "5+" },
+    { icon: Award, label: "Bonus Content", value: "3 Bonus Lessons" },
     { icon: Star, label: "Lifetime Access", value: "Yes" }
   ]
 
@@ -155,62 +170,71 @@ export default function CurriculumPage() {
   }
 
   return (
-    <main className="min-h-screen bg-white dark:bg-gray-900">
-      <NavBar />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-              Course Curriculum
-            </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              A comprehensive learning path designed to take you from AI beginner to confident practitioner. 
-              Each module builds upon the previous one, ensuring you develop practical skills you can use immediately.
-            </p>
+    <main className="min-h-screen bg-black overflow-x-hidden relative pt-20 sm:pt-24">
+      {/* Animated background gradient */}
+      <div className="fixed inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-green-900/20 opacity-50"></div>
+      <div className="fixed inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-700/10 via-transparent to-transparent"></div>
+      <div className="relative z-10">
+        <NavBar />
+        
+        {/* Hero Section */}
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5"></div>
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center max-w-4xl mx-auto"
+            >
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 leading-tight px-2 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
+                Course Curriculum
+              </h1>
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-4 font-medium">
+                A comprehensive learning path designed to take you from AI beginner to confident practitioner. 
+                Each module builds upon the previous one, ensuring you develop practical skills you can use immediately.
+              </p>
             
-            {/* Course Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
-              {courseStats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mx-auto mb-2">
-                    <stat.icon className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-                  </div>
-                  <div className="text-lg font-bold text-gray-900 dark:text-white">{stat.value}</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
+              {/* Course Stats */}
+              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6">
+                {courseStats.map((stat, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="flex items-center gap-3 sm:gap-4 bg-gradient-to-r from-green-500/5 to-green-600/5 border-2 border-green-500/20 rounded-2xl px-4 py-3 backdrop-blur-sm hover:border-green-400/40 transition-all duration-300"
+                  >
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center shadow-[0_0_20px_rgba(34,197,94,0.4)]">
+                      <stat.icon className="h-6 w-6 sm:h-7 sm:w-7 text-white" />
+                    </div>
+                    <div className="text-left">
+                      <div className="text-xl sm:text-2xl font-black text-white">{stat.value}</div>
+                      <div className="text-sm sm:text-base text-green-300 font-medium">{stat.label}</div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
 
-            <Link href="/get-course">
-              <Button 
-                size="lg" 
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
-              >
-                <Play className="h-5 w-5 mr-2" />
-                Enroll Now - $97
-                <ArrowRight className="h-4 w-4 ml-2" />
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+              <Link href="/get-course">
+                <Button 
+                  size="lg" 
+                  className="relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 text-lg sm:text-xl md:text-2xl shadow-[0_0_60px_rgba(34,197,94,0.5)] hover:shadow-[0_0_80px_rgba(34,197,94,0.7)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 w-full sm:w-auto min-h-[56px] sm:min-h-[64px] md:min-h-[72px] border-2 border-green-400/50 hover:border-green-300 backdrop-blur-sm"
+                >
+                  <Play className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
+                  🚀 Enroll Now - $97
+                  <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 ml-2" />
+                </Button>
+              </Link>
+            </motion.div>
+          </div>
+        </section>
+      </div>
 
       {/* Learning Outcomes */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -218,10 +242,10 @@ export default function CurriculumPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
               What You'll Learn
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-medium">
               By the end of this course, you'll have the skills and confidence to leverage AI tools effectively in your work and projects.
             </p>
           </motion.div>
@@ -234,10 +258,10 @@ export default function CurriculumPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-3 bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl px-4 py-3 backdrop-blur-sm hover:border-green-400/40 transition-all duration-300"
               >
-                <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mt-0.5" />
-                <span className="text-gray-700 dark:text-gray-300">{outcome}</span>
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0 mt-0.5 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
+                <span className="text-gray-300 font-medium">{outcome}</span>
               </motion.div>
             ))}
           </div>
@@ -245,8 +269,9 @@ export default function CurriculumPage() {
       </section>
 
       {/* Modules */}
-      <section className="py-20 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 via-transparent to-blue-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -254,10 +279,10 @@ export default function CurriculumPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
               Course Modules
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-medium">
               Each module is carefully designed to build your AI skills progressively, with hands-on projects and real-world applications.
             </p>
           </motion.div>
@@ -271,7 +296,7 @@ export default function CurriculumPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
               >
-                <Card className="bg-gray-50 dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
+                <Card className="h-full bg-gradient-to-br from-white/95 via-gray-50 to-white/95 dark:from-gray-900/95 dark:via-gray-800/50 dark:to-gray-900/95 border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
                   <CardHeader>
                     <div className="flex items-start gap-6">
                       <div className={`w-16 h-16 ${getColorClasses(module.color)} rounded-lg flex items-center justify-center flex-shrink-0`}>
@@ -318,8 +343,9 @@ export default function CurriculumPage() {
       </section>
 
       {/* Projects Preview */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 via-transparent to-blue-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -327,10 +353,10 @@ export default function CurriculumPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
               Hands-On Projects
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-medium">
               Apply your learning through real-world projects that you can add to your portfolio and showcase to potential employers.
             </p>
           </motion.div>
@@ -342,7 +368,7 @@ export default function CurriculumPage() {
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700">
+              <Card className="h-full bg-gradient-to-br from-white/95 via-gray-50 to-white/95 dark:from-gray-900/95 dark:via-gray-800/50 dark:to-gray-900/95 border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
                 <CardHeader>
                   <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center mb-4">
                     <FileText className="h-6 w-6 text-green-600 dark:text-green-400" />
@@ -363,7 +389,7 @@ export default function CurriculumPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700">
+              <Card className="h-full bg-gradient-to-br from-white/95 via-gray-50 to-white/95 dark:from-gray-900/95 dark:via-gray-800/50 dark:to-gray-900/95 border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
                 <CardHeader>
                   <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center mb-4">
                     <Bot className="h-6 w-6 text-blue-600 dark:text-blue-400" />
@@ -384,7 +410,7 @@ export default function CurriculumPage() {
               transition={{ duration: 0.6, delay: 0.3 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700">
+              <Card className="h-full bg-gradient-to-br from-white/95 via-gray-50 to-white/95 dark:from-gray-900/95 dark:via-gray-800/50 dark:to-gray-900/95 border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
                 <CardHeader>
                   <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center mb-4">
                     <Palette className="h-6 w-6 text-purple-600 dark:text-purple-400" />
@@ -405,7 +431,7 @@ export default function CurriculumPage() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700">
+              <Card className="h-full bg-gradient-to-br from-white/95 via-gray-50 to-white/95 dark:from-gray-900/95 dark:via-gray-800/50 dark:to-gray-900/95 border-gray-200 dark:border-gray-700 hover:shadow-2xl hover:shadow-blue-500/10 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
                 <CardHeader>
                   <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center mb-4">
                     <Code className="h-6 w-6 text-orange-600 dark:text-orange-400" />
@@ -424,8 +450,9 @@ export default function CurriculumPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 dark:bg-blue-700">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-transparent via-gray-900/50 to-transparent relative">
+        <div className="absolute inset-0 bg-gradient-to-r from-green-500/5 via-transparent to-blue-500/5"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -433,48 +460,48 @@ export default function CurriculumPage() {
             viewport={{ once: true }}
             className="text-center max-w-3xl mx-auto"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6 drop-shadow-[0_0_30px_rgba(255,255,255,0.1)]">
               Ready to Master AI?
             </h2>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl sm:text-2xl text-gray-300 mb-8 font-medium">
               Join thousands of professionals who are already using AI to transform their work and careers. 
               Start your AI journey today with our comprehensive curriculum.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                             <Link href="/get-course">
-                               <Button 
-                                 size="lg" 
-                                 className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
-                               >
-                                 <Play className="h-5 w-5 mr-2" />
-                                 Enroll Now - $97
-                                 <ArrowRight className="h-4 w-4 ml-2" />
-                               </Button>
-                             </Link>
+              <Link href="/get-course">
+                <Button 
+                  size="lg" 
+                  className="relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 text-lg sm:text-xl md:text-2xl shadow-[0_0_60px_rgba(34,197,94,0.5)] hover:shadow-[0_0_80px_rgba(34,197,94,0.7)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 w-full sm:w-auto min-h-[56px] sm:min-h-[64px] md:min-h-[72px] border-2 border-green-400/50 hover:border-green-300 backdrop-blur-sm"
+                >
+                  <Play className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
+                  🚀 Enroll Now - $97
+                  <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 ml-2" />
+                </Button>
+              </Link>
               <Link href="#modules">
                 <Button 
                   variant="outline" 
                   size="lg" 
-                  className="border-white text-white hover:bg-white hover:text-blue-600 font-semibold px-8 py-4 text-lg transition-all duration-200"
+                  className="border-2 border-white/50 text-white hover:bg-white/10 font-semibold px-8 py-4 text-lg transition-all duration-300 backdrop-blur-sm"
                 >
                   View Sample Lesson
                 </Button>
               </Link>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-blue-200 mt-8">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4" />
-                <span>Professional support</span>
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300 mt-8">
+              <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl px-4 py-2 backdrop-blur-sm">
+                <CheckCircle className="h-4 w-4 text-green-400 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
+                <span className="font-medium">Professional support</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4" />
-                <span>Lifetime access</span>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl px-4 py-2 backdrop-blur-sm">
+                <CheckCircle className="h-4 w-4 text-green-400 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
+                <span className="font-medium">Lifetime access</span>
               </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4" />
-                <span>Certificate included</span>
+              <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl px-4 py-2 backdrop-blur-sm">
+                <CheckCircle className="h-4 w-4 text-green-400 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
+                <span className="font-medium">Certificate included</span>
               </div>
             </div>
           </motion.div>
