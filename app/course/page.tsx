@@ -237,7 +237,7 @@ export default function SystemPage() {
               {modules.map((module, index) => (
                 <Link 
                   key={module.id}
-                  href={`/system/module-${module.id}`} 
+                  href={`/course/module-${module.id}`} 
                   className="group block relative"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -286,7 +286,7 @@ export default function SystemPage() {
                 {modules.map((module) => (
                   <Link 
                     key={module.id}
-                    href={`/system/module-${module.id}`} 
+                    href={`/course/module-${module.id}`} 
                     className="group block relative"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -342,7 +342,7 @@ export default function SystemPage() {
 
               <div className="flex flex-col items-center justify-center gap-4 mb-8 lg:mb-16 px-4">
                 <Link 
-                  href="/system/module-1"
+                  href="/course/module-1"
                   className="group relative inline-flex items-center bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 text-white font-black px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-2xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-0 group-hover:opacity-75 transition-opacity"></div>
@@ -458,7 +458,7 @@ export default function SystemPage() {
                   Join thousands of AI Income Engineers who've already designed automated income systems. Start with Module 1 and begin your journey to $5K-$15K monthly automated revenue.
                 </p>
                 <Link 
-                  href="/system/module-1"
+                  href="/course/module-1"
                   className="inline-flex items-center bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 text-white font-black px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-6 rounded-2xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 text-base sm:text-lg"
                 >
                   🚀 Join the Revolution

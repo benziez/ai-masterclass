@@ -73,7 +73,7 @@ export default function NavBar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link href="/get-course">
+            <Link href="/course">
               <Button 
                 size="lg" 
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-6 py-2 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] border border-blue-400/30"
@@ -135,7 +135,7 @@ export default function NavBar() {
                   transition={{ duration: 0.2, delay: navItems.length * 0.1 }}
                   className="px-4 pt-2"
                 >
-                  <Link href="/get-course" onClick={() => setIsMenuOpen(false)}>
+                  <Link href="/course" onClick={() => setIsMenuOpen(false)}>
                     <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold text-lg py-4 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] border border-blue-400/30">
                       Get the System
                     </Button>
