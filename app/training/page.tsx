@@ -336,7 +336,7 @@ export default function TrainingPage() {
                     <p className="text-green-600 dark:text-green-400 font-bold text-lg">$100,000+</p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">Me</p>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">
-                      "I built my own automated trading system using the AI strategies revealed in this course. What started as a $3,000 account has grown to over $100,000 through consistent AI-powered trades."
+                      "I built my own automated trading system using the AI strategies revealed in this system. What started as a $3,000 account has grown to over $100,000 through consistent AI-powered trades."
                     </p>
                   </div>
                 </div>
@@ -357,7 +357,7 @@ export default function TrainingPage() {
                     <p className="text-green-600 dark:text-green-400 font-bold text-lg">$1,366</p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">Marcus</p>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">
-                      "Marcus had been learning how to run his agency for months but struggled to land his first paying client. After completing the AI course, he used the outreach and automation techniques to book meetings more consistently."
+                      "Marcus had been learning how to run his agency for months but struggled to land his first paying client. After completing the AI system, he used the outreach and automation techniques to book meetings more consistently."
                     </p>
                   </div>
                 </div>
@@ -378,7 +378,7 @@ export default function TrainingPage() {
                     <p className="text-green-600 dark:text-green-400 font-bold text-lg">$704</p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">Jordan</p>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">
-                      "Jordan always wanted to start a side hustle online but didn't know where to begin. After going through the AI course, he learned how to use automation tools to create short-form content."
+                      "Jordan always wanted to start a side hustle online but didn't know where to begin. After going through the AI system, he learned how to use automation tools to create short-form content."
                     </p>
                   </div>
                 </div>
@@ -399,7 +399,7 @@ export default function TrainingPage() {
                     <p className="text-green-600 dark:text-green-400 font-bold text-lg">$5,016</p>
                     <p className="text-xs text-gray-500 dark:text-gray-400">Eric</p>
                     <p className="text-xs text-gray-600 dark:text-gray-400 mt-2 italic">
-                      "Eric was looking for a simple way to earn extra income outside of his 9–5. After taking the AI course, he started using automation to flip local services and manage gig work smarter."
+                      "Eric was looking for a simple way to earn extra income outside of his 9–5. After taking the AI system, he started using automation to flip local services and manage gig work smarter."
                     </p>
                   </div>
                 </div>
@@ -459,7 +459,7 @@ export default function TrainingPage() {
           <div className="space-y-4">
             {/* FAQ 1 */}
             <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
-              <h3 className="text-xl font-bold text-white mb-3">Do I need any technical background to take this course?</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Do I need any technical background to take this system?</h3>
               <p className="text-gray-400 leading-relaxed">No technical background required! This training is designed for complete beginners. We'll teach you everything from the ground up, including how to use AI tools without any coding knowledge.</p>
             </div>
             
@@ -471,20 +471,20 @@ export default function TrainingPage() {
             
             {/* FAQ 3 */}
             <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
-              <h3 className="text-xl font-bold text-white mb-3">What if I'm not satisfied with the course?</h3>
-              <p className="text-gray-400 leading-relaxed">We're confident you'll love the course, but if you have any concerns, please reach out to our support team. We're here to help ensure you get the most value from your investment.</p>
+              <h3 className="text-xl font-bold text-white mb-3">What if I'm not satisfied with the system?</h3>
+              <p className="text-gray-400 leading-relaxed">We're confident you'll love the system, but if you have any concerns, please reach out to our support team. We're here to help ensure you get the most value from your investment.</p>
             </div>
             
             {/* FAQ 4 */}
             <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
-              <h3 className="text-xl font-bold text-white mb-3">How long do I have access to the course?</h3>
-              <p className="text-gray-400 leading-relaxed">You get lifetime access to the course content, including all future updates and new modules we add. You can learn at your own pace and revisit the material anytime.</p>
+              <h3 className="text-xl font-bold text-white mb-3">How long do I have access to the system?</h3>
+              <p className="text-gray-400 leading-relaxed">You get lifetime access to the system content, including all future updates and new modules we add. You can learn at your own pace and revisit the material anytime.</p>
             </div>
             
             {/* FAQ 5 */}
             <div className="bg-gray-900/80 border-2 border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-500/60 transition-all">
               <h3 className="text-xl font-bold text-white mb-3">What kind of support do you provide?</h3>
-              <p className="text-gray-400 leading-relaxed">We provide professional support through our dedicated student community, email support, and detailed course materials. You're never alone in your learning journey.</p>
+              <p className="text-gray-400 leading-relaxed">We provide professional support through our dedicated student community, email support, and detailed system materials. You're never alone in your learning journey.</p>
             </div>
           </div>
         </div>

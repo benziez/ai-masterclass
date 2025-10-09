@@ -33,7 +33,7 @@ const lessons = [
         <p><strong>The problem wasn't the car — it was the driver.</strong></p>
       </div>
 
-      <p>Your goal in this course is to become the driver who knows exactly where they're going and uses the Ferrari for what it's designed to do: <strong>move faster than everyone else on the road.</strong></p>
+      <p>Your goal in this system is to become the driver who knows exactly where they're going and uses the Ferrari for what it's designed to do: <strong>move faster than everyone else on the road.</strong></p>
 
       <h3>🎯 Why This Matters Right Now</h3>
 
@@ -65,10 +65,10 @@ const lessons = [
 
       <div class="success-story">
         <p><strong>The difference-maker is strategy.</strong></p>
-        <p>This course isn't here to flood you with every possible AI app (because you don't need 500 tools you'll never touch). It's here to give you the <strong>core strategies, systems, and mindsets</strong> to actually build with AI — businesses, income streams, workflows, and skills that make you irreplaceable.</p>
+        <p>This system isn't here to flood you with every possible AI app (because you don't need 500 tools you'll never touch). It's here to give you the <strong>core strategies, systems, and mindsets</strong> to actually build with AI — businesses, income streams, workflows, and skills that make you irreplaceable.</p>
       </div>
 
-      <h3>🧠 What We'll Cover in This Course</h3>
+      <h3>🧠 What We'll Cover in This System</h3>
 
       <p>Over the next modules, we'll cover everything you need to become an AI-first creator, entrepreneur, or professional:</p>
 
@@ -83,14 +83,14 @@ const lessons = [
         <li><strong>Module 8:</strong> How to stay ahead as AI continues to evolve</li>
       </ol>
 
-      <h3>✍️ How This Course Works</h3>
+      <h3>✍️ How This System Works</h3>
 
       <p>This isn't a textbook. I'm not going to lecture you with theory and then send you on your way. Instead, I'll be talking to you like a mentor — walking you through exactly how I'd approach this if I were starting from scratch today.</p>
 
-      <p>At the end of each module, you'll get <strong>quick, practical action exercises</strong> so you're applying what you learn as you go. Knowledge without action is useless. This course is designed to get you moving.</p>
+      <p>At the end of each module, you'll get <strong>quick, practical action exercises</strong> so you're applying what you learn as you go. Knowledge without action is useless. This system is designed to get you moving.</p>
 
       <div class="key-takeaway">
-        <h4>🎯 By the Time You Finish This Course:</h4>
+        <h4>🎯 By the Time You Finish This System:</h4>
         <p>You won't just "understand" AI. You'll be <strong>building with it.</strong></p>
         <p>Whether that's launching your first AI-powered business, automating workflows that save you 10+ hours a week, or positioning yourself as the AI expert in your field — you'll have real, tangible results.</p>
       </div>
@@ -154,7 +154,7 @@ const lessons = [
 
       <p>Same tool. Different mindset. <strong>Completely different results.</strong></p>
 
-      <p>This course is designed to make you like Person B every single time.</p>
+      <p>This system is designed to make you like Person B every single time.</p>
 
       <h3>🧠 The Creator Mindset Framework</h3>
 
@@ -203,14 +203,14 @@ const lessons = [
       <p>Result? She doubled her client base and raised her prices because she was "the fastest copywriter they'd ever hired."</p>
 
       <h4>Example 3: The Digital Product Creator</h4>
-      <p>An entrepreneur wanted to create a course but didn't have time to write all the lessons. He used AI to:</p>
+      <p>An entrepreneur wanted to create a system but didn't have time to write all the lessons. He used AI to:</p>
       <ul>
         <li>Outline the entire curriculum</li>
         <li>Draft lesson scripts</li>
         <li>Generate marketing copy for the sales page</li>
         <li>Create promotional graphics with AI image tools</li>
       </ul>
-      <p>Result? He launched his course in 3 weeks instead of 6 months. It made $12,000 in the first month.</p>
+      <p>Result? He launched his system in 3 weeks instead of 6 months. It made $12,000 in the first month.</p>
 
       <h3>⚠️ The Trap Most Beginners Fall Into</h3>
 
@@ -372,7 +372,7 @@ const lessons = [
         <li>Decision-making</li>
       </ul>
 
-      <p>Think of it like this: a pilot doesn't let autopilot fly the entire plane. Autopilot handles the routine stuff — cruising at altitude, maintaining speed. The pilot handles takeoff, landing, and course corrections.</p>
+      <p>Think of it like this: a pilot doesn't let autopilot fly the entire plane. Autopilot handles the routine stuff — cruising at altitude, maintaining speed. The pilot handles takeoff, landing, and system corrections.</p>
 
       <p>That's your relationship with AI. <strong>You're the pilot. AI is the autopilot.</strong></p>
 
@@ -446,9 +446,9 @@ export default function Module1Page() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const unlocked = localStorage.getItem('course_unlocked')
+    const unlocked = localStorage.getItem('system_unlocked')
     if (unlocked !== 'true') {
-      router.push('/course')
+      router.push('/system')
       return
     }
     setIsUnlocked(true)
@@ -509,9 +509,9 @@ export default function Module1Page() {
         {/* Mobile Header - Only visible on mobile */}
         <div className="lg:hidden bg-black/40 backdrop-blur-xl border-b border-white/10 shadow-2xl p-4">
           <div className="flex items-center justify-between">
-            <Link href="/course" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group">
+            <Link href="/system" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group">
               <ArrowLeft className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              <span className="text-sm font-medium">Back to Course</span>
+              <span className="text-sm font-medium">Back to System</span>
             </Link>
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl px-3 py-1">
               <span className="text-green-400 font-semibold text-xs">Access Granted</span>
@@ -545,9 +545,9 @@ export default function Module1Page() {
         {/* Premium Sidebar - Hidden on mobile, shown on desktop */}
         <div className="hidden lg:block w-96 bg-black/40 backdrop-blur-xl border-r border-white/10 shadow-2xl">
           <div className="p-8 border-b border-white/10">
-            <Link href="/course" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors group">
+            <Link href="/system" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors group">
               <ArrowLeft className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to Course
+              Back to System
             </Link>
             
             <div className="flex items-center gap-4 mb-6">
@@ -712,7 +712,7 @@ export default function Module1Page() {
                 </div>
                 
                 {currentLesson === lessons.length - 1 ? (
-                  <Link href="/course" className="w-full sm:w-auto">
+                  <Link href="/system" className="w-full sm:w-auto">
                     <Button className="group bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:via-emerald-600 hover:to-green-700 text-white font-bold px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl lg:rounded-2xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto">
                       <span className="text-sm sm:text-base">Complete Module 1</span>
                       <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5 ml-2 group-hover:scale-110 transition-transform" />

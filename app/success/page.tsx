@@ -83,7 +83,7 @@ export default function SuccessPage() {
                 <p className="text-green-400 text-sm">✓ Copied to clipboard!</p>
               )}
               <p className="text-gray-400 text-sm mt-2">
-                Save this code! You'll need it to access the course.
+                Save this code! You'll need it to access the system.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export default function SuccessPage() {
               <ol className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 bg-cyan-500 text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
-                  <span>Click the button below to access the course</span>
+                  <span>Click the button below to access the system</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-6 h-6 bg-cyan-500 text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
@@ -110,7 +110,7 @@ export default function SuccessPage() {
 
             {/* CTA Button */}
             <Link
-              href="/course"
+              href="/system"
               className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 via-cyan-500 to-blue-500 hover:from-green-600 hover:via-cyan-600 hover:to-blue-600 text-white font-black px-8 py-4 text-lg rounded-xl shadow-[0_0_30px_rgba(34,197,94,0.4)] hover:shadow-[0_0_40px_rgba(34,197,94,0.6)] transition-all duration-300 transform hover:scale-105"
             >
               🚀 Access Your Course Now

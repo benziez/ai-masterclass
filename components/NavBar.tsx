@@ -78,7 +78,7 @@ export default function NavBar() {
                 size="lg" 
                 className="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold px-6 py-2 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] border border-blue-400/30"
               >
-                Get the Course
+                Get the System
               </Button>
             </Link>
           </div>
@@ -137,7 +137,7 @@ export default function NavBar() {
                 >
                   <Link href="/get-course" onClick={() => setIsMenuOpen(false)}>
                     <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold text-lg py-4 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-[0_0_20px_rgba(59,130,246,0.3)] hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] border border-blue-400/30">
-                      Get the Course
+                      Get the System
                     </Button>
                   </Link>
                 </motion.div>

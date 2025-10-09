@@ -21,7 +21,7 @@ export default function PricingPage() {
     window.location.href = 'https://buy.stripe.com/4gMeVc9xcdv964h7tt5gc03'
   }
 
-  const courseFeatures = [
+  const systemFeatures = [
     "6 comprehensive modules",
     "6+ hours of comprehensive content",
     "Hands-on projects and exercises",
@@ -33,7 +33,7 @@ export default function PricingPage() {
   ]
 
   const consultationFeatures = [
-    "Everything in the course",
+    "Everything in the system",
     "60-minute 1-on-1 strategy call with AI expert",
     "Custom AI workflow designed for YOUR business",
     "30-day email support (24-hour response time)",
@@ -48,7 +48,7 @@ export default function PricingPage() {
   ]
 
   const doneForYouFeatures = [
-    "Everything in the course",
+    "Everything in the system",
     "Complete AI business system setup",
     "Custom workflows and automation for YOUR industry",
     "30-day hands-on management and optimization",
@@ -122,7 +122,7 @@ export default function PricingPage() {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <ul className="space-y-3">
-                    {courseFeatures.map((feature, index) => (
+                    {systemFeatures.map((feature, index) => (
                       <li key={index} className="flex items-center">
                         <Check className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
@@ -238,7 +238,7 @@ export default function PricingPage() {
               <h3 className="text-2xl font-bold text-white">Professional Support</h3>
             </div>
             <p className="text-gray-300 max-w-2xl mx-auto">
-              We provide comprehensive support and resources to ensure your success. Our team is here to help you get the most out of the course.
+              We provide comprehensive support and resources to ensure your success. Our team is here to help you get the most out of the system.
             </p>
           </motion.div>
 
@@ -279,10 +279,10 @@ export default function PricingPage() {
               className="border border-gray-700 rounded-lg p-6 bg-gray-900"
             >
               <h3 className="text-lg font-semibold text-white mb-3">
-                Can I upgrade from the course to consultation or done-for-you later?
+                Can I upgrade from the system to consultation or done-for-you later?
               </h3>
               <p className="text-gray-300">
-                Yes! You can upgrade to any higher tier at any time. The course price will be credited toward your consultation or done-for-you package.
+                Yes! You can upgrade to any higher tier at any time. The system price will be credited toward your consultation or done-for-you package.
               </p>
             </motion.div>
             <motion.div
@@ -293,10 +293,10 @@ export default function PricingPage() {
               className="border border-gray-700 rounded-lg p-6 bg-gray-900"
             >
               <h3 className="text-lg font-semibold text-white mb-3">
-                How long do I have access to the course?
+                How long do I have access to the system?
               </h3>
               <p className="text-gray-300">
-                You have lifetime access to the course content and all future updates. Consultations and done-for-you services are one-time purchases with ongoing support.
+                You have lifetime access to the system content and all future updates. Consultations and done-for-you services are one-time purchases with ongoing support.
               </p>
             </motion.div>
             <motion.div

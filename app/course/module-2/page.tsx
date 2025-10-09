@@ -199,7 +199,7 @@ const lessons = [
 
       <h3>📦 Model #5: Digital Products</h3>
 
-      <p>Prompt packs, templates, guides, or courses are some of the <strong>most scalable</strong> AI businesses. You build it once, and sell it forever.</p>
+      <p>Prompt packs, templates, guides, or systems are some of the <strong>most scalable</strong> AI businesses. You build it once, and sell it forever.</p>
 
       <p>No inventory. No shipping. No customer service nightmares. Just pure digital leverage.</p>
 
@@ -213,7 +213,7 @@ const lessons = [
       <ul>
         <li>AI prompt libraries for specific niches</li>
         <li>Canva templates + AI workflows</li>
-        <li>Mini-courses on AI tools</li>
+        <li>Mini-systems on AI tools</li>
         <li>Notion templates with AI integrations</li>
         <li>Social media content calendars (AI-generated)</li>
       </ul>
@@ -415,9 +415,9 @@ export default function Module2Page() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const unlocked = localStorage.getItem('course_unlocked')
+    const unlocked = localStorage.getItem('system_unlocked')
     if (unlocked !== 'true') {
-      router.push('/course')
+      router.push('/system')
       return
     }
     setIsUnlocked(true)
@@ -478,9 +478,9 @@ export default function Module2Page() {
         {/* Mobile Header - Only visible on mobile */}
         <div className="lg:hidden bg-black/40 backdrop-blur-xl border-b border-white/10 shadow-2xl p-4">
           <div className="flex items-center justify-between">
-            <Link href="/course" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group">
+            <Link href="/system" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group">
               <ArrowLeft className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              <span className="text-sm font-medium">Back to Course</span>
+              <span className="text-sm font-medium">Back to System</span>
             </Link>
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl px-3 py-1">
               <span className="text-green-400 font-semibold text-xs">Access Granted</span>
@@ -514,9 +514,9 @@ export default function Module2Page() {
         {/* Premium Sidebar - Hidden on mobile, shown on desktop */}
         <div className="hidden lg:block w-96 bg-black/40 backdrop-blur-xl border-r border-white/10 shadow-2xl">
           <div className="p-8 border-b border-white/10">
-            <Link href="/course" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors group">
+            <Link href="/system" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors group">
               <ArrowLeft className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              Back to Course
+              Back to System
             </Link>
             
             <div className="flex items-center gap-4 mb-6">
@@ -681,7 +681,7 @@ export default function Module2Page() {
                 </div>
                 
                 {currentLesson === lessons.length - 1 ? (
-                  <Link href="/course">
+                  <Link href="/system">
                     <Button className="group bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:via-emerald-600 hover:to-green-700 text-white font-bold px-8 py-4 rounded-2xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105">
                       Complete Module 2
                       <CheckCircle className="h-5 w-5 ml-2 group-hover:scale-110 transition-transform" />

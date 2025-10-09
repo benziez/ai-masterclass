@@ -120,7 +120,7 @@ const lessons = [
 
       <h4>Step 1: Document What You Learn</h4>
 
-      <p>As you go through this course and test tools, <strong>share your journey.</strong></p>
+      <p>As you go through this system and test tools, <strong>share your journey.</strong></p>
 
       <p>Post on LinkedIn, Twitter, or even a simple blog about:</p>
       <ul>
@@ -249,9 +249,9 @@ export default function Module6Page() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const unlocked = localStorage.getItem('course_unlocked')
+    const unlocked = localStorage.getItem('system_unlocked')
     if (unlocked !== 'true') {
-      router.push('/course')
+      router.push('/system')
       return
     }
     setIsUnlocked(true)
@@ -310,11 +310,11 @@ export default function Module6Page() {
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         <Link 
-          href="/course"
+          href="/system"
           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-6 transition-colors"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
-          Back to Course
+          Back to System
         </Link>
 
         <div className="max-w-4xl mx-auto mb-8">
@@ -393,7 +393,7 @@ export default function Module6Page() {
             </Button>
 
             {currentLesson === lessons.length - 1 ? (
-              <Link href="/course">
+              <Link href="/system">
                 <Button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold">
                   Complete Module 6
                   <CheckCircle className="h-5 w-5 ml-2" />

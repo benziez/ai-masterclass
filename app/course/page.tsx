@@ -74,7 +74,7 @@ const modules = [
   }
 ]
 
-export default function CoursePage() {
+export default function SystemPage() {
   const [isUnlocked, setIsUnlocked] = useState(false)
   const [code, setCode] = useState('')
   const [error, setError] = useState('')
@@ -82,7 +82,7 @@ export default function CoursePage() {
 
   useEffect(() => {
     // Check if user already unlocked (stored in localStorage)
-    const unlocked = localStorage.getItem('course_unlocked')
+    const unlocked = localStorage.getItem('system_unlocked')
     if (unlocked === 'true') {
       setIsUnlocked(true)
     }
@@ -93,7 +93,7 @@ export default function CoursePage() {
     e.preventDefault()
     if (code.toUpperCase() === ACCESS_CODE) {
       setIsUnlocked(true)
-      localStorage.setItem('course_unlocked', 'true')
+      localStorage.setItem('system_unlocked', 'true')
       setError('')
     } else {
       setError('Invalid access code. Please check your purchase confirmation email.')
@@ -127,7 +127,7 @@ export default function CoursePage() {
                   Welcome to AI Masterclass
                 </h1>
                 <p className="text-gray-300">
-                  Enter your access code to unlock the course
+                  Enter your access code to unlock the system
                 </p>
               </div>
 
@@ -156,7 +156,7 @@ export default function CoursePage() {
                   type="submit"
                   className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-bold py-3 text-lg shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(6,182,212,0.5)] transition-all"
                 >
-                  Unlock Course
+                  Unlock System
                 </Button>
               </form>
 
@@ -164,7 +164,7 @@ export default function CoursePage() {
                 <p className="text-sm text-gray-400 text-center">
                   Don't have access yet?{' '}
                   <Link href="/training" className="text-cyan-400 hover:text-cyan-300 font-semibold">
-                    Get the course →
+                    Get the system →
                   </Link>
                 </p>
               </div>
@@ -175,7 +175,7 @@ export default function CoursePage() {
     )
   }
 
-  // Unlocked state - show course modules with premium design
+  // Unlocked state - show system modules with premium design
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-x-hidden relative">
       {/* Premium animated background */}
@@ -193,7 +193,7 @@ export default function CoursePage() {
               </div>
               <div>
                 <h1 className="text-lg font-black text-white">AI Masterclass</h1>
-                <p className="text-blue-300 text-xs font-medium">Premium Course</p>
+                <p className="text-blue-300 text-xs font-medium">Premium System</p>
               </div>
             </div>
             <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-xl px-3 py-1">
@@ -203,15 +203,15 @@ export default function CoursePage() {
         </div>
 
         {/* Premium Sidebar - Hidden on mobile, shown on desktop */}
-        <div className="hidden lg:block w-96 bg-black/40 backdrop-blur-xl border-r border-white/10 shadow-2xl">
-          <div className="p-8 border-b border-white/10">
+        <div className="hidden lg:flex lg:flex-col w-96 bg-black/40 backdrop-blur-xl border-r border-white/10 shadow-2xl">
+          <div className="p-8 border-b border-white/10 flex-shrink-0">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl flex items-center justify-center shadow-lg">
                 <span className="text-white font-black text-xl">AI</span>
               </div>
               <div>
                 <h1 className="text-2xl font-black text-white">Masterclass</h1>
-                <p className="text-blue-300 text-sm font-medium">Premium Course</p>
+                <p className="text-blue-300 text-sm font-medium">Premium System</p>
               </div>
             </div>
             
@@ -222,22 +222,22 @@ export default function CoursePage() {
                 </div>
                 <div>
                   <p className="text-green-400 font-bold text-sm">Access Granted</p>
-                  <p className="text-green-300/80 text-xs">Full course unlocked</p>
+                  <p className="text-green-300/80 text-xs">Full system unlocked</p>
                 </div>
               </div>
             </div>
           </div>
           
-          <nav className="p-6">
+          <nav className="flex-1 overflow-y-auto p-6">
             <h3 className="text-lg font-bold text-white mb-6 flex items-center gap-2">
               <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-              Course Modules
+              System Modules
             </h3>
             <div className="space-y-3">
               {modules.map((module, index) => (
                 <Link 
                   key={module.id}
-                  href={`/course/module-${module.id}`} 
+                  href={`/system/module-${module.id}`} 
                   className="group block relative"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -276,17 +276,17 @@ export default function CoursePage() {
         {/* Premium Main Content */}
         <div className="flex-1 overflow-y-auto">
           <div className="max-w-5xl mx-auto p-4 sm:p-6 lg:p-12">
-            {/* Mobile Course Modules - Only visible on mobile */}
+            {/* Mobile System Modules - Only visible on mobile */}
             <div className="lg:hidden mb-8">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
                 <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
-                Course Modules
+                System Modules
               </h2>
               <div className="space-y-4">
                 {modules.map((module) => (
                   <Link 
                     key={module.id}
-                    href={`/course/module-${module.id}`} 
+                    href={`/system/module-${module.id}`} 
                     className="group block relative"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-2xl blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -342,7 +342,7 @@ export default function CoursePage() {
 
               <div className="flex flex-col items-center justify-center gap-4 mb-8 lg:mb-16 px-4">
                 <Link 
-                  href="/course/module-1"
+                  href="/system/module-1"
                   className="group relative inline-flex items-center bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 text-white font-black px-6 sm:px-8 lg:px-10 py-3 sm:py-4 lg:py-5 rounded-2xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 w-full sm:w-auto"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl blur opacity-0 group-hover:opacity-75 transition-opacity"></div>
@@ -425,7 +425,7 @@ export default function CoursePage() {
                   <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-500 rounded-lg sm:rounded-xl flex items-center justify-center">
                     <span className="text-white text-lg sm:text-xl">📚</span>
                   </div>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">Course Structure</h3>
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white">System Structure</h3>
                 </div>
                 <ul className="space-y-3 sm:space-y-4">
                   <li className="flex items-center gap-3">
@@ -458,7 +458,7 @@ export default function CoursePage() {
                   Join thousands of AI Income Engineers who've already designed automated income systems. Start with Module 1 and begin your journey to $5K-$15K monthly automated revenue.
                 </p>
                 <Link 
-                  href="/course/module-1"
+                  href="/system/module-1"
                   className="inline-flex items-center bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 text-white font-black px-6 sm:px-8 lg:px-12 py-3 sm:py-4 lg:py-6 rounded-2xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 text-base sm:text-lg"
                 >
                   🚀 Join the Revolution

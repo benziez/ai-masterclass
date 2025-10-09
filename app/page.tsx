@@ -173,7 +173,7 @@ export default function HomePage() {
     {
       name: "Sarah Chen",
       role: "Marketing Manager",
-      content: "This course completely changed how I approach content creation. The AI tools I learned have saved me hours every week.",
+      content: "This system completely changed how I approach content creation. The AI tools I learned have saved me hours every week.",
       rating: 5
     },
     {
@@ -185,7 +185,7 @@ export default function HomePage() {
     {
       name: "Emily Watson",
       role: "Small Business Owner",
-      content: "As someone with no technical background, I was worried about learning AI. This course made it accessible and practical.",
+      content: "As someone with no technical background, I was worried about learning AI. This system made it accessible and practical.",
       rating: 5
     }
   ]
@@ -193,11 +193,11 @@ export default function HomePage() {
   const faqs = [
     {
       question: "Do I need any technical background?",
-      answer: "No technical background is required. The course is designed for beginners and covers everything from the basics up."
+      answer: "No technical background is required. The system is designed for beginners and covers everything from the basics up."
     },
     {
       question: "How long does it take to complete?",
-      answer: "The course is self-paced, but most students complete it in 2-4 weeks, spending 1-2 hours per day."
+      answer: "The system is self-paced, but most students complete it in 2-4 weeks, spending 1-2 hours per day."
     },
     {
       question: "What AI tools will I learn?",
@@ -205,7 +205,7 @@ export default function HomePage() {
     },
     {
       question: "Can I access it on mobile?",
-      answer: "Yes! The course works perfectly on all devices."
+      answer: "Yes! The system works perfectly on all devices."
     }
   ]
 
@@ -530,7 +530,7 @@ export default function HomePage() {
               Frequently Asked Questions
             </h2>
             <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              Everything you need to know about our AI course and learning experience.
+              Everything you need to know about our AI system and learning experience.
             </p>
           </motion.div>
 
@@ -595,7 +595,7 @@ export default function HomePage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8">
-              <Link href="/get-course" className="w-full sm:w-auto">
+              <Link href="/get-system" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
                   className="relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl shadow-[0_0_60px_rgba(34,197,94,0.5)] hover:shadow-[0_0_80px_rgba(34,197,94,0.7)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 w-full sm:w-auto backdrop-blur-sm border-2 border-green-400/50 hover:border-green-300"

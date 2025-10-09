@@ -353,7 +353,7 @@ const lessons = [
       <div class="success-story">
         <h4>💪 The Challenge:</h4>
         <ol>
-          <li>Pick <strong>one exercise</strong> from this course</li>
+          <li>Pick <strong>one exercise</strong> from this system</li>
           <li>Do it within the <strong>next 24 hours</strong></li>
           <li>Keep building, step by step, every week</li>
         </ol>
@@ -383,7 +383,7 @@ const lessons = [
         <li>Write down the #1 thing you're going to build or accomplish with AI in the next 30 days</li>
         <li>Share it publicly (LinkedIn, Twitter, or even just text a friend)</li>
         <li>Set a calendar reminder to check in on your progress every week</li>
-        <li>Come back to this course whenever you need a refresher or motivation</li>
+        <li>Come back to this system whenever you need a refresher or motivation</li>
       </ol>
 
       <p>Now go build something amazing. We're rooting for you! 🔥</p>
@@ -399,9 +399,9 @@ export default function Module8Page() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const unlocked = localStorage.getItem('course_unlocked')
+    const unlocked = localStorage.getItem('system_unlocked')
     if (unlocked !== 'true') {
-      router.push('/course')
+      router.push('/system')
       return
     }
     setIsUnlocked(true)
@@ -460,11 +460,11 @@ export default function Module8Page() {
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         <Link 
-          href="/course"
+          href="/system"
           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-6 transition-colors"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
-          Back to Course
+          Back to System
         </Link>
 
         <div className="max-w-4xl mx-auto mb-8">
@@ -543,9 +543,9 @@ export default function Module8Page() {
             </Button>
 
             {currentLesson === lessons.length - 1 ? (
-              <Link href="/course">
+              <Link href="/system">
                 <Button className="bg-gradient-to-r from-green-500 via-cyan-500 to-blue-500 hover:from-green-600 hover:via-cyan-600 hover:to-blue-600 text-white font-black px-8 py-4 shadow-[0_0_30px_rgba(34,197,94,0.5)]">
-                  🎉 Complete Course
+                  🎉 Complete System
                   <CheckCircle className="h-5 w-5 ml-2" />
                 </Button>
               </Link>

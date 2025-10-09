@@ -148,7 +148,7 @@ export default function CurriculumPage() {
     "Future-proof your career with AI Income Engineering™"
   ]
 
-  const courseStats = [
+  const systemStats = [
     { icon: Clock, label: "Total Duration", value: "5+ Hours" },
     { icon: BookOpen, label: "Modules", value: "8" },
     { icon: FileText, label: "Lessons", value: "19" },
@@ -197,7 +197,7 @@ export default function CurriculumPage() {
             
               {/* Course Stats */}
               <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6">
-                {courseStats.map((stat, index) => (
+                {systemStats.map((stat, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
@@ -216,7 +216,7 @@ export default function CurriculumPage() {
                 ))}
               </div>
 
-              <Link href="/get-course">
+              <Link href="/get-system">
                 <Button 
                   size="lg" 
                   className="relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 text-lg sm:text-xl md:text-2xl shadow-[0_0_60px_rgba(34,197,94,0.5)] hover:shadow-[0_0_80px_rgba(34,197,94,0.7)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 w-full sm:w-auto min-h-[56px] sm:min-h-[64px] md:min-h-[72px] border-2 border-green-400/50 hover:border-green-300 backdrop-blur-sm"
@@ -246,7 +246,7 @@ export default function CurriculumPage() {
               What You'll Learn
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-medium">
-              By the end of this course, you'll have the skills and confidence to leverage AI tools effectively in your work and projects.
+              By the end of this system, you'll have the skills and confidence to leverage AI tools effectively in your work and projects.
             </p>
           </motion.div>
 
@@ -469,7 +469,7 @@ export default function CurriculumPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/get-course">
+              <Link href="/get-system">
                 <Button 
                   size="lg" 
                   className="relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 text-lg sm:text-xl md:text-2xl shadow-[0_0_60px_rgba(34,197,94,0.5)] hover:shadow-[0_0_80px_rgba(34,197,94,0.7)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 w-full sm:w-auto min-h-[56px] sm:min-h-[64px] md:min-h-[72px] border-2 border-green-400/50 hover:border-green-300 backdrop-blur-sm"

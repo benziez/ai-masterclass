@@ -386,9 +386,9 @@ export default function Module3Page() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const unlocked = localStorage.getItem('course_unlocked')
+    const unlocked = localStorage.getItem('system_unlocked')
     if (unlocked !== 'true') {
-      router.push('/course')
+      router.push('/system')
       return
     }
     setIsUnlocked(true)
@@ -449,9 +449,9 @@ export default function Module3Page() {
         {/* Sidebar Navigation */}
         <div className="w-96 bg-black/40 backdrop-blur-xl border-r border-white/10 shadow-2xl">
           <div className="p-6 border-b border-gray-700/50">
-            <Link href="/course" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-4 transition-colors">
+            <Link href="/system" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-4 transition-colors">
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Course
+              Back to System
             </Link>
             <div className="flex items-center gap-4 mb-6">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
@@ -546,7 +546,7 @@ export default function Module3Page() {
               </Button>
 
               {currentLesson === lessons.length - 1 ? (
-                <Link href="/course">
+                <Link href="/system">
                   <Button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold">
                     Complete Module 3
                     <CheckCircle className="h-5 w-5 ml-2" />

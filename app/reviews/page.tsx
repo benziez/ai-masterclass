@@ -28,7 +28,7 @@ export default function ReviewsPage() {
       role: "Marketing Manager",
       company: "TechStart Inc.",
       rating: 5,
-      content: "This course completely transformed how I approach content creation. I went from spending 8 hours on blog posts to 2 hours, and the quality is even better. The AI tools I learned are now essential to my daily workflow.",
+      content: "This system completely transformed how I approach content creation. I went from spending 8 hours on blog posts to 2 hours, and the quality is even better. The AI tools I learned are now essential to my daily workflow.",
       avatar: "SC",
       results: "Saved 6+ hours per week",
       color: "blue"
@@ -38,7 +38,7 @@ export default function ReviewsPage() {
       role: "Freelance Designer",
       company: "Self-Employed",
       rating: 5,
-      content: "I was skeptical about AI at first, but this course showed me how to use it as a creative partner. I've increased my client base by 40% and can now offer AI-enhanced design services that set me apart from competitors.",
+      content: "I was skeptical about AI at first, but this system showed me how to use it as a creative partner. I've increased my client base by 40% and can now offer AI-enhanced design services that set me apart from competitors.",
       avatar: "MR",
       results: "40% increase in clients",
       color: "green"
@@ -48,7 +48,7 @@ export default function ReviewsPage() {
       role: "Business Analyst",
       company: "DataCorp",
       rating: 5,
-      content: "The practical projects in this course gave me real-world skills I could immediately apply. I automated several reporting processes that used to take me hours, and my team now sees me as the AI expert.",
+      content: "The practical projects in this system gave me real-world skills I could immediately apply. I automated several reporting processes that used to take me hours, and my team now sees me as the AI expert.",
       avatar: "EW",
       results: "Automated 3 major processes",
       color: "purple"
@@ -58,7 +58,7 @@ export default function ReviewsPage() {
       role: "Startup Founder",
       company: "InnovateLab",
       rating: 5,
-      content: "As a founder, time is my most valuable asset. This course taught me how to leverage AI to scale my operations without hiring more people. The ROI was immediate - I saved thousands in potential hiring costs.",
+      content: "As a founder, time is my most valuable asset. This system taught me how to leverage AI to scale my operations without hiring more people. The ROI was immediate - I saved thousands in potential hiring costs.",
       avatar: "DK",
       results: "Saved $15K in hiring costs",
       color: "orange"
@@ -68,7 +68,7 @@ export default function ReviewsPage() {
       role: "Content Creator",
       company: "Digital Media",
       rating: 5,
-      content: "I was struggling to keep up with content demands across multiple platforms. This course showed me how to create high-quality content in a fraction of the time. My engagement rates have increased by 60%.",
+      content: "I was struggling to keep up with content demands across multiple platforms. This system showed me how to create high-quality content in a fraction of the time. My engagement rates have increased by 60%.",
       avatar: "LT",
       results: "60% increase in engagement",
       color: "pink"
@@ -78,7 +78,7 @@ export default function ReviewsPage() {
       role: "Sales Director",
       company: "GrowthCo",
       rating: 5,
-      content: "The AI tools I learned here have revolutionized our sales process. I can now personalize outreach at scale and my team's conversion rates have improved by 35%. This course paid for itself in the first month.",
+      content: "The AI tools I learned here have revolutionized our sales process. I can now personalize outreach at scale and my team's conversion rates have improved by 35%. This system paid for itself in the first month.",
       avatar: "JW",
       results: "35% increase in conversions",
       color: "indigo"
@@ -223,7 +223,7 @@ export default function ReviewsPage() {
             </h2>
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-medium">
               These testimonials represent the actual experiences of our students. 
-              Each one has achieved measurable results using the skills they learned in our course.
+              Each one has achieved measurable results using the skills they learned in our system.
             </p>
           </motion.div>
 
@@ -432,7 +432,7 @@ export default function ReviewsPage() {
               Watch Student Success Stories
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-              Hear directly from our students about their journey and the impact this course has had on their careers.
+              Hear directly from our students about their journey and the impact this system has had on their careers.
             </p>
           </motion.div>
 
@@ -488,7 +488,7 @@ export default function ReviewsPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/get-course">
+              <Link href="/get-system">
                 <Button 
                   size="lg" 
                   className="relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black px-8 sm:px-12 md:px-16 py-4 sm:py-5 md:py-6 text-lg sm:text-xl md:text-2xl shadow-[0_0_60px_rgba(34,197,94,0.5)] hover:shadow-[0_0_80px_rgba(34,197,94,0.7)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 w-full sm:w-auto min-h-[56px] sm:min-h-[64px] md:min-h-[72px] border-2 border-green-400/50 hover:border-green-300 backdrop-blur-sm"
@@ -520,7 +520,7 @@ export default function ReviewsPage() {
               </div>
               <div className="flex items-center gap-2 bg-gradient-to-r from-green-500/10 to-green-600/10 border border-green-500/20 rounded-xl px-4 py-2 backdrop-blur-sm">
                 <CheckCircle className="h-4 w-4 text-green-400 shadow-[0_0_10px_rgba(34,197,94,0.5)]" />
-                <span className="font-medium">Lifetime access to course</span>
+                <span className="font-medium">Lifetime access to system</span>
               </div>
             </div>
           </motion.div>

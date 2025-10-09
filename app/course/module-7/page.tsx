@@ -64,7 +64,7 @@ const lessons = [
 
       <h4>Examples of AI-Powered Digital Products:</h4>
       <ul>
-        <li>Courses teaching AI workflows</li>
+        <li>Systems teaching AI workflows</li>
         <li>E-books or guides written with AI</li>
         <li>Prompt libraries for specific niches</li>
         <li>Templates (social media, email, Notion, etc.)</li>
@@ -83,8 +83,8 @@ const lessons = [
       <h4>How to Price Digital Products:</h4>
       <ul>
         <li><strong>$7-$27:</strong> Impulse buy range (prompt packs, templates)</li>
-        <li><strong>$47-$97:</strong> Mini-courses or comprehensive guides</li>
-        <li><strong>$197-$497:</strong> Full courses with community or coaching</li>
+        <li><strong>$47-$97:</strong> Mini-systems or comprehensive guides</li>
+        <li><strong>$197-$497:</strong> Full systems with community or coaching</li>
       </ul>
 
       <h3>📢 Model #3: Attention (Long-Term Play)</h3>
@@ -121,7 +121,7 @@ const lessons = [
         <h4>📈 The Scaling Progression:</h4>
         <ol>
           <li><strong>Stage 1: Services</strong> → Get immediate cash flow ($500-$2,000/month retainer clients)</li>
-          <li><strong>Stage 2: Products</strong> → Package what you've learned and sell it ($47 prompt packs, $197 courses)</li>
+          <li><strong>Stage 2: Products</strong> → Package what you've learned and sell it ($47 prompt packs, $197 systems)</li>
           <li><strong>Stage 3: Attention</strong> → Scale your brand, bringing in sponsorships, partnerships, and passive income</li>
         </ol>
         <p>This progression means you're never stuck waiting. You're building cash flow <em>and</em> long-term assets at the same time.</p>
@@ -181,7 +181,7 @@ const lessons = [
       <ul>
         <li>Automate your service delivery with AI workflows</li>
         <li>Take on 2-3 more clients (you can handle more because you're faster)</li>
-        <li>Launch your first digital product (prompt pack, template, mini-course)</li>
+        <li>Launch your first digital product (prompt pack, template, mini-system)</li>
       </ul>
 
       <p><strong>Revenue breakdown:</strong></p>
@@ -200,14 +200,14 @@ const lessons = [
       <ul>
         <li>Raise your prices (you're in demand now)</li>
         <li>Build an audience (faceless content, LinkedIn, newsletter)</li>
-        <li>Add higher-ticket offers ($1,000+ consulting, premium courses)</li>
+        <li>Add higher-ticket offers ($1,000+ consulting, premium systems)</li>
         <li>Create recurring revenue streams (memberships, subscriptions)</li>
       </ul>
 
       <p><strong>Revenue breakdown:</strong></p>
       <ul>
         <li>8 clients at $800/month = $6,400/month</li>
-        <li>Digital products + course sales = $3,000-$5,000/month</li>
+        <li>Digital products + system sales = $3,000-$5,000/month</li>
         <li>Sponsorships/affiliates from audience = $1,000-$3,000/month</li>
         <li><strong>Total: $10,000-$15,000/month</strong></li>
       </ul>
@@ -243,7 +243,7 @@ const lessons = [
       <h4>System 2: Standardized Products</h4>
       <p>Don't do custom work for every customer. Build once, sell many times.</p>
       <ul>
-        <li>Courses with pre-recorded lessons</li>
+        <li>Systems with pre-recorded lessons</li>
         <li>Templates and toolkits</li>
         <li>SaaS tools with self-service onboarding</li>
       </ul>
@@ -321,10 +321,10 @@ const lessons = [
         <li><strong>$7-$27:</strong> Impulse buys (prompt packs, checklists, templates)
           <ul><li>Low barrier, high volume potential</li></ul>
         </li>
-        <li><strong>$47-$97:</strong> Mini-courses or comprehensive toolkits
+        <li><strong>$47-$97:</strong> Mini-systems or comprehensive toolkits
           <ul><li>Feels like a "deal" but generates real revenue</li></ul>
         </li>
-        <li><strong>$197-$497:</strong> Full courses with bonuses or community access
+        <li><strong>$197-$497:</strong> Full systems with bonuses or community access
           <ul><li>Premium pricing for transformation-level content</li></ul>
         </li>
       </ul>
@@ -395,9 +395,9 @@ export default function Module7Page() {
   const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    const unlocked = localStorage.getItem('course_unlocked')
+    const unlocked = localStorage.getItem('system_unlocked')
     if (unlocked !== 'true') {
-      router.push('/course')
+      router.push('/system')
       return
     }
     setIsUnlocked(true)
@@ -456,11 +456,11 @@ export default function Module7Page() {
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         <Link 
-          href="/course"
+          href="/system"
           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-6 transition-colors"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
-          Back to Course
+          Back to System
         </Link>
 
         <div className="max-w-4xl mx-auto mb-8">
@@ -539,7 +539,7 @@ export default function Module7Page() {
             </Button>
 
             {currentLesson === lessons.length - 1 ? (
-              <Link href="/course">
+              <Link href="/system">
                 <Button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold">
                   Complete Module 7
                   <CheckCircle className="h-5 w-5 ml-2" />

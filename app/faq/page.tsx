@@ -28,53 +28,53 @@ export default function FAQPage() {
 
   const faqs = [
     {
-      question: "Do I need any coding experience to take this course?",
-      answer: "No coding experience required! This course is designed for complete beginners. We focus on using AI tools through user-friendly interfaces and platforms that don't require programming knowledge. You'll learn to leverage AI effectively without writing a single line of code.",
+      question: "Do I need any coding experience to take this system?",
+      answer: "No coding experience required! This system is designed for complete beginners. We focus on using AI tools through user-friendly interfaces and platforms that don't require programming knowledge. You'll learn to leverage AI effectively without writing a single line of code.",
       category: "Prerequisites"
     },
     {
-      question: "How long does it take to complete the course?",
-      answer: "The course contains 6+ hours of video content, but you can work at your own pace. Most students complete it in 2-4 weeks, spending 30-60 minutes per day. You have lifetime access, so you can take as much time as you need and revisit the content anytime.",
+      question: "How long does it take to complete the system?",
+      answer: "The system contains 6+ hours of video content, but you can work at your own pace. Most students complete it in 2-4 weeks, spending 30-60 minutes per day. You have lifetime access, so you can take as much time as you need and revisit the content anytime.",
       category: "Course Duration"
     },
     {
       question: "What AI tools will I learn to use?",
-      answer: "You'll master ChatGPT, Claude, and other essential AI platforms. We cover content creation tools, design assistants, automation platforms, and business applications. The course focuses on practical, real-world tools that you can use immediately in your work or business.",
+      answer: "You'll master ChatGPT, Claude, and other essential AI platforms. We cover content creation tools, design assistants, automation platforms, and business applications. The system focuses on practical, real-world tools that you can use immediately in your work or business.",
       category: "Course Content"
     },
     {
       question: "Will I get a certificate upon completion?",
-      answer: "Yes! You'll receive a professional certificate upon completing the course. This certificate demonstrates your AI proficiency and can be added to your resume, LinkedIn profile, or portfolio to showcase your new skills to employers or clients.",
+      answer: "Yes! You'll receive a professional certificate upon completing the system. This certificate demonstrates your AI proficiency and can be added to your resume, LinkedIn profile, or portfolio to showcase your new skills to employers or clients.",
       category: "Certification"
     },
     {
       question: "How quickly will I see results from what I learn?",
-      answer: "Many students see immediate results! You can start applying AI tools to your work from the very first module. Some students save 5-10 hours per week within the first week of taking the course. The practical projects ensure you're building real skills, not just theoretical knowledge.",
+      answer: "Many students see immediate results! You can start applying AI tools to your work from the very first module. Some students save 5-10 hours per week within the first week of taking the system. The practical projects ensure you're building real skills, not just theoretical knowledge.",
       category: "Results"
     },
     {
-      question: "What if I'm not satisfied with the course?",
-      answer: "We provide comprehensive support and resources to ensure your success. If you have any issues, our team is here to help you get the most out of the course.",
+      question: "What if I'm not satisfied with the system?",
+      answer: "We provide comprehensive support and resources to ensure your success. If you have any issues, our team is here to help you get the most out of the system.",
       category: "Support"
     },
     {
-      question: "Can I access the course on mobile devices?",
-      answer: "Absolutely! The course is fully responsive and works perfectly on smartphones, tablets, and desktop computers. You can learn on-the-go and access your content from any device with an internet connection.",
+      question: "Can I access the system on mobile devices?",
+      answer: "Absolutely! The system is fully responsive and works perfectly on smartphones, tablets, and desktop computers. You can learn on-the-go and access your content from any device with an internet connection.",
       category: "Accessibility"
     },
     {
       question: "Will AI replace my job?",
-      answer: "AI won't replace your job, but people who use AI effectively will have a significant advantage. This course teaches you how to use AI as a powerful tool to enhance your productivity, creativity, and value in the workplace. You'll learn to work smarter, not harder.",
+      answer: "AI won't replace your job, but people who use AI effectively will have a significant advantage. This system teaches you how to use AI as a powerful tool to enhance your productivity, creativity, and value in the workplace. You'll learn to work smarter, not harder.",
       category: "Career Impact"
     },
     {
       question: "What kind of support do you provide?",
-      answer: "We provide comprehensive support through our community forum, email support, and detailed course materials. You'll also have access to our student community where you can ask questions, share experiences, and connect with other learners.",
+      answer: "We provide comprehensive support through our community forum, email support, and detailed system materials. You'll also have access to our student community where you can ask questions, share experiences, and connect with other learners.",
       category: "Support"
     },
     {
-      question: "Is the course content updated regularly?",
-      answer: "Yes! AI technology evolves rapidly, so we update our course content regularly to ensure you're learning the latest tools and best practices. As a student, you get lifetime access to all updates at no additional cost.",
+      question: "Is the system content updated regularly?",
+      answer: "Yes! AI technology evolves rapidly, so we update our system content regularly to ensure you're learning the latest tools and best practices. As a student, you get lifetime access to all updates at no additional cost.",
       category: "Updates"
     },
     {
@@ -83,8 +83,8 @@ export default function FAQPage() {
       category: "Freelancing"
     },
     {
-      question: "What makes this course different from free YouTube tutorials?",
-      answer: "While free tutorials are great, this course provides structured learning, hands-on projects, professional certification, community support, and proven strategies that actually work. You'll save countless hours of trial-and-error and get results much faster than learning on your own.",
+      question: "What makes this system different from free YouTube tutorials?",
+      answer: "While free tutorials are great, this system provides structured learning, hands-on projects, professional certification, community support, and proven strategies that actually work. You'll save countless hours of trial-and-error and get results much faster than learning on your own.",
       category: "Value"
     }
   ]
@@ -120,7 +120,7 @@ export default function FAQPage() {
                 Frequently Asked Questions
               </h1>
               <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed px-4 font-medium">
-                Everything you need to know about our AI course, learning process, and how to get started. 
+                Everything you need to know about our AI system, learning process, and how to get started. 
                 Can't find what you're looking for? Contact us and we'll help you out.
               </p>
             
@@ -223,7 +223,7 @@ export default function FAQPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/get-course">
+              <Link href="/get-system">
                 <Button 
                   size="lg" 
                   className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
@@ -275,11 +275,11 @@ export default function FAQPage() {
             </h2>
             <p className="text-xl text-blue-100 mb-8">
               Join thousands of students who have already transformed their careers with AI. 
-              Start your learning journey today with our comprehensive course.
+              Start your learning journey today with our comprehensive system.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/get-course">
+              <Link href="/get-system">
                 <Button 
                   size="lg" 
                   className="bg-white text-blue-600 hover:bg-blue-50 font-semibold px-8 py-4 text-lg shadow-lg hover:shadow-xl transition-all duration-200"
