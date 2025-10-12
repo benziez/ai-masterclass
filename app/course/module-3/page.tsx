@@ -449,7 +449,7 @@ export default function Module3Page() {
         {/* Sidebar Navigation */}
         <div className="w-96 bg-black/40 backdrop-blur-xl border-r border-white/10 shadow-2xl">
           <div className="p-6 border-b border-gray-700/50">
-            <Link href="/system" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-4 transition-colors">
+            <Link href="/course" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-4 transition-colors">
               <ArrowLeft className="h-4 w-4 mr-2" />
               Back to System
             </Link>
@@ -546,7 +546,7 @@ export default function Module3Page() {
               </Button>
 
               {currentLesson === lessons.length - 1 ? (
-                <Link href="/system">
+                <Link href="/course">
                   <Button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold">
                     Complete Module 3
                     <CheckCircle className="h-5 w-5 ml-2" />

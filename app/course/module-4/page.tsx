@@ -483,7 +483,7 @@ export default function Module4Page() {
 
       <div className="relative z-10 container mx-auto px-4 py-8">
         <Link 
-          href="/system"
+          href="/course"
           className="inline-flex items-center text-cyan-400 hover:text-cyan-300 mb-6 transition-colors"
         >
           <ArrowLeft className="h-5 w-5 mr-2" />
@@ -566,7 +566,7 @@ export default function Module4Page() {
             </Button>
 
             {currentLesson === lessons.length - 1 ? (
-              <Link href="/system">
+              <Link href="/course">
                 <Button className="bg-gradient-to-r from-green-500 to-blue-500 hover:from-green-600 hover:to-blue-600 text-white font-bold">
                   Complete Module 4
                   <CheckCircle className="h-5 w-5 ml-2" />

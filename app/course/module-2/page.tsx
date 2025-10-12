@@ -478,7 +478,7 @@ export default function Module2Page() {
         {/* Mobile Header - Only visible on mobile */}
         <div className="lg:hidden bg-black/40 backdrop-blur-xl border-b border-white/10 shadow-2xl p-4">
           <div className="flex items-center justify-between">
-            <Link href="/system" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group">
+            <Link href="/course" className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors group">
               <ArrowLeft className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
               <span className="text-sm font-medium">Back to System</span>
             </Link>
@@ -514,7 +514,7 @@ export default function Module2Page() {
         {/* Premium Sidebar - Hidden on mobile, shown on desktop */}
         <div className="hidden lg:block w-96 bg-black/40 backdrop-blur-xl border-r border-white/10 shadow-2xl">
           <div className="p-8 border-b border-white/10">
-            <Link href="/system" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors group">
+            <Link href="/course" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-6 transition-colors group">
               <ArrowLeft className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
               Back to System
             </Link>
@@ -681,7 +681,7 @@ export default function Module2Page() {
                 </div>
                 
                 {currentLesson === lessons.length - 1 ? (
-                  <Link href="/system">
+                  <Link href="/course">
                     <Button className="group bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 hover:from-green-600 hover:via-emerald-600 hover:to-green-700 text-white font-bold px-8 py-4 rounded-2xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105">
                       Complete Module 2
                       <CheckCircle className="h-5 w-5 ml-2 group-hover:scale-110 transition-transform" />
