@@ -595,13 +595,13 @@ export default function HomePage() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8">
-              <Link href="/get-system" className="w-full sm:w-auto">
+              <Link href="/training" className="w-full sm:w-auto">
                 <Button 
                   size="lg" 
                   className="relative bg-gradient-to-r from-green-500 via-blue-500 to-purple-500 hover:from-green-600 hover:via-blue-600 hover:to-purple-600 text-white font-black px-8 sm:px-12 py-5 sm:py-6 text-lg sm:text-xl shadow-[0_0_60px_rgba(34,197,94,0.5)] hover:shadow-[0_0_80px_rgba(34,197,94,0.7)] transition-all duration-500 transform hover:scale-110 hover:-translate-y-2 w-full sm:w-auto backdrop-blur-sm border-2 border-green-400/50 hover:border-green-300"
                 >
                   <Play className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
-                  🚀 Get AI Masterclass - $97
+                  🚀 Get AI Masterclass - $27
                   <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 ml-2" />
                 </Button>
               </Link>

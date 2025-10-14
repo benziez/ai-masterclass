@@ -17,8 +17,8 @@ export default function PricingPage() {
   const [isLoading, setIsLoading] = useState(false)
 
   const handleCheckout = () => {
-    // Direct link to your live Stripe payment page
-    window.location.href = 'https://buy.stripe.com/4gMeVc9xcdv964h7tt5gc03'
+    // Direct link to your live Stripe payment page for $27
+    window.location.href = 'https://buy.stripe.com/8x2dR8fVA4YDgIV6pp5gc06'
   }
 
   const systemFeatures = [
@@ -110,10 +110,10 @@ export default function PricingPage() {
                   <CardTitle className="text-3xl font-bold text-white">AI Course</CardTitle>
                   <div className="mt-4">
                     <div className="flex items-center justify-center gap-2 mb-1">
-                      <span className="text-sm text-gray-400 line-through">$497</span>
-                      <span className="text-xs bg-red-500 text-white px-2 py-1 rounded-full">80% OFF</span>
+                      <span className="text-sm text-gray-400 line-through">$127</span>
+                      <span className="text-xs bg-red-500 text-white px-2 py-1 rounded-full">79% OFF</span>
                     </div>
-                    <span className="text-4xl font-bold text-white">$97</span>
+                    <span className="text-4xl font-bold text-white">$27</span>
                     <span className="text-gray-400 ml-2">one-time</span>
                   </div>
                   <CardDescription className="text-lg mt-2 text-gray-300">
